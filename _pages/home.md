@@ -10,7 +10,7 @@ permalink: /
 InfiniAI lab aims to 
 - Build next generation efficient AI models
 - Support affordable AI deployment
-- Elevate scaling law of LLMs
+- Elevate scaling law of LLM/VLMs
 <div markdown="0" id="carousel" class="carousel slide" data-ride="carousel" data-interval="4000" data-pause="hover" >
     <!-- Menu -->
     <ol class="carousel-indicators">
