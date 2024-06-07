@@ -6,7 +6,7 @@ sitemap: false
 permalink: /
 ---
 
-### Vision
+### Missions
 InfiniAI lab aims to develop efficient algorithms and systems for AI models co-designing with existing and new hardware and ultimately power more intelligent learning paradigms.
 
 <div markdown="0" id="carousel" class="carousel slide" data-ride="carousel" data-interval="4000" data-pause="hover" >
