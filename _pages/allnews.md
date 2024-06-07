@@ -3,7 +3,7 @@ title: "News"
 layout: textlay
 excerpt: "InfiniAI Lab at CMU."
 sitemap: false
-permalink: /allnews.html
+permalink: /lab-page/allnews.html
 ---
 
 # News

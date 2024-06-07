@@ -3,7 +3,7 @@ title: "Allan Lab - Instrumente"
 layout: textlay
 excerpt: "AOA"
 sitemap: false
-permalink: /instrumente.html
+permalink: /lab-page/instrumente.html
 ---
 
 

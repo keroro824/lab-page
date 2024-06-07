@@ -19,10 +19,10 @@ InfiniAI lab aims to develop efficient algorithms and systems for AI models co-d
     <!-- Items -->
     <div class="carousel-inner" markdown="0">
         <div class="item active">
-            <img src="{{ site.url }}{{ site.baseurl }}/images/TriForce.png" alt="Slide 1"  style="height:226px" />
+            <img src="https://preminstrel.com/lab-page/images/TriForce.png" alt="Slide 1"  style="height:226px" />
         </div>
         <div class="item">
-            <img src="{{ site.url }}{{ site.baseurl }}/images/Sequoia.jpeg" alt="Slide 2" style="height:226px" />
+            <img src="https://preminstrel.com/lab-page/images/Sequoia.jpeg" alt="Slide 2" style="height:226px" />
         </div>
     </div>
   <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
