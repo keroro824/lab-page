@@ -10,8 +10,8 @@ title: InfiniAI Lab
 email: your-email@domain.com
 description: > # this means to ignore newlines until "baseurl:"
   Website of InfiniAI Lab.
-baseurl: "https://preminstrel.github.io/lab-page"
-url: "https://preminstrel.github.io/lab-page"
+baseurl: ""
+url: ""
 
 include:
   - .htaccess
