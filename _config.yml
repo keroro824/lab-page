@@ -8,10 +8,9 @@
 # Site settings
 title: InfiniAI Lab
 email: your-email@domain.com
-description: > # this means to ignore newlines until "baseurl:"
-  Website of InfiniAI Lab.
-baseurl: ""
-url: ""
+description: Website of InfiniAI Lab.
+baseurl: "https://preminstrel.com/lab-page/"
+url: "https://preminstrel.com/lab-page/"
 
 include:
   - .htaccess
