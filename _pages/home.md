@@ -43,7 +43,7 @@ InfiniAI lab’s research develops most frontier GenAI algorithms. We are
 - Building efficient next generation model architecture
 - Innovating in AI systems for seamlessly multi-modal understanding
 
-reduces the computing cost, energy consumption, and carbon footprint of GenAI systems in many real-world applications, supports more customized pre-training for scenarios with specific needs and sensitive data, allows businesses across numerous industries to deploy powerful LLMs at a lower cost, and reduces the barrier to entry for academic institutes, startups and new players in industry. You can find an overview of some of our research themes at our [Research page](research).
+Our research helps reduce the computing cost, energy consumption, and carbon footprint of GenAI systems in many real-world applications, support more customized pre-training for scenarios with specific needs and sensitive data, which allows businesses across numerous industries to deploy powerful LLMs at a lower cost, and reduces the barrier to entry for academic institutes, startups and new players in industry. You can find an overview of some of our research themes at our [Research page](research).
 
 
 
