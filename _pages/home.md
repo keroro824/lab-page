@@ -42,7 +42,7 @@ permalink: /
 </div>
 
 ### Research
-InfiniAI lab’s research develops efficient and scalable AI algorithms and systems. Specifically, we are focusing on
+InfiniAI lab’s research develops *efficient* and *scalable* AI algorithms and systems. Specifically, we are focusing on
 - Long-context Multimodal Modeling and Generation
 - Next-Gen Model Architecture beyond Current Scaling Law
 - Foundation Model Understanding & Reasoning Enhancement
