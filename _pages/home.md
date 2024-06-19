@@ -25,9 +25,6 @@ Beidi Chen is an Assistant Professor at Carnegie Mellon University and a Researc
             <img src="https://preminstrel.com/lab-page/images/Sequoia.jpeg" alt="Slide 2" style="height:226px" />
         </div>
         <div class="item">
-            <img src="https://preminstrel.com/lab-page/images/train_loss.jpg" alt="Slide 3" style="height:226px" />
-        </div>
-        <div class="item">
             <img src="https://preminstrel.com/lab-page/images/memory_breakdown.jpg" alt="Slide 4" style="height:226px" />
         </div>
         <div class="item">
