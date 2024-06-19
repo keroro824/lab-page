@@ -34,10 +34,6 @@
   authors: Dong, Harry; Chen, Beidi; Chi, Yuejie; 
   display: arXiv preprint arXiv:2404.01365
   highlight: 1
-- title: "On the Similarity between Attention and SVM on the Token Separation and Selection Behavior"
-  authors: Chen, Beidi; Guo, Wentao; Li, Zhihang; Song, Zhao; Zhou, Tianyi; 
-  display: nan
-  highlight: 1
 - title: "Found in the Middle: How Language Models Use Long Contexts Better via Plug-and-Play Positional Encoding"
   authors: Zhang, Zhenyu; Chen, Runjin; Liu, Shiwei; Yao, Zhewei; Ruwase, Olatunji; Chen, Beidi; Wu, Xiaoxia; Wang, Zhangyang; 
   display: arXiv preprint arXiv:2403.04797
@@ -69,10 +65,6 @@
 - title: "KIVI: A Tuning-Free Asymmetric 2bit Quantization for KV Cache"
   authors: Liu, Zirui; Yuan, Jiayi; Jin, Hongye; Zhong, Shaochen; Xu, Zhaozhuo; Braverman, Vladimir; Chen, Beidi; Hu, Xia; 
   display: arXiv preprint arXiv:2402.02750
-  highlight: 1
-- title: "KIVI: Plug-and-play 2bit KV Cache Quantization with Streaming Asymmetric Quantization"
-  authors: Liu, Zirui; Yuan, Jiayi; Jin, Hongye; Zhong, Shaochen; Xu, Zhaozhuo; Braverman, Vladimir; Chen, Beidi; Hu, Xia; 
-  display: nan
   highlight: 1
 - title: "Hexgen: Generative inference of foundation model over heterogeneous decentralized environment"
   authors: Jiang, Youhe; Yan, Ran; Yao, Xiaozhe; Chen, Beidi; Yuan, Binhang; 
