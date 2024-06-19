@@ -46,7 +46,7 @@ Cohen, Andrew; Dou, Weiping; Zhu, Jiang; Koziel, Slawomir; Renner, Peter; Mattss
 
 ## Publications
 
-**Galore: Memory-efficient llm training by gradient low-rank projection** 
+**Galore: Memory-efficient llm training by gradient low-rank projection**  
 Zhao, Jiawei; Zhang, Zhenyu; Chen, Beidi; Wang, Zhangyang; Anandkumar, Anima; Tian, Yuandong  
 ICML2024 (<font color=Red>Oral</font>)
 
@@ -58,7 +58,7 @@ ICML2024
 Cai, Ruisi; Tian, Yuandong; Wang, Zhangyang; Chen, Beidi  
 ICML2024
 
-**HexGen: Generative Inference of Large Language Model over Heterogeneous Environment**
+**HexGen: Generative Inference of Large Language Model over Heterogeneous Environment**  
 Jiang, Youhe; Yan, Ran; Yao, Xiaozhe; Zhou, Yang; Chen, Beidi; Yuan, Binhang  
 ICML2024
 
@@ -66,15 +66,15 @@ ICML2024
 Liu, Zirui; Yuan, Jiayi; Jin, Hongye; Zhong, Shaochen; Xu, Zhaozhuo; Braverman, Vladimir; Chen, Beidi; Hu, Xia  
 ICML2024
 
-**Compress, then prompt: Improving accuracy-efficiency trade-off of llm inference with transferable prompt**
+**Compress, then prompt: Improving accuracy-efficiency trade-off of llm inference with transferable prompt**  
 Xu, Zhaozhuo; Liu, Zirui; Chen, Beidi; Tang, Yuxin; Wang, Jue; Zhou, Kaixiong; Hu, Xia; Shrivastava, Anshumali  
 ICML2024
 
-**Layer skip: Enabling early exit inference and self-speculative decoding**
+**Layer skip: Enabling early exit inference and self-speculative decoding**  
 Elhoushi, Mostafa; Shrivastava, Akshat; Liskovich, Diana; Hosmer, Basil; Wasti, Bram; Lai, Liangzhen; Mahmoud, Anas; Acun, Bilge; Agarwal, Saurabh; Roman, Ahmed  
 ACL2024
 
-**Q-Hitter: A Better Token Oracle for Efficient LLM Inference via Sparse-Quantized KV Cache** 
+**Q-Hitter: A Better Token Oracle for Efficient LLM Inference via Sparse-Quantized KV Cache**   
 Zhang, Zhenyu; Liu, Shiwei; Chen, Runjin; Kailkhura, Bhavya; Chen, Beidi; Wang, Atlas  
 MLSys2024 
 
