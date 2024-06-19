@@ -32,9 +32,6 @@ Li, Minghan; Chen, Xilun; Holtzman, Ari; Chen, Beidi; Lin, Jimmy; Yih, Wen-tau; 
 **Found in the Middle: How Language Models Use Long Contexts Better via Plug-and-Play Positional Encoding**   
 Zhang, Zhenyu; Chen, Runjin; Liu, Shiwei; Yao, Zhewei; Ruwase, Olatunji; Chen, Beidi; Wu, Xiaoxia; Wang, Zhangyang 
 
-**Sample-efficient Surrogate Model for Frequency Response of Linear PDEs using Self-Attentive Complex Polynomials**    
-Cohen, Andrew; Dou, Weiping; Zhu, Jiang; Koziel, Slawomir; Renner, Peter; Mattsson, Jan-Ove; Yang, Xiaomeng; Chen, Beidi; Stone, Kevin; Tian, Yuandong
-
 **LLM Inference Unveiled: Survey and Roofline Model Insights**    
 Yuan, Zhihang; Shang, Yuzhang; Zhou, Yang; Dong, Zhen; Xue, Chenhao; Wu, Bingzhe; Li, Zhikai; Gu, Qingyi; Lee, Yong Jae Yan, Yan; 
 
@@ -43,6 +40,9 @@ Zheng, Haizhong; Bai, Xiaoyan; Chen, Beidi; Lai, Fan; Prakash, Atul
 
 **Inrank: Incremental low-rank learning**    
 Zhao, Jiawei; Zhang, Yifei; Chen, Beidi; Schäfer, Florian; Anandkumar, Anima
+
+**Sample-efficient Surrogate Model for Frequency Response of Linear PDEs using Self-Attentive Complex Polynomials**    
+Cohen, Andrew; Dou, Weiping; Zhu, Jiang; Koziel, Slawomir; Renner, Peter; Mattsson, Jan-Ove; Yang, Xiaomeng; Chen, Beidi; Stone, Kevin; Tian, Yuandong
 
 ## Publications
 
