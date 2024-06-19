@@ -8,41 +8,41 @@ permalink: /publications/
 
 ## Preprints
 
-**Zeroth-Order Fine-Tuning of LLMs with Extreme Sparsity** arXiv preprint arXiv:2406.02913  
-Guo, Wentao; Long, Jikai; Zeng, Yimeng; Liu, Zirui; Yang, Xinyu; Ran, Yide; Gardner, Jacob R; Bastani, Osbert; De Sa, Christopher; Yu, Xiaodong; 
+**Triforce: Lossless acceleration of long sequence generation with hierarchical speculative decoding**  
+Sun, Hanshi; Chen, Zhuoming; Yang, Xinyu; Tian, Yuandong; Chen, Beidi 
 
-**SpecExec: Massively Parallel Speculative Decoding for Interactive LLM Inference on Consumer Devices** arXiv preprint arXiv:2406.02532  
-Svirschevski, Ruslan; May, Avner; Chen, Zhuoming; Chen, Beidi; Jia, Zhihao; Ryabinin, Max; 
+**Sequoia: Scalable, Robust, and Hardware-aware Speculative Decoding**    
+Chen, Zhuoming; May, Avner; Svirschevski, Ruslan; Huang, Yuhsun; Ryabinin, Max; Jia, Zhihao; Chen, Beidi
 
-**Nearest Neighbor Speculative Decoding for LLM Generation and Attribution** arXiv preprint arXiv:2405.19325  
-Li, Minghan; Chen, Xilun; Holtzman, Ari; Chen, Beidi; Lin, Jimmy; Yih, Wen-tau; Lin, Xi Victoria; 
+**Megalodon: Efficient llm pretraining and inference with unlimited context length**  
+Ma, Xuezhe; Yang, Xiaomeng; Xiong, Wenhan; Chen, Beidi; Yu, Lili; Zhang, Hao; May, Jonathan; Zettlemoyer, Luke; Levy, Omer; Zhou, Chunting
 
-**Triforce: Lossless acceleration of long sequence generation with hierarchical speculative decoding** arXiv preprint arXiv:2404.11912  
-Sun, Hanshi; Chen, Zhuoming; Yang, Xinyu; Tian, Yuandong; Chen, Beidi; 
+**Prompt-prompted Mixture of Experts for Efficient LLM Generation**
+Dong, Harry; Chen, Beidi; Chi, Yuejie
 
-**Megalodon: Efficient llm pretraining and inference with unlimited context length** arXiv preprint arXiv:2404.08801  
-Ma, Xuezhe; Yang, Xiaomeng; Xiong, Wenhan; Chen, Beidi; Yu, Lili; Zhang, Hao; May, Jonathan; Zettlemoyer, Luke; Levy, Omer; Zhou, Chunting; 
+**Zeroth-Order Fine-Tuning of LLMs with Extreme Sparsity**
+Guo, Wentao; Long, Jikai; Zeng, Yimeng; Liu, Zirui; Yang, Xinyu; Ran, Yide; Gardner, Jacob R; Bastani, Osbert; De Sa, Christopher; Yu, Xiaodong
 
-**Prompt-prompted Mixture of Experts for Efficient LLM Generation** arXiv preprint arXiv:2404.01365  
-Dong, Harry; Chen, Beidi; Chi, Yuejie; 
+**SpecExec: Massively Parallel Speculative Decoding for Interactive LLM Inference on Consumer Devices**  
+Svirschevski, Ruslan; May, Avner; Chen, Zhuoming; Chen, Beidi; Jia, Zhihao; Ryabinin, Max
 
-**Found in the Middle: How Language Models Use Long Contexts Better via Plug-and-Play Positional Encoding** arXiv preprint arXiv:2403.04797  
-Zhang, Zhenyu; Chen, Runjin; Liu, Shiwei; Yao, Zhewei; Ruwase, Olatunji; Chen, Beidi; Wu, Xiaoxia; Wang, Zhangyang; 
+**Nearest Neighbor Speculative Decoding for LLM Generation and Attribution**  
+Li, Minghan; Chen, Xilun; Holtzman, Ari; Chen, Beidi; Lin, Jimmy; Yih, Wen-tau; Lin, Xi Victoria 
 
-**Sample-efficient Surrogate Model for Frequency Response of Linear PDEs using Self-Attentive Complex Polynomials** arXiv preprint arXiv:2301.02747  
-Cohen, Andrew; Dou, Weiping; Zhu, Jiang; Koziel, Slawomir; Renner, Peter; Mattsson, Jan-Ove; Yang, Xiaomeng; Chen, Beidi; Stone, Kevin; Tian, Yuandong; 
+**Found in the Middle: How Language Models Use Long Contexts Better via Plug-and-Play Positional Encoding**   
+Zhang, Zhenyu; Chen, Runjin; Liu, Shiwei; Yao, Zhewei; Ruwase, Olatunji; Chen, Beidi; Wu, Xiaoxia; Wang, Zhangyang 
 
-**LLM Inference Unveiled: Survey and Roofline Model Insights** arXiv preprint arXiv:2402.16363  
-Yuan, Zhihang; Shang, Yuzhang; Zhou, Yang; Dong, Zhen; Xue, Chenhao; Wu, Bingzhe; Li, Zhikai; Gu, Qingyi; Lee, Yong Jae; Yan, Yan; 
+**Sample-efficient Surrogate Model for Frequency Response of Linear PDEs using Self-Attentive Complex Polynomials**    
+Cohen, Andrew; Dou, Weiping; Zhu, Jiang; Koziel, Slawomir; Renner, Peter; Mattsson, Jan-Ove; Yang, Xiaomeng; Chen, Beidi; Stone, Kevin; Tian, Yuandong
 
-**Sequoia: Scalable, Robust, and Hardware-aware Speculative Decoding** arXiv preprint arXiv:2402.12374  
-Chen, Zhuoming; May, Avner; Svirschevski, Ruslan; Huang, Yuhsun; Ryabinin, Max; Jia, Zhihao; Chen, Beidi; 
+**LLM Inference Unveiled: Survey and Roofline Model Insights**    
+Yuan, Zhihang; Shang, Yuzhang; Zhou, Yang; Dong, Zhen; Xue, Chenhao; Wu, Bingzhe; Li, Zhikai; Gu, Qingyi; Lee, Yong Jae Yan, Yan; 
 
-**Learn To be Efficient: Build Structured Sparsity in Large Language Models** arXiv preprint arXiv:2402.06126  
-Zheng, Haizhong; Bai, Xiaoyan; Chen, Beidi; Lai, Fan; Prakash, Atul; 
+**Learn To be Efficient: Build Structured Sparsity in Large Language Models**    
+Zheng, Haizhong; Bai, Xiaoyan; Chen, Beidi; Lai, Fan; Prakash, Atul 
 
-**Inrank: Incremental low-rank learning** arXiv preprint arXiv:2306.11250  
-Zhao, Jiawei; Zhang, Yifei; Chen, Beidi; Schäfer, Florian; Anandkumar, Anima;
+**Inrank: Incremental low-rank learning**    
+Zhao, Jiawei; Zhang, Yifei; Chen, Beidi; Schäfer, Florian; Anandkumar, Anima
 
 ## Publications
 
