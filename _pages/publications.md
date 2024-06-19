@@ -17,10 +17,10 @@ Chen, Zhuoming; May, Avner; Svirschevski, Ruslan; Huang, Yuhsun; Ryabinin, Max; 
 **Megalodon: Efficient llm pretraining and inference with unlimited context length**  
 Ma, Xuezhe; Yang, Xiaomeng; Xiong, Wenhan; Chen, Beidi; Yu, Lili; Zhang, Hao; May, Jonathan; Zettlemoyer, Luke; Levy, Omer; Zhou, Chunting
 
-**Prompt-prompted Mixture of Experts for Efficient LLM Generation**
+**Prompt-prompted Mixture of Experts for Efficient LLM Generation**  
 Dong, Harry; Chen, Beidi; Chi, Yuejie
 
-**Zeroth-Order Fine-Tuning of LLMs with Extreme Sparsity**
+**Zeroth-Order Fine-Tuning of LLMs with Extreme Sparsity**  
 Guo, Wentao; Long, Jikai; Zeng, Yimeng; Liu, Zirui; Yang, Xinyu; Ran, Yide; Gardner, Jacob R; Bastani, Osbert; De Sa, Christopher; Yu, Xiaodong
 
 **SpecExec: Massively Parallel Speculative Decoding for Interactive LLM Inference on Consumer Devices**  
@@ -54,7 +54,7 @@ ICML2024 (<font color=Red>Oral</font>)
 Dong, Harry; Yang, Xinyu; Zhang, Zhenyu; Wang, Zhangyang; Chi, Yuejie; Chen, Beidi  
 ICML2024
 
-**LoCoCo: Dropping In Convolutions for Long Context Compression**
+**LoCoCo: Dropping In Convolutions for Long Context Compression**  
 Cai, Ruisi; Tian, Yuandong; Wang, Zhangyang; Chen, Beidi
 ICML2024
 
@@ -82,11 +82,11 @@ MLSys2024
 Xiao, Guangxuan; Tian, Yuandong; Chen, Beidi; Han, Song; Lewis, Mike  
 ICLR2024
 
-**Joma: Demystifying multilayer transformers via joint dynamics of mlp and attention**
+**Joma: Demystifying multilayer transformers via joint dynamics of mlp and attention**  
 Tian, Yuandong; Wang, Yiping; Zhang, Zhenyu; Chen, Beidi; Du, Simon  
 ICLR2024 
 
-**Fast Algorithms for a New Relaxation of Optimal Transport** 
+**Fast Algorithms for a New Relaxation of Optimal Transport**   
 Charikar, Moses; Chen, Beidi; Ré, Christopher; Waingarten, Erik  
 COLT2023
 
@@ -94,7 +94,7 @@ COLT2023
 Zhang, Zhenyu; Sheng, Ying; Zhou, Tianyi; Chen, Tianlong; Zheng, Lianmin; Cai, Ruisi; Song, Zhao; Tian, Yuandong; Ré, Christopher; Barrett, Clark; Wang, Zhangyang; Chen, Beidi
 NeurIPS2023
 
-**Scan and Snap: Understanding Training Dynamics and Token Composition in 1-layer Transformer** 
+**Scan and Snap: Understanding Training Dynamics and Token Composition in 1-layer Transformer**    
 Tian, Yuandong; Wang, Yiping; Chen, Beidi; Du, Simon
 NeurIPS2023
 
@@ -102,83 +102,83 @@ NeurIPS2023
 Massaroli, Stefano; Poli, Michael; Fu, Dan; Kumbong, Hermann; Parnichkun, Rom; Romero, David; Timalsina, Aman; McIntyre, Quinn; Chen, Beidi; Rudra, Atri  
 NeurIPS2023   
 
-**Deja vu: Contextual sparsity for efficient llms at inference time**
+**Deja vu: Contextual sparsity for efficient llms at inference time**   
 Liu, Zichang; Wang, Jue; Dao, Tri; Zhou, Tianyi; Yuan, Binhang; Song, Zhao; Shrivastava, Anshumali; Zhang, Ce; Tian, Yuandong; Re, Christopher; Chen, Beidi
 ICML2023 (<font color=Red>Oral</font>)
 
-**FlexGen: High-Throughput Generative Inference of Large Language Models with a Single GPU**
+**FlexGen: High-Throughput Generative Inference of Large Language Models with a Single GPU**   
 Sheng, Ying; Zheng, Lianmin; Yuan, Binhang; Li, Zhuohan; Ryabinin, Max; Chen, Beidi; Liang, Percy; Re, Christopher; Stoica, Ion; Zhang, Ce
 ICML2023 (<font color=Red>Oral</font>)
 
-**CocktailSGD: Fine-tuning foundation models over 500Mbps networks**
+**CocktailSGD: Fine-tuning foundation models over 500Mbps networks**   
 Wang, Jue; Lu, Yucheng; Yuan, Binhang; Chen, Beidi; Liang, Percy; De Sa, Christopher; Re, Christopher; Zhang, Ce
 ICML2023
 
-**Decentralized training of foundation models in heterogeneous environments**
+**Decentralized training of foundation models in heterogeneous environments**   
 Yuan, Binhang; He, Yongjun; Davis, Jared Quincy; Zhang, Tianyi; Dao, Tri; Chen, Beidi; Liang, Percy; Re, Christopher; Zhang, Ce
 NeurIPS2022 (<font color=Red>Oral</font>)
 
-**Fine-tuning language models over slow networks using activation compression with guarantees** 
+**Fine-tuning language models over slow networks using activation compression with guarantees**   
 Wang, Jue; Yuan, Binhang; Rimanic, Luka; He, Yongjun; Dao, Tri; Chen, Beidi; Re, Christopher; Zhang, Ce
 NeurIPS2022
 
-**Monarch: Expressive structured matrices for efficient and accurate training**
+**Monarch: Expressive structured matrices for efficient and accurate training**   
 Dao, Tri; Chen, Beidi; Sohoni, Nimit S; Desai, Arjun; Poli, Michael; Grogan, Jessica; Liu, Alexander; Rao, Aniruddh; Rudra, Atri; Ré, Christopher
 ICML2022 (<font color=Red>Outstanding Paper Runner Up</font>)
 
-**Pixelated butterfly: Simple and efficient sparse training for neural network models** 
+**Pixelated butterfly: Simple and efficient sparse training for neural network models**    
 Chen, Beidi; Dao, Tri; Liang, Kaizhao; Yang, Jiaming; Song, Zhao; Rudra, Atri; Re, Christopher
 ICLR2022 (<font color=Red>Spotlight</font>)
 
-**Halos: Hashing large output space for cheap inference**
+**Halos: Hashing large output space for cheap inference**   
 Liu, Zichang; Xu, Zhaozhuo; Ji, Alan; Zhang, Junyan; Li, Jonathan; Chen, Beidi; Shrivastava, Anshumali
 MLSys2022
 
-**Scatterbrain: Unifying sparse and low-rank attention** 
+**Scatterbrain: Unifying sparse and low-rank attention**    
 Chen, Beidi; Dao, Tri; Winsor, Eric; Song, Zhao; Rudra, Atri; Ré, Christopher
 NeurIPS2021
 
-**Locality sensitive teaching**
+**Locality sensitive teaching**   
 Xu, Zhaozhuo; Chen, Beidi; Li, Chaojian; Liu, Weiyang; Song, Le; Lin, Yingyan; Shrivastava, Anshumali
 NeurIPS2021
 
-**A tale of two efficient and informative negative sampling distributions**
+**A tale of two efficient and informative negative sampling distributions**   
 Daghaghi, Shabnam; Medini, Tharun; Meisburger, Nicholas; Chen, Beidi; Zhao, Mengnan; Shrivastava, Anshumali
 ICML2021 (<font color=Red>Oral</font>)
 
-**MONGOOSE: A learnable LSH framework for efficient neural network training**
+**MONGOOSE: A learnable LSH framework for efficient neural network training**   
 Chen, Beidi; Liu, Zichang; Peng, Binghui; Xu, Zhaozhuo; Li, Jonathan Lingjie; Dao, Tri; Song, Zhao; Shrivastava, Anshumali; Re, Christopher
 ICLR2021 (<font color=Red>Oral</font>)
 
-**SOLAR: Sparse Orthogonal Learned and Random Embeddings**
+**SOLAR: Sparse Orthogonal Learned and Random Embeddings**   
 Medini, Tharun; Chen, Beidi; Shrivastava, Anshumali 
 ICLR2021
 
-**Satellite Images and Deep Learning to Identify Discrepancy in Mailing Addresses with Applications to Census 2020 in Houston**  
+**Satellite Images and Deep Learning to Identify Discrepancy in Mailing Addresses with Applications to Census 2020 in Houston**     
 Xu, Zhaozhuo; Ji, Alan Baonan; Woods, Andrew; Chen, Beidi; Shrivastava, Anshumali
 JSM2021 
 
-**SLIDE: In Defense of Smart Algorithms over Hardware Acceleration for Large-scale Deep Learning Systems**
+**SLIDE: In Defense of Smart Algorithms over Hardware Acceleration for Large-scale Deep Learning Systems**   
 Chen, Beidi; Medini, Tharun; Farwell, James; Gobriel, Sameh; Tai, Charlie; Shrivastava, Anshumali
 MLSys2020
 
-**Angular visual hardness** 
+**Angular visual hardness**    
 Chen, Beidi; Liu, Weiyang; Yu, Zhiding; Kautz, Jan; Shrivastava, Anshumali; Garg, Animesh; Anandkumar, Animashree  
 ICML2020
 
-**Fast and accurate stochastic gradient estimation** 
+**Fast and accurate stochastic gradient estimation**   
 Chen, Beidi; Xu, Yingchen; Shrivastava, Anshumali
 NeurIPS2019 
 
-**Densified winner take all (WTA) hashing for sparse datasets**
+**Densified winner take all (WTA) hashing for sparse datasets**   
 Chen, Beidi; Shrivastava, Anshumali
 UAI2018
 
-**Unique entity estimation with application to the Syrian conflict**  
+**Unique entity estimation with application to the Syrian conflict**    
 Chen, Beidi; Shrivastava, Anshumali; Steorts, Rebecca C
 The Annals of Applied Statistics 12.2 (2018). (<font color=Red>IISA 2018 Best Student Paper in Applied Statistics</font>)
 
-**Analyzing log analysis: An empirical study of user log mining**
+**Analyzing log analysis: An empirical study of user log mining**    
 Alspaugh, Sara; Chen, Beidi; Lin, Jessica; Ganapathi, Archana; Hearst, Marti; Katz, Randy
 LISA2014 (<font color=Red>Best Student Paper</font>)
 
