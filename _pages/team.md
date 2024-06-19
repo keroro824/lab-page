@@ -15,7 +15,7 @@ permalink: /people/
 
 {% assign even_odd = number_printed | modulo: 2 %}
 
-{% if even_odd == 1 %}
+{% if even_odd == 0 %}
 <div class="row">
 {% endif %}
 
