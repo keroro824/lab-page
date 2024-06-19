@@ -185,10 +185,10 @@ LISA2014 (<font color=Red>Best Student Paper</font>)
 ## Workshops
 
 **Towards Structured Sparsity in Transformers for Efficient Inference** Workshop on Efficient Systems for Foundation Models@ ICML2023  
-Dong, Harry; Chen, Beidi; Chi, Yuejie; 
+Dong, Harry; Chen, Beidi; Chi, Yuejie
 
 **BearLoc: a composable distributed framework for indoor localization systems** Proceedings of the 2015 Workshop on IoT challenges in Mobile and Industrial Systems  
-Chen, Kaifei; He, Siyuan; Chen, Beidi; Kolb, John; Katz, Randy H; Culler, David E; 
+Chen, Kaifei; He, Siyuan; Chen, Beidi; Kolb, John; Katz, Randy H; Culler, David E
 
 
  
