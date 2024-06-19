@@ -6,11 +6,9 @@ sitemap: false
 permalink: /
 ---
 
-### Missions
-InfiniAI lab targets at  
-- Elevating scaling law of AI models
-- Supporting affordable and efficient AI deployment
-- Augumenting functionalities of AI agents 
+### About
+Beidi Chen is an Assistant Professor at Carnegie Mellon University and a Research Scientist at FAIR. Before that, she was a postdoctoral scholar at Stanford University. She received her Ph.D. from Rice University. Her research focuses on efficient AI; specifically, she designs and optimizes algorithms on current hardware to accelerate large machine learning systems. Her work has won best paper runner-up at ICML 2022 and she was selected as a Rising Star in EECS by MIT and UIUC.
+
 <div markdown="0" id="carousel" class="carousel slide" data-ride="carousel" data-interval="4000" data-pause="hover" >
     <!-- Menu -->
     <ol class="carousel-indicators">
@@ -47,12 +45,11 @@ InfiniAI lab targets at
 </div>
 
 ### Research
-InfiniAI lab’s research develops most frontier GenAI algorithms. We are 
-- Codesigning algorithms with hardware
-- Building efficient next generation model architecture
-- Innovating in AI systems for seamlessly multi-modal understanding
-
-Our research helps reduce the computing cost, energy consumption, and carbon footprint of GenAI systems in many real-world applications, support more customized pre-training for scenarios with specific needs and sensitive data, which allows businesses across numerous industries to deploy powerful LLMs at a lower cost, and reduces the barrier to entry for academic institutes, startups and new players in industry. You can find an overview of some of our research themes at our [Research page](research).
+InfiniAI lab’s research develops efficient and scalable AI algorithms and systems. Specifically, we are focusing on
+- Long-context Multimodal Modeling and Generation
+- Next-Gen Model Architecture beyond Current Scaling Law
+- Foundation Model Understanding & Reasoning Enhancement
+- Democratized AI with Efficient Algorithm, System and Hardware
 
 
 
