@@ -42,12 +42,15 @@ permalink: /
 </div>
 
 ### Research
-InfiniAI lab’s research develops *efficient* and *scalable* AI algorithms and systems. Specifically, we are focusing on
-- Long-context Multimodal Modeling and Generation
-- Next-Gen Model Architecture beyond Current Scaling Law
-- Foundation Model Understanding & Reasoning Enhancement
-- Democratized AI with Efficient Algorithm, System and Hardware
-
+<div>
+  InfiniAI lab’s research focuses on developing <em>efficient</em> and <em>scalable</em> AI algorithms and systems. Our key areas of focus include:
+  <ul>
+    <li style="margin-bottom: 10px;"><i class="fas fa-brain" style="color: #008000"></i> Long-context Multimodal Modeling and Generation</li>
+    <li style="margin-bottom: 10px;"><i class="fas fa-cogs" style="color: #808000"></i> Next-Gen Model Architecture beyond Current Scaling Law</li>
+    <li style="margin-bottom: 10px;"><i class="bi bi-robot"  style="color: #000080"></i> Foundation Model Understanding & Reasoning Enhancement</li>
+    <li style="margin-bottom: 10px;"><i class="bi bi-globe-asia-australia" style="color: #6495ED"></i> Democratized AI with Efficient Algorithm, System, and Hardware</li>
+  </ul>
+</div>
 
 
 <!-- 
