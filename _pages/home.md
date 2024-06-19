@@ -27,13 +27,13 @@ InfiniAI lab targets at
             <img src="https://preminstrel.com/lab-page/images/Sequoia.jpeg" alt="Slide 2" style="height:226px" />
         </div>
         <div class="item">
-            <img src="https://preminstrel.com/lab-page/images/train_loss.pdf" alt="Slide 2" style="height:226px" />
+            <img src="https://preminstrel.com/lab-page/images/train_loss.pdf" alt="Slide 3" style="height:226px" />
         </div>
         <div class="item">
-            <img src="https://preminstrel.com/lab-page/images/memory_breakdown.pdf" alt="Slide 2" style="height:226px" />
+            <img src="https://preminstrel.com/lab-page/images/memory_breakdown.pdf" alt="Slide 4" style="height:226px" />
         </div>
         <div class="item">
-            <img src="https://preminstrel.com/lab-page/images/scheme.pdf" alt="Slide 2" style="height:226px" />
+            <img src="https://preminstrel.com/lab-page/images/scheme.pdf" alt="Slide 5" style="height:226px" />
         </div>
     </div>
   <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
