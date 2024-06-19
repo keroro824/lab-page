@@ -1,7 +1,7 @@
 ---
-title: "Allan Lab - Publications"
+title: "InfiniAI Lab - Publications"
 layout: gridlay
-excerpt: "Allan Lab -- Publications."
+excerpt: "InfiniAI Lab -- Publications."
 sitemap: false
 permalink: /publications/
 ---

@@ -1,7 +1,7 @@
 ---
-title: "Allan Lab - Team"
+title: "InfiniAI Lab - Team"
 layout: gridlay
-excerpt: "Allan Lab: Team members"
+excerpt: "InfiniAI Lab: Team members"
 sitemap: false
 permalink: /people/
 ---
