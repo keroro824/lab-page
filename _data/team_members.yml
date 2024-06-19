@@ -11,53 +11,45 @@
   info: PhD Student
   email: zhuominc@andrew.cmu.edu
   number_educ: 1
-  education1: LLM inference efficiency; LLM serving systems
 
 - name: <a href="https://xinyuyang.me/">Xinyu Yang</a>
   photo: xinyu.png
   info: PhD Student
   email: xinyuya2@andrew.cmu.edu
   number_educ: 1
-  education1: Sparsity and Compression in Foundation Models; Enhanced Foundation Models for Real-world Applications
 
 - name: <a href="https://www.linkedin.com/in/yangzhou2001/">Yang Zhou</a>
   photo: yang.jpg
   info: PhD Student
   email: yangzho6@andrew.cmu.edu
   number_educ: 1
-  education1: Hierarchical Parallel Decoding for LLM
 
 - name: Ranajoy Sadhukhan
   photo: ranajoy.jpg
   info: PhD Student
   email: rsadhukh@andrew.cmu.edu
   number_educ: 1
-  education1: Retrieval-augmented LLMs
 
 - name: <a href="https://preminstrel.com">Hanshi Sun</a>
   photo: hanshi.png
   info: Master Student
   email: hanshis@andrew.cmu.edu
   number_educ: 1
-  education1: Long-context LLM inference efficiency
-
+  
 - name: Gbemileke Onilude
   photo: 1000079647.jpg
   info: Master Student
   email: gonilude@andrew.cmu.edu
   number_educ: 1
-  education1: LLM Efficiency
 
 - name: Jian Chen
   photo: jian.png
   info: Master Student
   email: jianc2@andrew.cmu.edu
   number_educ: 1
-  education1: LLM inference efficiency; LLM serving system
 
 - name: <a href="https://www.linkedin.com/in/vashistht/">Vashisth Tiwari</a>
   photo: vash.jpg
   info: Master Student
   email: vashistt@andrew.cmu.edu
   number_educ: 1
-  education1: Model Compression, Efficient LLM Inference
