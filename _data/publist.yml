@@ -20,7 +20,7 @@
   highlight: 1
 
 - title: "H2O: Heavy-Hitter Oracle for Efficient Generative Inference of Large Language Models"
-  authors: Zhenyu Zhang, Ying Sheng, Tianyi Zhou, Tianlong Chen, Lianmin Zheng, Ruisi Cai, Zhao Song, Yuandong Tian, Christopher Ré, Clark Barrett, Zhangyang Wang,
+  authors: Zhenyu Zhang, Ying Sheng, Tianyi Zhou, Tianlong Chen, Lianmin Zheng, Ruisi Cai, Zhao Song, Yuandong Tian, Christopher Ré, Clark Barrett, Zhangyang Wang, Beidi Chen
   link:
     url: https://arxiv.org/abs/2306.14048
     display: NeurIPS 2023
