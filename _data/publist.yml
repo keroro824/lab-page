@@ -16,12 +16,12 @@
     blog: https://infini-ai-lab.github.io/Sequoia-Page/
     display: Arxiv
   highlight: 1
-- title: "MagicDec: Breaking the Latency-Throughput Tradeoff for Long Context Generation with Speculative Decoding"
-  image: MagicDec.png
-  description: MagicDec studies the speculative decoding in the regime of long context and large batch serving and illustrate the potential of speculative decoding in improving throughput. MagicDec also proposes to use sparse attention for draft models, which is of vital importance for large batch serving. For moderate to long sequences, we demonstrate up to 2x speedup for LLaMA-2-7B-32K and 1.84x speedup for LLaMA-3.1-8B when serving batch sizes ranging from 32 to 256 on 8 NVIDIA A100 GPUs.  
-  authors: Jian Chen, Vashisth Tiwari, Ranajoy Sadhukhan, Zhuoming Chen, Jinyuan Shi, Ian En-Hsu Yen, Beidi Chen
-  link:
-    url: https://arxiv.org/abs/2408.11049v3
-    blog: https://ranonrkm.github.io/magicdec_hosting/
-    display: Arxiv
-  highlight: 1
+# - title: "MagicDec: Breaking the Latency-Throughput Tradeoff for Long Context Generation with Speculative Decoding"
+#   image: MagicDec.png
+#   description: MagicDec studies the speculative decoding in the regime of long context and large batch serving and illustrate the potential of speculative decoding in improving throughput. MagicDec also proposes to use sparse attention for draft models, which is of vital importance for large batch serving. For moderate to long sequences, we demonstrate up to 2x speedup for LLaMA-2-7B-32K and 1.84x speedup for LLaMA-3.1-8B when serving batch sizes ranging from 32 to 256 on 8 NVIDIA A100 GPUs.  
+#   authors: Jian Chen, Vashisth Tiwari, Ranajoy Sadhukhan, Zhuoming Chen, Jinyuan Shi, Ian En-Hsu Yen, Beidi Chen
+#   link:
+#     url: https://arxiv.org/abs/2408.11049v3
+#     blog: https://ranonrkm.github.io/magicdec_hosting/
+#     display: Arxiv
+#   highlight: 1
