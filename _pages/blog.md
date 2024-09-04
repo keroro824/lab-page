@@ -22,7 +22,7 @@ permalink: /blog/
 <div class="col-sm-6 clearfix">
  <div class="well">
   <pubtit>{{ publi.title }}</pubtit>
-  <img src="https://preminstrel.com/lab-page/images/pubpic/{{ publi.image }}" class="img-responsive" width="93%" style="float: left" />
+  <img src="https://keroro824.github.io/lab-page/images/pubpic/{{ publi.image }}" class="img-responsive" width="93%" style="float: left" />
   <p>{{ publi.description }}</p>
   <p><em>{{ publi.authors }}</em></p>
   <p><strong><a href="{{ publi.link.blog }}">Read More</a></strong></p>
