@@ -47,7 +47,7 @@ Cohen, Andrew; Dou, Weiping; Zhu, Jiang; Koziel, Slawomir; Renner, Peter; Mattss
 ## Publications
 
 **[TriForce: Lossless Acceleration of Long Sequence Generation with Hierarchical Speculative Decoding](https://arxiv.org/abs/2404.11912)**  
-Sun, Hanshi; Chen, Zhuoming; Yang, Xinyu; Tian, Yuandong; Chen, Beidi 
+Sun, Hanshi; Chen, Zhuoming; Yang, Xinyu; Tian, Yuandong; Chen, Beidi  
 COLM2024
 
 **[Galore: Memory-efficient llm training by gradient low-rank projection](https://arxiv.org/abs/2403.03507)**  
