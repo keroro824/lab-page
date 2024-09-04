@@ -8,8 +8,8 @@ permalink: /publications/
 
 ## Preprints
 
-**[TriForce: Lossless Acceleration of Long Sequence Generation with Hierarchical Speculative Decoding](https://arxiv.org/abs/2404.11912)**  
-Sun, Hanshi; Chen, Zhuoming; Yang, Xinyu; Tian, Yuandong; Chen, Beidi 
+**[MagicDec: Breaking the Latency-Throughput Tradeoff for Long Context Generation with Speculative Decoding](https://arxiv.org/abs/2408.11049)**  
+Chen, Jian; Tiwari, Vashisth; Sadhukhan, Ranajoy; Chen, Zhuoming; Shi, Jinyuan; Yen, Ian En-Hsu; Chen, Beidi
 
 **[Sequoia: Scalable, Robust, and Hardware-aware Speculative Decoding](https://arxiv.org/abs/2402.12374)**    
 Chen, Zhuoming; May, Avner; Svirschevski, Ruslan; Huang, Yuhsun; Ryabinin, Max; Jia, Zhihao; Chen, Beidi
