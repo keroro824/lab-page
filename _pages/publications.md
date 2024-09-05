@@ -21,7 +21,7 @@ Ma, Xuezhe; Yang, Xiaomeng; Xiong, Wenhan; Chen, Beidi; Yu, Lili; Zhang, Hao; Ma
 Dong, Harry; Chen, Beidi; Chi, Yuejie
 
 **[Zeroth-Order Fine-Tuning of LLMs with Extreme Sparsity](https://arxiv.org/abs/2406.02913)**  
-Guo, Wentao; Long, Jikai; Zeng, Yimeng; Liu, Zirui; Yang, Xinyu; Ran, Yide; Gardner, Jacob R; Bastani, Osbert; De Sa, Christopher; Yu, Xiaodong
+Guo, Wentao; Long, Jikai; Zeng, Yimeng; Liu, Zirui; Yang, Xinyu; Ran, Yide; Gardner, Jacob R; Bastani, Osbert; De Sa, Christopher; Yu, Xiaodong; Chen, Beidi; Xu, Zhaozhuo 
 
 **[SpecExec: Massively Parallel Speculative Decoding for Interactive LLM Inference on Consumer Devices](https://arxiv.org/abs/2406.02532)**  
 Svirschevski, Ruslan; May, Avner; Chen, Zhuoming; Chen, Beidi; Jia, Zhihao; Ryabinin, Max
@@ -33,7 +33,7 @@ Li, Minghan; Chen, Xilun; Holtzman, Ari; Chen, Beidi; Lin, Jimmy; Yih, Wen-tau; 
 Zhang, Zhenyu; Chen, Runjin; Liu, Shiwei; Yao, Zhewei; Ruwase, Olatunji; Chen, Beidi; Wu, Xiaoxia; Wang, Zhangyang 
 
 **[LLM Inference Unveiled: Survey and Roofline Model Insights](https://arxiv.org/abs/2402.16363)**    
-Yuan, Zhihang; Shang, Yuzhang; Zhou, Yang; Dong, Zhen; Xue, Chenhao; Wu, Bingzhe; Li, Zhikai; Gu, Qingyi; Lee, Yong Jae Yan, Yan; 
+Yuan, Zhihang; Shang, Yuzhang; Zhou, Yang; Dong, Zhen; Xue, Chenhao; Wu, Bingzhe; Li, Zhikai; Gu, Qingyi; Lee, Yong Jae Yan, Yan; Chen, Beidi; Sun, Guangyu; Keutzer, Kurt 
 
 **[Learn To be Efficient: Build Structured Sparsity in Large Language Models](https://arxiv.org/abs/2402.06126)**    
 Zheng, Haizhong; Bai, Xiaoyan; Chen, Beidi; Lai, Fan; Prakash, Atul 
