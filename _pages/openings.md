@@ -18,4 +18,5 @@ If you are interested in working with us as a PhD student or postdoc, please sen
 
 
 ### Applications for Internship positions
-Contact me (or any group member) per email or stop by my office if you are a CMU student.
+Contact me (or any group member) per email or stop by my office if you are a CMU student. Also, you need to fill in our [application form](https://docs.google.com/forms/d/e/1FAIpQLSfMJwpRMARPuwhzuoPo_76VrGPq84FkFrFNAnp3P17ITyxF9Q/viewform?usp=pp_url
+)
