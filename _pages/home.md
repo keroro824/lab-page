@@ -24,6 +24,9 @@ Her research focuses on efficient AI; specifically, she designs and optimizes al
             <img src="https://keroro824.github.io/lab-page/images/MagicDec.png" alt="Slide 1"  style="height:226px" />
         </div>
         <div class="item">
+            <img src="https://keroro824.github.io/lab-page/images/Sirius.png"> alt="Slide 2" style="height:226px" />
+        </div>
+        <div class="item">
             <img src="https://preminstrel.com/lab-page/images/TriForce.png" alt="Slide 2"  style="height:226px" />
         </div>
         <div class="item">
