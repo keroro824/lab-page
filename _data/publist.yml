@@ -34,7 +34,7 @@
     blog: https://infini-ai-lab.github.io/MagicDec-part2/
     display: Arxiv
   highlight: 1
-- title: Sirius: Contextual Sparsity with Correction for Efficient LLMs
+- title: "Sirius: Contextual Sparsity with Correction for Efficient LLMs"
   image: Sirius.png
   description: With the blossom of large language models (LLMs), inference efficiency becomes increasingly important. Various approximation methods are proposed to reduce the cost at inference time. Contextual Sparsity (CS) is appealing for its training-free nature and its ability to reach a higher compression ratio seemingly without quality degradation. However, after a comprehensive evaluation of contextual sparsity methods on various complex generation tasks, we find that although CS succeeds in prompt-understanding tasks, CS significantly degrades the model performance for reasoning, deduction, and knowledge-based tasks. Despite the gap in end-to-end accuracy, we observed that sparse models often share general problem-solving logic and require only a minor portion of token corrections to recover the original model performance. This paper introduces Sirius, an efficient correction mechanism, which significantly recovers CS models quality on reasoning tasks while maintaining its efficiency gain. Sirius is evaluated on 6 models with 8 difficult generation tasks in reasoning, math, and coding and shows consistent effectiveness and efficiency. Also, we carefully develop a system implementation for Sirius and show that Sirius achieves roughly 20% reduction in latency for 8B model on-chip and 35% reduction for 70B model offloading. 
   authors: Yang Zhou; Zhuoming Chen; Zhaozhuo Xu; Victoria Lin; Beidi Chen 
