@@ -11,7 +11,7 @@ permalink: /publications/
 **[MagicDec: Breaking the Latency-Throughput Tradeoff for Long Context Generation with Speculative Decoding](https://arxiv.org/abs/2408.11049)**  
 Chen, Jian; Tiwari, Vashisth; Sadhukhan, Ranajoy; Chen, Zhuoming; Shi, Jinyuan; Yen, Ian En-Hsu; Chen, Beidi
 
-**[Sirius: Contextual Sparsity with Correction for Efficient LLMs](https://www.arxiv.org/pdf/2409.03856)**
+**[Sirius: Contextual Sparsity with Correction for Efficient LLMs](https://www.arxiv.org/pdf/2409.03856)**  
 
 Zhou, Yang; Chen, Zhuoming; Xu, Zhaozhuo; Lin, Victoria; Chen, Beidi 
 
