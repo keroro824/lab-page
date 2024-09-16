@@ -1,21 +1,3 @@
-- title: "TriForce: Lossless Acceleration of Long Sequence Generation with Hierarchical Speculative Decoding"
-  image: TriForce.png
-  description: With large language models (LLMs) deployed for long content generation, the growing key-value (KV) cache size has become a bottleneck, leading to low computational core utilization and high latency. TriForce, a hierarchical speculative decoding system, addresses this by using dynamic sparse KV cache via retrieval and a smaller model for speculative decoding, achieving up to 2.31× speedup on an A100 GPU and notable efficiency on RTX 4090 GPUs. TriForce also outperforms DeepSpeed-Zero-Inference by 4.86× on a single RTX 4090 GPU, maintaining robust performance across various temperatures.
-  authors: Hanshi Sun, Zhuoming Chen, Xinyu Yang, Yuandong Tian, Beidi Chen
-  link:
-    url: https://arxiv.org/abs/2404.11912
-    blog: https://infini-ai-lab.github.io/TriForce/
-    display: Arxiv
-  highlight: 1
-- title: "Sequoia: Scalable, Robust, and Hardware-aware Speculative Decoding"
-  image: Sequoia.jpeg
-  description: Sequoia offers a scalable, robust, and hardware-aware solution for speculative decoding. Sequoia uses a dynamic programming algorithm for optimal token tree structures, a novel sampling and verification method for robust performance across temperatures, and a hardware-aware optimizer for maximum efficiency. Evaluations show Sequoia significantly speeds up decoding, improving Llama2-7B, Llama2-13B, and Vicuna-33B performance on an A100 by up to 4.04×, 3.73×, and 2.27×, respectively, and achieving impressive speedups in offloading settings.
-  authors: Zhuoming Chen, Avner May, Ruslan Svirschevski, Yuhsun Huang, Max Ryabinin, Zhihao Jia, Beidi Chen
-  link:
-    url: https://arxiv.org/abs/2402.12374
-    blog: https://infini-ai-lab.github.io/Sequoia-Page/
-    display: Arxiv
-  highlight: 1
 - title: "MagicDec-part1: Breaking the Latency-Throughput Tradeoff for Long Context Generation with Speculative Decoding"
   image: MagicDec.png
   description: MagicDec studies the speculative decoding in the regime of long context and large batch serving and illustrate the potential of speculative decoding in improving throughput. MagicDec also proposes to use sparse attention for draft models, which is of vital importance for large batch serving. For moderate to long sequences, we demonstrate up to 2x speedup for LLaMA-2-7B-32K and 1.84x speedup for LLaMA-3.1-8B when serving batch sizes ranging from 32 to 256 on 8 NVIDIA A100 GPUs.  
@@ -41,5 +23,23 @@
   link:
     url: https://www.arxiv.org/pdf/2409.03856
     blog: https://infini-ai-lab.github.io/Sirius/
+    display: Arxiv
+  highlight: 1
+- title: "TriForce: Lossless Acceleration of Long Sequence Generation with Hierarchical Speculative Decoding"
+  image: TriForce.png
+  description: With large language models (LLMs) deployed for long content generation, the growing key-value (KV) cache size has become a bottleneck, leading to low computational core utilization and high latency. TriForce, a hierarchical speculative decoding system, addresses this by using dynamic sparse KV cache via retrieval and a smaller model for speculative decoding, achieving up to 2.31× speedup on an A100 GPU and notable efficiency on RTX 4090 GPUs. TriForce also outperforms DeepSpeed-Zero-Inference by 4.86× on a single RTX 4090 GPU, maintaining robust performance across various temperatures.
+  authors: Hanshi Sun, Zhuoming Chen, Xinyu Yang, Yuandong Tian, Beidi Chen
+  link:
+    url: https://arxiv.org/abs/2404.11912
+    blog: https://infini-ai-lab.github.io/TriForce/
+    display: Arxiv
+  highlight: 1
+- title: "Sequoia: Scalable, Robust, and Hardware-aware Speculative Decoding"
+  image: Sequoia.jpeg
+  description: Sequoia offers a scalable, robust, and hardware-aware solution for speculative decoding. Sequoia uses a dynamic programming algorithm for optimal token tree structures, a novel sampling and verification method for robust performance across temperatures, and a hardware-aware optimizer for maximum efficiency. Evaluations show Sequoia significantly speeds up decoding, improving Llama2-7B, Llama2-13B, and Vicuna-33B performance on an A100 by up to 4.04×, 3.73×, and 2.27×, respectively, and achieving impressive speedups in offloading settings.
+  authors: Zhuoming Chen, Avner May, Ruslan Svirschevski, Yuhsun Huang, Max Ryabinin, Zhihao Jia, Beidi Chen
+  link:
+    url: https://arxiv.org/abs/2402.12374
+    blog: https://infini-ai-lab.github.io/Sequoia-Page/
     display: Arxiv
   highlight: 1
