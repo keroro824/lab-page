@@ -27,47 +27,47 @@ Cohen, Andrew; Dou, Weiping; Zhu, Jiang; Koziel, Slawomir; Renner, Peter; Mattss
 
 
 **[Sequoia: Scalable, Robust, and Hardware-aware Speculative Decoding](https://arxiv.org/abs/2402.12374)**    
-Chen, Zhuoming*; May, Avner*; Svirschevski, Ruslan*; Huang, Yuhsun; Ryabinin, Max; Jia, Zhihao; Chen, Beidi
+Chen, Zhuoming*; May, Avner*; Svirschevski, Ruslan*; Huang, Yuhsun; Ryabinin, Max; Jia, Zhihao; Chen, Beidi	
 NeurIPS2024 (<font color=Red>Spotlight</font>)
 
 **[Sirius: Contextual Sparsity with Correction for Efficient LLMs](https://www.arxiv.org/pdf/2409.03856)**  
-Zhou, Yang; Chen, Zhuoming; Xu, Zhaozhuo; Lin, Victoria; Chen, Beidi 
+Zhou, Yang; Chen, Zhuoming; Xu, Zhaozhuo; Lin, Victoria; Chen, Beidi	
 NeurIPS2024
 	
 **[S2FT: Efficient, Scalable and Generalizable LLM Fine-tuning by Structured Sparsity]()**
-Yang, Xinyu; Leng, Jixuan; Guo, Geyang; Zhao, Jiawei; Nakada, Ryumei; Zhang, Linjun; Yao Huaxiu; Chen Beidi  
+Yang, Xinyu; Leng, Jixuan; Guo, Geyang; Zhao, Jiawei; Nakada, Ryumei; Zhang, Linjun; Yao Huaxiu; Chen Beidi	  
 NeurIPS2024
 
 **[Learn To be Efficient: Build Structured Sparsity in Large Language Models](https://arxiv.org/abs/2402.06126)**    
-Zheng, Haizhong; Bai, Xiaoyan; Chen, Beidi; Lai, Fan; Prakash, Atul 
+Zheng, Haizhong; Bai, Xiaoyan; Chen, Beidi; Lai, Fan; Prakash, Atul	
 NeurIPS2024 (<font color=Red>Spotlight</font>)
 
 **[SpecExec: Massively Parallel Speculative Decoding for Interactive LLM Inference on Consumer Devices](https://arxiv.org/abs/2406.02532)**  
-Svirschevski, Ruslan*; May, Avner*; Chen, Zhuoming*; Chen, Beidi; Jia, Zhihao; Ryabinin, Max
+Svirschevski, Ruslan*; May, Avner*; Chen, Zhuoming*; Chen, Beidi; Jia, Zhihao; Ryabinin, Max	
 NeurIPS2024
 
 **[Megalodon: Efficient llm pretraining and inference with unlimited context length](https://arxiv.org/abs/2404.08801)**  
-Ma, Xuezhe; Yang, Xiaomeng; Xiong, Wenhan; Chen, Beidi; Yu, Lili; Zhang, Hao; May, Jonathan; Zettlemoyer, Luke; Levy, Omer; Zhou, Chunting
+Ma, Xuezhe; Yang, Xiaomeng; Xiong, Wenhan; Chen, Beidi; Yu, Lili; Zhang, Hao; May, Jonathan; Zettlemoyer, Luke; Levy, Omer; Zhou, Chunting	
 NeurIPS2024
 
 **[Mini-Sequence Transformer: Optimizing Intermediate Memory for Long Sequences Training](https://www.arxiv.org/abs/2407.15892)**
-Luo Cheng; Zhao, Jiawei; Chen, Zhuoming; Chen, Beidi; Anandkumar, Anima 
+Luo Cheng; Zhao, Jiawei; Chen, Zhuoming; Chen, Beidi; Anandkumar, Anima	
 NeurIPS2024
 
 **[Nearest Neighbor Speculative Decoding for LLM Generation and Attribution](https://arxiv.org/abs/2405.19325)**  
-Li, Minghan; Chen, Xilun; Holtzman, Ari; Chen, Beidi; Lin, Jimmy; Yih, Wen-tau; Lin, Xi Victoria 
+Li, Minghan; Chen, Xilun; Holtzman, Ari; Chen, Beidi; Lin, Jimmy; Yih, Wen-tau; Lin, Xi Victoria	 
 NeurIPS2024
 
 **[Who Needs Features? On the Surprising Effectiveness of Attention Transfer for Vision Transformers]()**
-Li, Alexander, Cong; Tian, Yuandong; Chen, Beidi; Pathak, Deepak; Chen, Xinlei 
+Li, Alexander, Cong; Tian, Yuandong; Chen, Beidi; Pathak, Deepak; Chen, Xinlei	
 NeurIPS2024
 
 **[Found in the Middle: How Language Models Use Long Contexts Better via Plug-and-Play Positional Encoding](https://arxiv.org/abs/2403.04797)**   
-Zhang, Zhenyu; Chen, Runjin; Liu, Shiwei; Yao, Zhewei; Ruwase, Olatunji; Chen, Beidi; Wu, Xiaoxia; Wang, Zhangyang 
+Zhang, Zhenyu; Chen, Runjin; Liu, Shiwei; Yao, Zhewei; Ruwase, Olatunji; Chen, Beidi; Wu, Xiaoxia; Wang, Zhangyang	 
 NeurIPS2024
 
 **[TriForce: Lossless Acceleration of Long Sequence Generation with Hierarchical Speculative Decoding](https://arxiv.org/abs/2404.11912)**  
-Sun, Hanshi; Chen, Zhuoming; Yang, Xinyu; Tian, Yuandong; Chen, Beidi  
+Sun, Hanshi; Chen, Zhuoming; Yang, Xinyu; Tian, Yuandong; Chen, Beidi	 
 COLM2024
 
 **[Prompt-prompted Mixture of Experts for Efficient LLM Generation](https://arxiv.org/abs/2404.01365)**  
