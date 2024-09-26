@@ -9,7 +9,7 @@ permalink: /publications/
 ## Preprints
 
 **[MagicDec: Breaking the Latency-Throughput Tradeoff for Long Context Generation with Speculative Decoding](https://arxiv.org/abs/2408.11049)**  
-Chen, Jian*; Tiwari, Vashisth*; Sadhukhan, Ranajoy*; Chen, Zhuoming; Shi, Jinyuan; Yen, Ian En-Hsu; Chen, Beidi
+Chen, Jian\*; Tiwari, Vashisth\*; Sadhukhan, Ranajoy\*; Chen, Zhuoming; Shi, Jinyuan; Yen, Ian En-Hsu; Chen, Beidi
 
 **[Zeroth-Order Fine-Tuning of LLMs with Extreme Sparsity](https://arxiv.org/abs/2406.02913)**  
 Guo, Wentao; Long, Jikai; Zeng, Yimeng; Liu, Zirui; Yang, Xinyu; Ran, Yide; Gardner, Jacob R; Bastani, Osbert; De Sa, Christopher; Yu, Xiaodong; Chen, Beidi; Xu, Zhaozhuo 
@@ -27,7 +27,7 @@ Cohen, Andrew; Dou, Weiping; Zhu, Jiang; Koziel, Slawomir; Renner, Peter; Mattss
 
 
 **[Sequoia: Scalable, Robust, and Hardware-aware Speculative Decoding](https://arxiv.org/abs/2402.12374)**    
-Chen, Zhuoming*; May, Avner*; Svirschevski, Ruslan*; Huang, Yuhsun; Ryabinin, Max; Jia, Zhihao; Chen, Beidi 	  
+Chen, Zhuoming\*; May, Avner\*; Svirschevski, Ruslan\*; Huang, Yuhsun; Ryabinin, Max; Jia, Zhihao; Chen, Beidi 	  
 NeurIPS2024 (<font color=Red>Spotlight</font>)
 
 **[Sirius: Contextual Sparsity with Correction for Efficient LLMs](https://www.arxiv.org/pdf/2409.03856)**  
