@@ -30,11 +30,11 @@ Cohen, Andrew; Dou, Weiping; Zhu, Jiang; Koziel, Slawomir; Renner, Peter; Mattss
 Chen, Zhuoming\*; May, Avner\*; Svirschevski, Ruslan\*; Huang, Yuhsun; Ryabinin, Max; Jia, Zhihao; Chen, Beidi 	  
 NeurIPS2024 (<font color=Red>Spotlight</font>)
 
-**[Sirius: Contextual Sparsity with Correction for Efficient LLMs](https://www.arxiv.org/pdf/2409.03856)**  
+**[Sirius: Contextual Sparsity with Correction for Efficient LLMs](https://www.arxiv.org/pdf/2409.03856)**      
 Zhou, Yang; Chen, Zhuoming; Xu, Zhaozhuo; Lin, Victoria; Chen, Beidi		  
 NeurIPS2024
 	
-**[S2FT: Efficient, Scalable and Generalizable LLM Fine-tuning by Structured Sparsity]()**
+**[S2FT: Efficient, Scalable and Generalizable LLM Fine-tuning by Structured Sparsity]()**    
 Yang, Xinyu; Leng, Jixuan; Guo, Geyang; Zhao, Jiawei; Nakada, Ryumei; Zhang, Linjun; Yao Huaxiu; Chen Beidi	  
 NeurIPS2024
 
@@ -50,7 +50,7 @@ NeurIPS2024
 Ma, Xuezhe; Yang, Xiaomeng; Xiong, Wenhan; Chen, Beidi; Yu, Lili; Zhang, Hao; May, Jonathan; Zettlemoyer, Luke; Levy, Omer; Zhou, Chunting		  
 NeurIPS2024
 
-**[Mini-Sequence Transformer: Optimizing Intermediate Memory for Long Sequences Training](https://www.arxiv.org/abs/2407.15892)**
+**[Mini-Sequence Transformer: Optimizing Intermediate Memory for Long Sequences Training](https://www.arxiv.org/abs/2407.15892)**    
 Luo Cheng; Zhao, Jiawei; Chen, Zhuoming; Chen, Beidi; Anandkumar, Anima		  
 NeurIPS2024
 
@@ -58,7 +58,7 @@ NeurIPS2024
 Li, Minghan; Chen, Xilun; Holtzman, Ari; Chen, Beidi; Lin, Jimmy; Yih, Wen-tau; Lin, Xi Victoria	 	  
 NeurIPS2024
 
-**[Who Needs Features? On the Surprising Effectiveness of Attention Transfer for Vision Transformers]()**
+**[Who Needs Features? On the Surprising Effectiveness of Attention Transfer for Vision Transformers]()**    
 Li, Alexander, Cong; Tian, Yuandong; Chen, Beidi; Pathak, Deepak; Chen, Xinlei		  
 NeurIPS2024
 
