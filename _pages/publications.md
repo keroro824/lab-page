@@ -8,6 +8,10 @@ permalink: /publications/
 
 ## Preprints
 
+**[MagicPIG: LSH Sampling for Efficient LLM Generation](https://arxiv.org/abs/2410.16179)**  
+Chen, Zhuoming; Sadhukhan, Ranajoy; Ye, Zihao; Zhou, Yang; Zhang, Jianyu; Nolte, Niklas; Tian, Yuandong; Douze Matthijs;  Bottou, Leon; Jia, Zhihao; Chen, Beidi        
+
+
 **[MagicDec: Breaking the Latency-Throughput Tradeoff for Long Context Generation with Speculative Decoding](https://arxiv.org/abs/2408.11049)**  
 Chen, Jian\*; Tiwari, Vashisth\*; Sadhukhan, Ranajoy\*; Chen, Zhuoming; Shi, Jinyuan; Yen, Ian En-Hsu; Chen, Beidi
 
