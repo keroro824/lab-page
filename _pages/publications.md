@@ -8,6 +8,9 @@ permalink: /publications/
 
 ## Preprints
 
+**[ShadowKV: KV Cache in Shadows for High-Throughput Long-Context LLM Inference](https://arxiv.org/abs/2410.21465)**  
+Sun, Hanshi; Chang, Li-Wen; Bao, Wenlei; Zheng, Size; Zheng, Ningxin; Liu, Xin; Dong, Harry; Chi, Yuejie; Chen, Beidi        
+
 **[MagicPIG: LSH Sampling for Efficient LLM Generation](https://arxiv.org/abs/2410.16179)**  
 Chen, Zhuoming; Sadhukhan, Ranajoy; Ye, Zihao; Zhou, Yang; Zhang, Jianyu; Nolte, Niklas; Tian, Yuandong; Douze, Matthijs;  Bottou, Leon; Jia, Zhihao; Chen, Beidi        
 
