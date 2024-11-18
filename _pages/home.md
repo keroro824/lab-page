@@ -7,7 +7,7 @@ permalink: /
 ---
 
 ### About PI
-**Beidi Chen** is an Assistant Professor at Carnegie Mellon University and a Research Scientist at FAIR. Before that, she was a postdoctoral scholar at Stanford University. She received her Ph.D. from Rice University. 
+**Beidi Chen** is an Assistant Professor at Carnegie Mellon University. Previously, she was a visiting Research Scientist at FAIR. Before that, she was a postdoctoral scholar at Stanford University. She received her Ph.D. from Rice University. 
 
 Her research focuses on efficient AI; specifically, she designs and optimizes algorithms on current hardware to accelerate large machine learning systems. Her work has won best paper runner-up at ICML 2022 and she was selected as a Rising Star in EECS by MIT and UIUC.
 
