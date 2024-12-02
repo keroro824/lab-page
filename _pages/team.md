@@ -8,7 +8,7 @@ permalink: /people/
 
 # Group Members
 
- **We are  looking for new PhD students, Postdocs, and Master students to join the team** [(see openings)](https://preminstrel.com/lab-page/vacancies) **!**
+ **We are  looking for new PhD students, Postdocs, and Master students to join the team** [(see openings)](https://keroro824.github.io/lab-page/vacancies) **!**
 
 {% assign number_printed = 0 %}
 {% for member in site.data.team_members %}
