@@ -1,6 +1,6 @@
 - title: "S2FT: Efficient, Scalable and Generalizable LLM Fine-tuning by Structured Sparsity"
   image: S2FT.png
-  description: S2FT is a novel PEFT family for LLMs that achieves high quality, efficient training, and scalable serving simutaneously. Compared to LoRA, S2FT offers several key advantages: (i) improved OOD performance, (2) enhanced training efficiency (time & memory), (3) better serving scalability (adapter fusion/switch/parallelism). These features are particularly valuable in real-world, large-scale PEFT scenarios for LLMs.
+  description: S2FT is a novel PEFT family for LLMs that achieves high quality, efficient training, and scalable serving simutaneously. Compared to LoRA, S2FT offers several key advantages, including (i) improved OOD performance, (2) enhanced training efficiency (time & memory), (3) better serving scalability (adapter fusion/switch/parallelism). These features are particularly valuable in real-world, large-scale PEFT scenarios for LLMs.
   authors: Xinyu Yang, Jixuan Leng, Geyang Guo, Jiawei Zhao, Ryumei Nakada, Linjun Zhang, Huaxiu Yao, Beidi Chen
   link:
     url: https://arxiv.org/abs/2402.12374
