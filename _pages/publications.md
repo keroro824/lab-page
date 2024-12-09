@@ -41,7 +41,7 @@ NeurIPS2024 (<font color=Red>Spotlight</font>)
 Zhou, Yang; Chen, Zhuoming; Xu, Zhaozhuo; Lin, Victoria; Chen, Beidi		  
 NeurIPS2024
 	
-**[S2FT: Efficient, Scalable and Generalizable LLM Fine-tuning by Structured Sparsity]()**    
+**[S$^2$FT: Efficient, Scalable and Generalizable LLM Fine-tuning by Structured Sparsity]()**    
 Yang, Xinyu; Leng, Jixuan; Guo, Geyang; Zhao, Jiawei; Nakada, Ryumei; Zhang, Linjun; Yao Huaxiu; Chen Beidi	  
 NeurIPS2024
 
@@ -228,4 +228,4 @@ Chen, Kaifei; He, Siyuan; Chen, Beidi; Kolb, John; Katz, Randy H; Culler, David 
 Proceedings of the 2015 Workshop on IoT challenges in Mobile and Industrial Systems  
 
 
- 
+
