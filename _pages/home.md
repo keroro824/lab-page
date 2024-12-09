@@ -24,19 +24,22 @@ Her research focuses on efficient AI; specifically, she designs and optimizes al
             <img src="https://keroro824.github.io/lab-page/images/MagicDec.png" alt="Slide 1"  style="height:226px" />
         </div>
         <div class="item">
-            <img src="https://keroro824.github.io/lab-page/images/Sirius.png" alt="Slide 2" style="height:226px" />
+            <img src="https://keroro824.github.io/lab-page/images/S2FT.png" alt="Slide 2" style="height:226px" />
         </div>
         <div class="item">
-            <img src="https://preminstrel.com/lab-page/images/TriForce.png" alt="Slide 2"  style="height:226px" />
+            <img src="https://keroro824.github.io/lab-page/images/Sirius.png" alt="Slide 3" style="height:226px" />
         </div>
         <div class="item">
-            <img src="https://preminstrel.com/lab-page/images/Sequoia.jpeg" alt="Slide 3" style="height:226px" />
+            <img src="https://preminstrel.com/lab-page/images/TriForce.png" alt="Slide 4"  style="height:226px" />
         </div>
         <div class="item">
-            <img src="https://preminstrel.com/lab-page/images/memory_breakdown.jpg" alt="Slide 4" style="height:226px" />
+            <img src="https://preminstrel.com/lab-page/images/Sequoia.jpeg" alt="Slide 5" style="height:226px" />
         </div>
         <div class="item">
-            <img src="https://preminstrel.com/lab-page/images/scheme.jpg" alt="Slide 5" style="height:226px" />
+            <img src="https://preminstrel.com/lab-page/images/memory_breakdown.jpg" alt="Slide 6" style="height:226px" />
+        </div>
+        <div class="item">
+            <img src="https://preminstrel.com/lab-page/images/scheme.jpg" alt="Slide 7" style="height:226px" />
         </div>
     </div>
   <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">

@@ -41,8 +41,8 @@ NeurIPS2024 (<font color=Red>Spotlight</font>)
 Zhou, Yang; Chen, Zhuoming; Xu, Zhaozhuo; Lin, Victoria; Chen, Beidi		  
 NeurIPS2024
 	
-**[S$^2$FT: Efficient, Scalable and Generalizable LLM Fine-tuning by Structured Sparsity]()**    
-Yang, Xinyu; Leng, Jixuan; Guo, Geyang; Zhao, Jiawei; Nakada, Ryumei; Zhang, Linjun; Yao Huaxiu; Chen Beidi	  
+**[S2FT: Efficient, Scalable and Generalizable LLM Fine-tuning by Structured Sparsity]()**    
+Yang, Xinyu; Leng, Jixuan; Guo, Geyang; Zhao, Jiawei; Nakada, Ryumei; Zhang, Linjun; Yao, Huaxiu; Chen, Beidi	  
 NeurIPS2024
 
 **[Learn To be Efficient: Build Structured Sparsity in Large Language Models](https://arxiv.org/abs/2402.06126)**    

@@ -1,3 +1,12 @@
+- title: "S2FT: Efficient, Scalable and Generalizable LLM Fine-tuning by Structured Sparsity"
+  image: S2FT.png
+  description: S2FT is a novel PEFT family for LLMs that achieves high quality, efficient training, and scalable serving simutaneously. Compared to LoRA, S2FT offers several key advantages: (i) improved OOD performance, (2) enhanced training efficiency (time & memory), (3) better serving scalability (adapter fusion/switch/parallelism). These features are particularly valuable in real-world, large-scale PEFT scenarios for LLMs.
+  authors: Xinyu Yang, Jixuan Leng, Geyang Guo, Jiawei Zhao, Ryumei Nakada, Linjun Zhang, Huaxiu Yao, Beidi Chen
+  link:
+    url: https://arxiv.org/abs/2402.12374
+    blog: https://infini-ai-lab.github.io/S2FT-Page/
+    display: Arxiv
+  highlight: 1
 - title: "Sirius: Contextual Sparsity with Correction for Efficient LLMs"
   image: Sirius.png
   description: Contextual Sparsity (CS) is appealing for its training-free nature and its ability to reach a higher compression ratio seemingly without quality degradation. However, in this paper, we find that although CS succeeds in prompt-understanding tasks, CS significantly degrades the model performance for reasoning, deduction, and knowledge-based tasks. This paper introduces Sirius, an efficient correction mechanism, which significantly recovers CS models quality on reasoning tasks while maintaining its efficiency gain. We comprehensively evaluate Sirius on 6 models across 8 complex generation tasks. Also, we develop system implementation for Sirius to achieve around 20% speedup for Llama-3-8B-Instruct on-chip and 35% on Llama-3-70B-Instruct offloading. 
