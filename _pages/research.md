@@ -19,17 +19,19 @@ Example recent work:
 
 [1] Sequoia: Scalable, Robust, and Hardware-aware Speculative Decoding. 2024 
 
-[2] HexGen: Generative Inference of Large-Scale Foundation Model over Heterogeneous Decentralized Environment
+[2] S2FT: Efficient, Scalable and Generalizable LLM Fine-tuning by Structured Sparsity. 2024
 
-[3] Prompt-prompted Mixture of Experts for Efficient LLM Generation. 2024
+[3] HexGen: Generative Inference of Large-Scale Foundation Model over Heterogeneous Decentralized Environment
 
-[4] GaLore: Memory-Efficient LLM Training by Gradient Low-Rank Projection. 2024
+[4] Prompt-prompted Mixture of Experts for Efficient LLM Generation. 2024
 
-[5] Deja Vu: Contextual Sparsity for Efficient LLMs at Inference Time. 2023
+[5] GaLore: Memory-Efficient LLM Training by Gradient Low-Rank Projection. 2024
 
-[6] FlexGen: High-Throughput Generative Inference of Large Language Models with a Single GPU. 2023
+[6] Deja Vu: Contextual Sparsity for Efficient LLMs at Inference Time. 2023
 
-[7] Fine-tuning Language Models over Slow Networks using Activation Compression with Guarantees. 2023
+[7] FlexGen: High-Throughput Generative Inference of Large Language Models with a Single GPU. 2023
+
+[8] Fine-tuning Language Models over Slow Networks using Activation Compression with Guarantees. 2023
 
 ## Long-context modeling and generation
 Enable functionality of long-context modeling, e.g., efficiency in fine tuning and serving, extrapolation ability, no context left behind
