@@ -1,5 +1,5 @@
 - title: "MagicPIG: LSH Sampling for Efficient LLM Generation"
-  image: S2FT.png
+  image: MagicPIG.png
   description: MagicPIG leverages sampling for efficient attention estimation, utilizing CPUs as augmented memory to significantly enhance inference throughput. This approach stands out by combining computational efficiency with scalability, making it well-suited for handling resource-intensive tasks. Unlike conventional TopK attention mechanisms, which can struggle with maintaining both precision and performance as context lengths grow, MagicPIG excels in processing complex tasks such as long-context reasoning. By effectively distributing memory and computation between CPUs and accelerators, MagicPIG not only ensures high throughput but also maintains the fidelity of attention mechanisms over extended sequences.
   link:
     url: https://arxiv.org/abs/2410.16179
