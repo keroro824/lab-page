@@ -1,7 +1,13 @@
 - name: <a href="https://www.andrew.cmu.edu/user/beidic/">Beidi Chen</a>
   photo: beidichen.png
-  info: Assistant professor
+  info: Assistant Professor
   email: beidic@andrew.cmu.edu
+  number_educ: 0
+
+- name: <a href="http://zhenghaizhong.com/">Haizhong Zheng</a>
+  photo: Haizhong.jpeg
+  info: Postdoctoral Researcher
+  email: haizhonz@andrew.cmu.edu
   number_educ: 0
 
 - name: <a href="https://dreaming-panda.github.io/">Zhuoming Chen</a>
