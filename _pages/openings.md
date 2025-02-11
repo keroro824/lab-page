@@ -8,7 +8,7 @@ permalink: /vacancies
 
 # Open positions
 
-**We are currently open for PhD and postdoc applications.**
+**We are currently open for intern, PhD, and postdoc applications.**
 Apply by filling in our [application form](https://docs.google.com/forms/d/e/1FAIpQLSfMJwpRMARPuwhzuoPo_76VrGPq84FkFrFNAnp3P17ITyxF9Q/viewform?usp=pp_url
 ).
 
