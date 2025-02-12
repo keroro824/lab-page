@@ -35,6 +35,10 @@ ICLR2025 (<font color=Red>Spotlight</font>)
 Chen, Jian\*; Tiwari, Vashisth\*; Sadhukhan, Ranajoy\*; Chen, Zhuoming; Shi, Jinyuan; Yen, Ian En-Hsu; Chen, Beidi    
 ICLR2025  
 
+**[Memory Mosaics](https://arxiv.org/abs/2405.06394)**     
+Zhang, Jianyu; Niklas, Nolte; Sadhukhan Ranajoy; Chen, Beidi; Bottou, Léon       
+
+
 **[Zeroth-Order Fine-Tuning of LLMs with Extreme Sparsity](https://arxiv.org/abs/2406.02913)**  
 Guo, Wentao; Long, Jikai; Zeng, Yimeng; Liu, Zirui; Yang, Xinyu; Ran, Yide; Gardner, Jacob R; Bastani, Osbert; De Sa, Christopher; Yu, Xiaodong; Chen, Beidi; Xu, Zhaozhuo  
 ICLR2025   
