@@ -8,7 +8,7 @@ permalink: /publications/
 
 ## Preprints
 
-**[GSM-\(\infty\): How Do Your LLMs Behave over Infinitely Increasing Context Length and Reasoning Complexity?]**   
+**[GSM-$\infty$: How Do Your LLMs Behave over Infinitely Increasing Context Length and Reasoning Complexity?]**   
 Zhou, Yang; Liu, Hongyi; Chen, Zhuoming; Tian, Yuandong, Chen, Beidi    
 
 **[ShadowKV: KV Cache in Shadows for High-Throughput Long-Context LLM Inference](https://arxiv.org/abs/2410.21465)**  
