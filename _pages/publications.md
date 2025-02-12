@@ -10,17 +10,6 @@ permalink: /publications/
 
 **[ShadowKV: KV Cache in Shadows for High-Throughput Long-Context LLM Inference](https://arxiv.org/abs/2410.21465)**  
 Sun, Hanshi; Chang, Li-Wen; Bao, Wenlei; Zheng, Size; Zheng, Ningxin; Liu, Xin; Dong, Harry; Chi, Yuejie; Chen, Beidi        
-
-**[MagicPIG: LSH Sampling for Efficient LLM Generation](https://arxiv.org/abs/2410.16179)**  
-Chen, Zhuoming; Sadhukhan, Ranajoy; Ye, Zihao; Zhou, Yang; Zhang, Jianyu; Nolte, Niklas; Tian, Yuandong; Douze, Matthijs;  Bottou, Leon; Jia, Zhihao; Chen, Beidi        
-
-
-**[MagicDec: Breaking the Latency-Throughput Tradeoff for Long Context Generation with Speculative Decoding](https://arxiv.org/abs/2408.11049)**  
-Chen, Jian\*; Tiwari, Vashisth\*; Sadhukhan, Ranajoy\*; Chen, Zhuoming; Shi, Jinyuan; Yen, Ian En-Hsu; Chen, Beidi
-
-**[Zeroth-Order Fine-Tuning of LLMs with Extreme Sparsity](https://arxiv.org/abs/2406.02913)**  
-Guo, Wentao; Long, Jikai; Zeng, Yimeng; Liu, Zirui; Yang, Xinyu; Ran, Yide; Gardner, Jacob R; Bastani, Osbert; De Sa, Christopher; Yu, Xiaodong; Chen, Beidi; Xu, Zhaozhuo 
-
 **[LLM Inference Unveiled: Survey and Roofline Model Insights](https://arxiv.org/abs/2402.16363)**    
 Yuan, Zhihang; Shang, Yuzhang; Zhou, Yang; Dong, Zhen; Xue, Chenhao; Wu, Bingzhe; Li, Zhikai; Gu, Qingyi; Lee, Yong Jae Yan, Yan; Chen, Beidi; Sun, Guangyu; Keutzer, Kurt 
 
@@ -32,6 +21,17 @@ Cohen, Andrew; Dou, Weiping; Zhu, Jiang; Koziel, Slawomir; Renner, Peter; Mattss
 
 ## Publications
 
+**[MagicPIG: LSH Sampling for Efficient LLM Generation](https://arxiv.org/abs/2410.16179)**  
+Chen, Zhuoming; Sadhukhan, Ranajoy; Ye, Zihao; Zhou, Yang; Zhang, Jianyu; Nolte, Niklas; Tian, Yuandong; Douze, Matthijs;  Bottou, Leon; Jia, Zhihao; Chen, Beidi        
+ICLR2025 (<font color=Red>Spotlight</font>) 
+
+**[MagicDec: Breaking the Latency-Throughput Tradeoff for Long Context Generation with Speculative Decoding](https://arxiv.org/abs/2408.11049)**  
+Chen, Jian\*; Tiwari, Vashisth\*; Sadhukhan, Ranajoy\*; Chen, Zhuoming; Shi, Jinyuan; Yen, Ian En-Hsu; Chen, Beidi 
+ICLR2025  
+
+**[Zeroth-Order Fine-Tuning of LLMs with Extreme Sparsity](https://arxiv.org/abs/2406.02913)**  
+Guo, Wentao; Long, Jikai; Zeng, Yimeng; Liu, Zirui; Yang, Xinyu; Ran, Yide; Gardner, Jacob R; Bastani, Osbert; De Sa, Christopher; Yu, Xiaodong; Chen, Beidi; Xu, Zhaozhuo  
+ICLR2025   
 
 **[Sequoia: Scalable, Robust, and Hardware-aware Speculative Decoding](https://arxiv.org/abs/2402.12374)**    
 Chen, Zhuoming\*; May, Avner\*; Svirschevski, Ruslan\*; Huang, Yuhsun; Ryabinin, Max; Jia, Zhihao; Chen, Beidi 	  
