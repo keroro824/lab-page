@@ -35,6 +35,9 @@ ICLR2025 (<font color=Red>Spotlight</font>)
 Chen, Jian\*; Tiwari, Vashisth\*; Sadhukhan, Ranajoy\*; Chen, Zhuoming; Shi, Jinyuan; Yen, Ian En-Hsu; Chen, Beidi    
 ICLR2025  
 
+**[APE: Faster and Longer Context-Augmented Generation via Adaptive Parallel Encoding](https://arxiv.org/abs/2502.05431)**  
+Yang, Xinyu; Chen, Tianqi; Chen Beidi    
+
 **[Memory Mosaics](https://arxiv.org/abs/2405.06394)**     
 Zhang, Jianyu; Niklas, Nolte; Sadhukhan Ranajoy; Chen, Beidi; Bottou, Léon  
 ICLR2025     
