@@ -3,7 +3,7 @@ title: "InfiniAI Lab - Publications"
 layout: gridlay
 excerpt: "InfiniAI Lab -- Publications."
 sitemap: false
-permalink: /publications/
+permalink: /publications_old/
 ---
 
 ## Preprints
