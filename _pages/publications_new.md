@@ -32,11 +32,11 @@ permalink: /publications/
             <span class="authors">
                 Zhou, Yang; Liu, Hongyi; Chen, Zhuoming; Tian, Yuandong; Chen, Beidi
             </span><br />
-            <span class="venuetype"></span><span class="venue">Preprints</span> 
+            <span class="venuetype"></span><span class="venue">Preprints</span>
             <br />
         </td>
     </tr>
-    
+
     <tr>
         <td>
             <span class="date">
@@ -52,11 +52,11 @@ permalink: /publications/
             <span class="authors">
                 Sun, Hanshi; Chang, Li-Wen; Bao, Wenlei; Zheng, Size; Zheng, Ningxin; Liu, Xin; Dong, Harry; Chi, Yuejie; Chen, Beidi
             </span><br />
-            <span class="venuetype"></span><span class="venue">Preprints</span> 
+            <span class="venuetype"></span><span class="venue">Preprints</span>
             <br />
         </td>
     </tr>
-    
+
     <tr>
         <td>
             <span class="date">
@@ -72,11 +72,11 @@ permalink: /publications/
             <span class="authors">
                 Yuan, Zhihang; Shang, Yuzhang; Zhou, Yang; Dong, Zhen; Xue, Chenhao; Wu, Bingzhe; Li, Zhikai; Gu, Qingyi; Lee, Yong Jae; Yan, Yan; Chen, Beidi; Sun, Guangyu; Keutzer, Kurt
             </span><br />
-            <span class="venuetype"></span><span class="venue">Preprints</span> 
+            <span class="venuetype"></span><span class="venue">Preprints</span>
             <br />
         </td>
     </tr>
-    
+
     <tr>
         <td>
             <span class="date">
@@ -92,11 +92,11 @@ permalink: /publications/
             <span class="authors">
                 Zhao, Jiawei; Zhang, Yifei; Chen, Beidi; Schäfer, Florian; Anandkumar, Anima
             </span><br />
-            <span class="venuetype"></span><span class="venue">Preprints</span> 
+            <span class="venuetype"></span><span class="venue">Preprints</span>
             <br />
         </td>
     </tr>
-    
+
     <tr>
         <td>
             <span class="date">
@@ -112,7 +112,7 @@ permalink: /publications/
             <span class="authors">
                 Cohen, Andrew; Dou, Weiping; Zhu, Jiang; Koziel, Slawomir; Renner, Peter; Mattsson, Jan-Ove; Yang, Xiaomeng; Chen, Beidi; Stone, Kevin; Tian, Yuandong
             </span><br />
-            <span class="venuetype"></span><span class="venue">Preprints</span> 
+            <span class="venuetype"></span><span class="venue">Preprints</span>
             <br />
         </td>
     </tr>
@@ -138,7 +138,7 @@ permalink: /publications/
                 <span class="authors">
                     Chen, Zhuoming; Sadhukhan, Ranajoy; Ye, Zihao; Zhou, Yang; Zhang, Jianyu; Nolte, Niklas; Tian, Yuandong; Douze, Matthijs; Bottou, Leon; Jia, Zhihao; Chen, Beidi
                 </span><br />
-                <span class="venuetype"></span><span class="venue">ICLR 2025</span> 
+                <span class="venuetype"></span><span class="venue">ICLR 2025</span>
                 <span style="color:red; font-weight:bold;">(Spotlight)</span>.
             </td>
         </tr>
@@ -234,7 +234,7 @@ permalink: /publications/
                 <span class="authors">
                     Chen, Zhuoming*; May, Avner*; Svirschevski, Ruslan*; Huang, Yuhsun; Ryabinin, Max; Jia, Zhihao; Chen, Beidi
                 </span><br />
-                <span class="venuetype"></span><span class="venue">NeurIPS 2024</span> 
+                <span class="venuetype"></span><span class="venue">NeurIPS 2024</span>
                 <span style="color:red; font-weight:bold;">(Spotlight)</span>.
             </td>
         </tr>
@@ -292,7 +292,7 @@ permalink: /publications/
                 <span class="authors">
                     Zheng, Haizhong; Bai, Xiaoyan; Chen, Beidi; Lai, Fan; Prakash, Atul
                 </span><br />
-                <span class="venuetype"></span><span class="venue">NeurIPS 2024</span> 
+                <span class="venuetype"></span><span class="venue">NeurIPS 2024</span>
                 <span style="color:red; font-weight:bold;">(Spotlight)</span>.
             </td>
         </tr>
@@ -426,7 +426,23 @@ permalink: /publications/
                 <span class="authors">
                     Sun, Hanshi; Chen, Zhuoming; Yang, Xinyu; Tian, Yuandong; Chen, Beidi
                 </span><br />
-                <span class="venuetype"></span><span class="venue">COLM 2024</span>.
+                <span class="venuetype"></span><span class="venue">COLM 2024</span><br />
+
+                <a href="https://infini-ai-lab.github.io/TriForce/" target="_blank" style="text-decoration: none; color: #418ab6; display: inline-flex; align-items: center; margin-right: 10px;">
+                    <img src="../images/iconpic/web-icon.png" width="20" height="20" alt="Web" style="margin: 0; box-shadow: none; vertical-align: middle;">
+                    <span style="position: relative; top: 1px; margin-left: 3px;">Website</span>
+                </a>
+
+                <a href="https://arxiv.org/pdf/2404.11912" target="_blank" style="text-decoration: none; color: #418ab6; display: inline-flex; align-items: center; margin-right: 10px;">
+                    <img src="../images/iconpic/pdf-icon.jpg" width="20" height="20" alt="PDF" style="margin: 0; box-shadow: none; vertical-align: middle;">
+                    <span style="position: relative; top: 1px; margin-left: 3px;">PDF</span>
+                </a>
+
+                <a href="https://github.com/Infini-AI-Lab/TriForce/tree/main" target="_blank" style="text-decoration: none; color: #418ab6; display: inline-flex; align-items: center; margin-right: 10px;">
+                    <img src="../images/iconpic/code-icon.jpg" width="20" height="20" alt="Code" style="margin: 0; box-shadow: none; vertical-align: middle;">
+                    <span style="position: relative; top: 1px; margin-left: 3px;">Code</span>
+                </a>
+
             </td>
         </tr>
 
@@ -464,11 +480,11 @@ permalink: /publications/
                 <span class="authors">
                     Zhao, Jiawei; Zhang, Zhenyu; Chen, Beidi; Wang, Zhangyang; Anandkumar, Anima; Tian, Yuandong
                 </span><br />
-                <span class="venuetype"></span><span class="venue">ICML 2024</span> 
+                <span class="venuetype"></span><span class="venue">ICML 2024</span>
                 <span style="color:red; font-weight:bold;">(Oral)</span>.
             </td>
         </tr>
-        
+
         <tr>
             <td>
                 <span class="date">
@@ -677,7 +693,7 @@ permalink: /publications/
                 <br />
             </td>
         </tr>
-        
+
         <tr>
             <td>
                 <span class="date">
@@ -697,7 +713,7 @@ permalink: /publications/
                 <br />
             </td>
         </tr>
-        
+
         <tr>
             <td>
                 <span class="date">
@@ -717,7 +733,7 @@ permalink: /publications/
                 <br />
             </td>
         </tr>
-        
+
         <tr>
             <td>
                 <span class="date">
@@ -737,7 +753,7 @@ permalink: /publications/
                 <br />
             </td>
         </tr>
-        
+
         <tr>
             <td>
                 <span class="date">
@@ -757,7 +773,7 @@ permalink: /publications/
                 <br />
             </td>
         </tr>
-        
+
         <tr>
             <td>
                 <span class="date">
@@ -796,7 +812,7 @@ permalink: /publications/
                 <br />
             </td>
         </tr>
-        
+
         <tr>
             <td>
                 <span class="date">
@@ -816,7 +832,7 @@ permalink: /publications/
                 <br />
             </td>
         </tr>
-        
+
         <tr>
             <td>
                 <span class="date">
@@ -836,7 +852,7 @@ permalink: /publications/
                 <br />
             </td>
         </tr>
-        
+
         <tr>
             <td>
                 <span class="date">
@@ -856,7 +872,7 @@ permalink: /publications/
                 <br />
             </td>
         </tr>
-        
+
         <tr>
             <td>
                 <span class="date">
@@ -895,7 +911,7 @@ permalink: /publications/
                 <br />
             </td>
         </tr>
-        
+
         <tr>
             <td>
                 <span class="date">
@@ -915,7 +931,7 @@ permalink: /publications/
                 <br />
             </td>
         </tr>
-        
+
         <tr>
             <td>
                 <span class="date">
@@ -935,7 +951,7 @@ permalink: /publications/
                 <br />
             </td>
         </tr>
-        
+
         <tr>
             <td>
                 <span class="date">
@@ -955,7 +971,7 @@ permalink: /publications/
                 <br />
             </td>
         </tr>
-        
+
         <tr>
             <td>
                 <span class="date">
@@ -975,7 +991,7 @@ permalink: /publications/
                 <br />
             </td>
         </tr>
-        
+
         <tr>
             <td>
                 <span class="date">
@@ -1014,7 +1030,7 @@ permalink: /publications/
                 <br />
             </td>
         </tr>
-        
+
         <tr>
             <td>
                 <span class="date">
@@ -1034,7 +1050,7 @@ permalink: /publications/
                 <br />
             </td>
         </tr>
-        
+
         <tr>
             <td>
                 <span class="date">
@@ -1054,7 +1070,7 @@ permalink: /publications/
                 <br />
             </td>
         </tr>
-        
+
         <tr>
             <td>
                 <span class="date">
@@ -1074,7 +1090,7 @@ permalink: /publications/
                 <br />
             </td>
         </tr>
-        
+
         <tr>
             <td>
                 <span class="date">
@@ -1094,7 +1110,7 @@ permalink: /publications/
                 <br />
             </td>
         </tr>
-        
+
         <tr>
             <td>
                 <span class="date">
@@ -1113,6 +1129,6 @@ permalink: /publications/
                 <span class="venuetype"></span><span class="venue"><strong>LISA 2014</strong> <span style="color:red; font-weight:bold;">(Best Student Paper)</span></span>
                 <br />
             </td>
-        </tr>        
+        </tr>
 </tbody>
 </table>
