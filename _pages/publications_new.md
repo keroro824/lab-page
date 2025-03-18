@@ -175,7 +175,7 @@ permalink: /publications/
                     <a href="https://arxiv.org/abs/2502.05431">APE: Faster and Longer Context-Augmented Generation via Adaptive Parallel Encoding</a>.
                 </span><br />
                 <span class="authors">
-                    Yang, Xinyu; Chen, Tianqi; Chen Beidi
+                    Yang, Xinyu; Chen, Tianqi; Chen, Beidi
                 </span><br />
                 <span class="venuetype"></span><span class="venue">ICLR 2025</span>.
             </td>
