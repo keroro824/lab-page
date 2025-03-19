@@ -1,5 +1,5 @@
 - title: "GSM-Infinite: How Do Your LLMs Behave over Infinitely Increasing Context Length and Reasoning Complexity?"
-  image: GSM-Infinite.png
+  image: GSM-infinite.png
   description: We develop GSM-infinite, a grade-school math problem generator capable of producing arithmetic problems with infinite difficulty and context length under fine-grained control. GSM-infinite benchmark provides a scalable and controllable testbed for quantitatively evaluating and advancing LLM reasoning abilities with increasing reasoning difficulty and increasing context length. Specifically, we found these observations. 1. LLMs reasoning performance drops exponentially (sigmoid on realistic context) as reasoning complexity increases. 2. LLMs reasoning performance sharply decreases when context length increases. 3. LLMs consistently better at forward-thinking problems (constructive logic) than backward-thinking problems given the same reasoning complexity. 4. When we scale repeated sampling computation exponentially, LLM performance on GSM-infinite grows linearly.
   authors: Yang Zhou, Hongyi Liu, Zhuoming Chen, Yuandong Tian, Beidi Chen
   link:
