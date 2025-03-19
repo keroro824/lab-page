@@ -60,15 +60,17 @@ New paradigm of LLM serving, e.g., plugin contextual - persistent memory for tas
 
 Example recent work:
 
-[1] Memory Mosaics: Semi-parametric LLMs. 2024
+[1] APE: Faster and Longer Context-Augmented Generation via Adaptive Parallel Encoding. 2024
 
-[2] Learn To be Efficient: Build Structured Sparsity in Large Language Models. 2024
+[2] Memory Mosaics: Semi-parametric LLMs. 2024
 
-[3] HALOS: Hashing Large Output Space for Cheap Inference. 2022
+[3] Learn To be Efficient: Build Structured Sparsity in Large Language Models. 2024
 
-[4] MONGOOSE: A Learnable LSH Framework for Efficient Neural Network Training. 2021
+[4] HALOS: Hashing Large Output Space for Cheap Inference. 2022
 
-[5] SLIDE: In Defense of Smart Algorithms over Hardware Acceleration for Large-Scale Deep Learning Systems. 2020
+[5] MONGOOSE: A Learnable LSH Framework for Efficient Neural Network Training. 2021
+
+[6] SLIDE: In Defense of Smart Algorithms over Hardware Acceleration for Large-Scale Deep Learning Systems. 2020
 
 ## Enhancing Model’s Lookahead Planning and Reasoning Abilities 
 Design new tasks and weakly supervised data collection algorithms for enhancing LLM abilities, e.g., RL, synthetic data, simulated world environment … 
