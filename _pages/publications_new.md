@@ -99,7 +99,7 @@ permalink: /publications/
                     Sun, Hanshi; Chang, Li-Wen; Bao, Wenlei; Zheng, Size; Zheng, Ningxin; Liu, Xin; Dong, Harry; Chi, Yuejie; Chen, Beidi
                 </span><br />
                 <span class="venuetype"></span><span class="venue">ICML 2025</span>
-                <span style="color:red; font-weight:bold;">Spotlight/Oral</span> 
+                <span style="color:red; font-weight:bold;">(Spotlight/Oral)</span> 
                 <br />
             </td>
         </tr>
