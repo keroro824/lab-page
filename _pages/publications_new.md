@@ -20,46 +20,6 @@ permalink: /publications/
     <tr>
         <td>
             <span class="date">
-                <big><strong>2025</strong></big>
-                <br />
-                February
-            </span>
-        </td>
-        <td class="publication">
-            <span class="pubtitle">
-                <a href="https://www.arxiv.org/abs/2502.05252"><strong>GSM-Infinite: How Do Your LLMs Behave over Infinitely Increasing Context Length and Reasoning Complexity?</strong></a>.
-            </span><br />
-            <span class="authors">
-                Zhou, Yang; Liu, Hongyi; Chen, Zhuoming; Tian, Yuandong; Chen, Beidi
-            </span><br />
-            <span class="venuetype"></span><span class="venue">Preprints</span>
-            <br />
-        </td>
-    </tr>
-
-    <tr>
-        <td>
-            <span class="date">
-                <big><strong>2024</strong></big>
-                <br />
-                October
-            </span>
-        </td>
-        <td class="publication">
-            <span class="pubtitle">
-                <a href="https://www.arxiv.org/abs/2410.21465"><strong>ShadowKV: KV Cache in Shadows for High-Throughput Long-Context LLM Inference</strong></a>.
-            </span><br />
-            <span class="authors">
-                Sun, Hanshi; Chang, Li-Wen; Bao, Wenlei; Zheng, Size; Zheng, Ningxin; Liu, Xin; Dong, Harry; Chi, Yuejie; Chen, Beidi
-            </span><br />
-            <span class="venuetype"></span><span class="venue">Preprints</span>
-            <br />
-        </td>
-    </tr>
-
-    <tr>
-        <td>
-            <span class="date">
                 <big><strong>2024</strong></big>
                 <br />
                 February
@@ -123,6 +83,64 @@ permalink: /publications/
 ## Publications
 <table class="table table-pubs">
     <tbody>
+        <tr>
+            <td>
+                <span class="date">
+                    <big><strong>2024</strong></big>
+                    <br />
+                    October
+                </span>
+            </td>
+            <td class="publication">
+                <span class="pubtitle">
+                    <a href="https://www.arxiv.org/abs/2410.21465"><strong>ShadowKV: KV Cache in Shadows for High-Throughput Long-Context LLM Inference</strong></a>.
+                </span><br />
+                <span class="authors">
+                    Sun, Hanshi; Chang, Li-Wen; Bao, Wenlei; Zheng, Size; Zheng, Ningxin; Liu, Xin; Dong, Harry; Chi, Yuejie; Chen, Beidi
+                </span><br />
+                <span class="venuetype"></span><span class="venue">ICML 2025</span>
+                <span style="color:red; font-weight:bold;">Spotlight/Oral</span> 
+                <br />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="date">
+                    <big><strong>2025</strong></big>
+                    <br />
+                    February
+                </span>
+            </td>
+            <td class="publication">
+                <span class="pubtitle">
+                    <a href="https://www.arxiv.org/abs/2502.05252"><strong>GSM-Infinite: How Do Your LLMs Behave over Infinitely Increasing Context Length and Reasoning Complexity?</strong></a>.
+                </span><br />
+                <span class="authors">
+                    Zhou, Yang*; Liu, Hongyi*; Chen, Zhuoming; Tian, Yuandong; Chen, Beidi
+                </span><br />
+                <span class="venuetype"></span><span class="venue">ICML 2025</span>
+                <br />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="date">
+                    <big><strong>2025</strong></big>
+                    <br />
+                    February
+                </span>
+            </td>
+            <td class="publication">
+                <span class="pubtitle">
+                    <a href="https://arxiv.org/pdf/2502.02789"><strong>Speculative Prefill: Turbocharging TTFT with Lightweight and Training-Free Token Importance Estimation</strong></a>.
+                </span><br />
+                <span class="authors">
+                    Liu, Jingyu; Chen, Beidi; Zhang, Ce; 
+                </span><br />
+                <span class="venuetype"></span><span class="venue">ICML 2025</span>
+                <br />
+            </td>
+        </tr>
         <tr>
             <td>
                 <span class="date">
