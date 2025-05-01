@@ -93,7 +93,7 @@ permalink: /publications/
             </td>
             <td class="publication">
                 <span class="pubtitle">
-                    <a href="https://www.arxiv.org/abs/2410.21465"><strong>ShadowKV: KV Cache in Shadows for High-Throughput Long-Context LLM Inference</strong></a>.
+                    <a href="https://www.arxiv.org/abs/2410.21465">ShadowKV: KV Cache in Shadows for High-Throughput Long-Context LLM Inference</a>.
                 </span><br />
                 <span class="authors">
                     Sun, Hanshi; Chang, Li-Wen; Bao, Wenlei; Zheng, Size; Zheng, Ningxin; Liu, Xin; Dong, Harry; Chi, Yuejie; Chen, Beidi
@@ -113,7 +113,7 @@ permalink: /publications/
             </td>
             <td class="publication">
                 <span class="pubtitle">
-                    <a href="https://www.arxiv.org/abs/2502.05252"><strong>GSM-Infinite: How Do Your LLMs Behave over Infinitely Increasing Context Length and Reasoning Complexity?</strong></a>.
+                    <a href="https://www.arxiv.org/abs/2502.05252">GSM-Infinite: How Do Your LLMs Behave over Infinitely Increasing Context Length and Reasoning Complexity?</a>.
                 </span><br />
                 <span class="authors">
                     Zhou, Yang*; Liu, Hongyi*; Chen, Zhuoming; Tian, Yuandong; Chen, Beidi
@@ -132,7 +132,7 @@ permalink: /publications/
             </td>
             <td class="publication">
                 <span class="pubtitle">
-                    <a href="https://arxiv.org/pdf/2502.02789"><strong>Speculative Prefill: Turbocharging TTFT with Lightweight and Training-Free Token Importance Estimation</strong></a>.
+                    <a href="https://arxiv.org/pdf/2502.02789">Speculative Prefill: Turbocharging TTFT with Lightweight and Training-Free Token Importance Estimation</a>.
                 </span><br />
                 <span class="authors">
                     Liu, Jingyu; Chen, Beidi; Zhang, Ce; 
