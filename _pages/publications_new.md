@@ -86,9 +86,9 @@ permalink: /publications/
         <tr>
             <td>
                 <span class="date">
-                    <big><strong>2024</strong></big>
+                    <big><strong>2025</strong></big>
                     <br />
-                    October
+                    July
                 </span>
             </td>
             <td class="publication">
@@ -108,7 +108,7 @@ permalink: /publications/
                 <span class="date">
                     <big><strong>2025</strong></big>
                     <br />
-                    February
+                    July
                 </span>
             </td>
             <td class="publication">
@@ -127,7 +127,7 @@ permalink: /publications/
                 <span class="date">
                     <big><strong>2025</strong></big>
                     <br />
-                    February
+                    July
                 </span>
             </td>
             <td class="publication">
