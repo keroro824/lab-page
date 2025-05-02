@@ -71,5 +71,13 @@ permalink: /people/
 {% endif %}
 
 # Alumni
+<div class="row">
+<div class="col-sm-6 clearfix">
+<p><b>Visitors and Bachelor/ Master students</b></p>
+<p>Hanshi Sun&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Bytedance</p>
+<p>Jian Chen &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; UCSD</p>
+<p>Haoyun Chen &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sakana AI</p>
+</div>
+</div>
 
 
