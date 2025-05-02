@@ -73,15 +73,31 @@ permalink: /people/
 # Alumni
 <div class="row">
 <div class="col-sm-6 clearfix">
-<p><b>Visitors and Bachelor/ Master students and their next steps</b></p>
-<p><span color="blue">Hanshi Sun (MS)</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Bytedance</p>
-<p><span color="blue">Jian Chen (MS)</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PhD at UCSD</p>
-<p><span color="blue">Haoyun Chen (Undergrad)</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PhD at Princeton University (Gap year at Sakana AI)</p>
-<p><span color="blue">Jingwei Zuo (MS)</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PhD at Rice University</p>
-<p><span color="blue">Vashisth Tiwari (MS)</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PhD at CMU</p>
-<p><span color="blue">Chen Li (MS)</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PhD at CMU</p>
-<p><span color="blue">Yiying Luo (MS)</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PhD at CMU</p>
-<p><span color="blue">Wentao Guo (MS)</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PhD at Princeton University</p>
+<p><b style="font-size: 18px;">🎓 Visitors and Bachelor/Master Students and Their Next Steps</b></p>
+
+<p><span style="color:#1a73e8; font-weight:bold;">Hanshi Sun (MS)</span><br>
+➡️ Bytedance</p>
+
+<p><span style="color:#1a73e8; font-weight:bold;">Jian Chen (MS)</span><br>
+➡️ PhD at UCSD</p>
+
+<p><span style="color:#1a73e8; font-weight:bold;">Haoyun Chen (Undergrad)</span><br>
+➡️ PhD at Princeton University (Gap year at Sakana AI)</p>
+
+<p><span style="color:#1a73e8; font-weight:bold;">Jingwei Zuo (MS)</span><br>
+➡️ PhD at Rice University</p>
+
+<p><span style="color:#1a73e8; font-weight:bold;">Vashisth Tiwari (MS)</span><br>
+➡️ PhD at CMU</p>
+
+<p><span style="color:#1a73e8; font-weight:bold;">Chen Li (MS)</span><br>
+➡️ PhD at CMU</p>
+
+<p><span style="color:#1a73e8; font-weight:bold;">Yiying Luo (MS)</span><br>
+➡️ PhD at CMU</p>
+
+<p><span style="color:#1a73e8; font-weight:bold;">Wentao Guo (MS)</span><br>
+➡️ PhD at Princeton University</p>
 
 </div>
 </div>
