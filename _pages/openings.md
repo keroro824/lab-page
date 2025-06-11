@@ -20,4 +20,5 @@ If you are interested in working with us as a PhD student or postdoc, please sen
 
 ### Applications for Internship positions
 If you are interested in working with us as an intern. Please fill out our [application form](https://docs.google.com/forms/d/e/1FAIpQLSfMJwpRMARPuwhzuoPo_76VrGPq84FkFrFNAnp3P17ITyxF9Q/viewform?usp=pp_url
-). Additionally, please also send an email to me and the Ph.D. student(s) or postdoc(s) you are interested in working with, along with the following materials: 1. Your CV; 2. Your transcript; 3. A brief description of your research interests and the directions you'd like to explore. You can also stop by my office if you are a CMU student.
+). Please make sure to submit both your CV and transcript through the form.
+Additionally, please also send an email to me and the Ph.D. student(s) or postdoc(s) you are interested in working with, along with the following materials: 1. Your CV; 2. Your transcript; 3. A brief description of your research interests and the directions you'd like to explore. You can also stop by my office if you are a CMU student.
