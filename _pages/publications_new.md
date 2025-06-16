@@ -30,7 +30,7 @@ permalink: /publications/
                 <a href="https://arxiv.org/pdf/2506.09991"><strong> Multiverse: Your Language Models Secretly Decide How to Parallelize and Merge Generation</strong></a>.
             </span><br />
             <span class="authors">
-                Yang, Xinyu*; An, Yuwei*; Liu, Hongyi; Chen, Tianqi; Chen, Beidi; Sun, Guangyu; Keutzer, Kurt
+                Yang, Xinyu*; An, Yuwei*; Liu, Hongyi; Chen, Tianqi; Chen, Beidi
             </span><br />
             <span class="venuetype"></span><span class="venue">Preprints</span>
             <br />
