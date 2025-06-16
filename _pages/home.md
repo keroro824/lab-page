@@ -21,6 +21,9 @@ Her research focuses on efficient AI; specifically, she designs and optimizes al
     <!-- Items -->
     <div class="carousel-inner" markdown="0">
         <div class="item active">
+            <img src="{{ site.url }}{{ site.baseurl }}/images/Multiverse.gif" alt="Slide 2" style="height:226px" />
+        </div>
+        <div class="item">
             <img src="https://keroro824.github.io/lab-page/images/APE.jpg" alt="Slide 2" style="height:226px" />
         </div>
         <div class="item">
@@ -60,7 +63,7 @@ Her research focuses on efficient AI; specifically, she designs and optimizes al
 
 ### Research
 <div>
-  InfiniAI lab’s research focuses on developing <em>efficient</em> and <em>scalable</em> AI algorithms and systems. Our key areas of focus include:
+  InfiniAI lab's research focuses on developing <em>efficient</em> and <em>scalable</em> AI algorithms and systems. Our key areas of focus include:
   <ul>
     <li style="margin-bottom: 10px;"><i class="fas fa-brain" style="color: #008000"></i> Long-context Multimodal Modeling and Generation</li>
     <li style="margin-bottom: 10px;"><i class="fas fa-cogs" style="color: #808000"></i> Next-Gen Model Architecture beyond Current Scaling Law</li>
