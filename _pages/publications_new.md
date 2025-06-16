@@ -20,6 +20,25 @@ permalink: /publications/
     <tr>
         <td>
             <span class="date">
+                <big><strong>2025</strong></big>
+                <br />
+                June
+            </span>
+        </td>
+        <td class="publication">
+            <span class="pubtitle">
+                <a href="https://arxiv.org/pdf/2506.09991"><strong> Multiverse: Your Language Models Secretly Decide How to Parallelize and Merge Generation</strong></a>.
+            </span><br />
+            <span class="authors">
+                Yang, Xinyu*; An, Yuwei*; Liu, Hongyi; Chen, Tianqi; Chen, Beidi; Sun, Guangyu; Keutzer, Kurt
+            </span><br />
+            <span class="venuetype"></span><span class="venue">Preprints</span>
+            <br />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <span class="date">
                 <big><strong>2024</strong></big>
                 <br />
                 February

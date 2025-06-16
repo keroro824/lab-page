@@ -9,7 +9,7 @@ permalink: /research/
 # Research
 
 Research umbrella: Following directions all aim to strengthen the ability of “copilot”.
-Key words: efficient inference, hardware-aware, long context modeling, sparsity, quantization, speculative decoding, semi-parametric  
+Key words: efficient inference, hardware-aware, long context modeling, sparsity, quantization, speculative decoding, semi-parametric, parallelism  
 
 ## Co-design LLM algorithms with hardware properties
 Design smarter algorithms that leverage hardware characteristics, e.g., model sparsity, flops and bandwidth ratio, memory hierarchy, cpu and gpu …
@@ -17,19 +17,21 @@ Enable impossible training/serving environment ,e.g., offloading, on-device, dec
 
 Example recent work:
 
-[1] Sequoia: Scalable, Robust, and Hardware-aware Speculative Decoding. 2024 
+[1] Multiverse: Your Language Models Secretly Decide How to Parallelize and Merge Generation. 2025
 
-[2] HexGen: Generative Inference of Large-Scale Foundation Model over Heterogeneous Decentralized Environment
+[2] Sequoia: Scalable, Robust, and Hardware-aware Speculative Decoding. 2024 
 
-[3] Prompt-prompted Mixture of Experts for Efficient LLM Generation. 2024
+[3] HexGen: Generative Inference of Large-Scale Foundation Model over Heterogeneous Decentralized Environment
 
-[4] GaLore: Memory-Efficient LLM Training by Gradient Low-Rank Projection. 2024
+[4] Prompt-prompted Mixture of Experts for Efficient LLM Generation. 2024
 
-[5] Deja Vu: Contextual Sparsity for Efficient LLMs at Inference Time. 2023
+[5] GaLore: Memory-Efficient LLM Training by Gradient Low-Rank Projection. 2024
 
-[6] FlexGen: High-Throughput Generative Inference of Large Language Models with a Single GPU. 2023
+[6] Deja Vu: Contextual Sparsity for Efficient LLMs at Inference Time. 2023
 
-[7] Fine-tuning Language Models over Slow Networks using Activation Compression with Guarantees. 2023
+[7] FlexGen: High-Throughput Generative Inference of Large Language Models with a Single GPU. 2023
+
+[8] Fine-tuning Language Models over Slow Networks using Activation Compression with Guarantees. 2023
 
 ## Long-context modeling and generation
 Enable functionality of long-context modeling, e.g., efficiency in fine tuning and serving, extrapolation ability, no context left behind
