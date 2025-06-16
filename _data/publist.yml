@@ -1,3 +1,12 @@
+- title: "Multiverse: Your Language Models Secretly Decide How to Parallelize and Merge Generation"
+  image: Multiverse.gif
+  description: "We introduce Multiverse, a new generative model that enables natively parallel generation. Multiverse internalizes a MapReduce paradigm through three stages: (i) a Map stage for adaptive task splitting, (ii) a Process stage for parallel subtask execution, and (iii) a Reduce stage for lossless result merging. Next, we build a real-world Multiverse model with a co-design of data, algorithm, and system, enabling rapid and seamless transfer from frontier AR-LLMs. For data creation, we develop Multiverse Curator, an automated LLM-assisted pipeline that transforms sequential chains into MapReduce structures. Algorithmically, we design Multiverse Attention to separate parallel steps while ensuring training efficiency. Systematically, we implement Multiverse Engine to dynamically switches between sequential and parallel generation. After a 3-hour fine-tuning with 1K examples, Multiverse-32B is the only open-sourced non-AR model to match the performance of leading AR-LLMs of the same scale, scoring 54% and 46% on AIME24 & 25, respectively. Moreover, it exhibits superior scaling, outperforming AR-LLMs by 1.87% on average, which results in up to a 2x speedup."
+  authors: Xinyu Yang, Yuwei An, Hongyi Liu, Tianqi Chen, Beidi Chen
+  link:
+    url: https://arxiv.org/pdf/2506.09991 
+    blog: https://multiverse4fm.github.io/
+    display: Arxiv
+  highlight: 1
 - title: "GSM-Infinite: How Do Your LLMs Behave over Infinitely Increasing Context Length and Reasoning Complexity?"
   image: GSM-infinite.png
   description: We develop GSM-infinite, a grade-school math problem generator capable of producing arithmetic problems with infinite difficulty and context length under fine-grained control. GSM-infinite benchmark provides a scalable and controllable testbed for quantitatively evaluating and advancing LLM reasoning abilities with increasing reasoning difficulty and increasing context length. Specifically, we found these observations. 1. LLMs reasoning performance drops exponentially (sigmoid on realistic context) as reasoning complexity increases. 2. LLMs reasoning performance sharply decreases when context length increases. 3. LLMs consistently better at forward-thinking problems (constructive logic) than backward-thinking problems given the same reasoning complexity. 4. When we scale repeated sampling computation exponentially, LLM performance on GSM-infinite grows linearly.
