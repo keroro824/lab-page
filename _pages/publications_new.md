@@ -27,6 +27,25 @@ permalink: /publications/
         </td>
         <td class="publication">
             <span class="pubtitle">
+                <a href="https://arxiv.org/abs/2506.02177"><strong> Act Only When It Pays: Efficient Reinforcement Learning for LLM Reasoning via Selective Rollouts</strong></a>.
+            </span><br />
+            <span class="authors">
+                Zheng, Haizhong; Zhou, Yang; Bartoldson, Brian R.; Kailkhura, Bhavya; Lai, Fan; Zhao, Jiawei; Chen, Beidi
+            </span><br />
+            <span class="venuetype"></span><span class="venue">Preprints</span>
+            <br />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <span class="date">
+                <big><strong>2025</strong></big>
+                <br />
+                June
+            </span>
+        </td>
+        <td class="publication">
+            <span class="pubtitle">
                 <a href="https://arxiv.org/pdf/2506.09991"><strong> Multiverse: Your Language Models Secretly Decide How to Parallelize and Merge Generation</strong></a>.
             </span><br />
             <span class="authors">
