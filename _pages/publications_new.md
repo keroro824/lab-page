@@ -27,6 +27,25 @@ permalink: /publications/
         </td>
         <td class="publication">
             <span class="pubtitle">
+                <a href="https://arxiv.org/abs/2506.05333"><strong> Kinetics: Rethinking Test-Time Scaling Laws</strong></a>.
+            </span><br />
+            <span class="authors">
+                Sadhukhan, Ranajoy; Chen, Zhuoming; Zheng, Haizhong; Zhou, Yang; Strubell, Emma; Chen, Beidi
+            </span><br />
+            <span class="venuetype"></span><span class="venue">Preprints</span>
+            <br />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <span class="date">
+                <big><strong>2025</strong></big>
+                <br />
+                June
+            </span>
+        </td>
+        <td class="publication">
+            <span class="pubtitle">
                 <a href="https://arxiv.org/abs/2506.02177"><strong> Act Only When It Pays: Efficient Reinforcement Learning for LLM Reasoning via Selective Rollouts</strong></a>.
             </span><br />
             <span class="authors">

@@ -1,3 +1,12 @@
+- title: "Kinetics: Rethinking Test-Time Scaling Laws"
+  image: Kinetics.png
+  description: "We introduce Kinetics, which challenges the traditional test-time scaling (TTS) laws by adopting a practical efficiency perspective. It reveals that prior compute-optimal approaches overlook major key-value memory access bottlenecks in various TTS strategies. By jointly considering memory and compute, the Kinetics scaling law shows that it is more efficient to scale model size up to a threshold before investing more compute in test-time scaling. Motivated by this, we propose a new scaling paradigm centered on sparse attention, which fundamentally reshapes the scaling law. According to our Sparse Kinetics scaling law, sparse attention significantly enhances the scalability and performance of TTS and becomes increasingly valuable in high-cost scenarios."
+  authors: Ranajoy Sadhukhan, Zhuoming Chen, Haizhong Zheng, Yang Zhou, Emma Strubell, Beidi Chen
+  link:
+    url: https://arxiv.org/abs/2506.05333
+    blog: https://infini-ai-lab.github.io/Kinetics/
+    display: Arxiv
+  highlight: 1
 - title: "Multiverse: Your Language Models Secretly Decide How to Parallelize and Merge Generation"
   image: Multiverse.gif
   description: "We introduce Multiverse, a new generative model that enables natively parallel generation. Multiverse internalizes a MapReduce paradigm through three stages: (i) a Map stage for adaptive task splitting, (ii) a Process stage for parallel subtask execution, and (iii) a Reduce stage for lossless result merging. Next, we build a real-world Multiverse model with a co-design of data, algorithm, and system, enabling rapid and seamless transfer from frontier AR-LLMs. For data creation, we develop Multiverse Curator, an automated LLM-assisted pipeline that transforms sequential chains into MapReduce structures. Algorithmically, we design Multiverse Attention to separate parallel steps while ensuring training efficiency. Systematically, we implement Multiverse Engine to dynamically switches between sequential and parallel generation. After a 3-hour fine-tuning with 1K examples, Multiverse-32B is the only open-sourced non-AR model to match the performance of leading AR-LLMs of the same scale, scoring 54% and 46% on AIME24 & 25, respectively. Moreover, it exhibits superior scaling, outperforming AR-LLMs by 1.87% on average, which results in up to a 2x speedup."
