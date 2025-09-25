@@ -17,7 +17,7 @@ permalink: /publications/
 ## Preprints
 <table class="table">
 <tbody>
-    <tr>
+    <!-- <tr>
         <td>
             <span class="date">
                 <big><strong>2025</strong></big>
@@ -35,8 +35,8 @@ permalink: /publications/
             <span class="venuetype"></span><span class="venue">Preprints</span>
             <br />
         </td>
-    </tr>
-    <tr>
+    </tr> -->
+    <!-- <tr>
         <td>
             <span class="date">
                 <big><strong>2025</strong></big>
@@ -54,8 +54,8 @@ permalink: /publications/
             <span class="venuetype"></span><span class="venue">Preprints</span>
             <br />
         </td>
-    </tr>
-    <tr>
+    </tr> -->
+    <!-- <tr>
         <td>
             <span class="date">
                 <big><strong>2025</strong></big>
@@ -73,7 +73,7 @@ permalink: /publications/
             <span class="venuetype"></span><span class="venue">Preprints</span>
             <br />
         </td>
-    </tr>
+    </tr> -->
     <tr>
         <td>
             <span class="date">
@@ -139,7 +139,62 @@ permalink: /publications/
 
 ## Publications
 <table class="table table-pubs">
-    <tbody>
+    <tbody><tr>
+          <td>
+            <span class="date">
+              <big><strong>2025</strong></big><br />
+              June
+            </span>
+          </td>
+          <td class="publication">
+            <span class="pubtitle">
+              <a href="#">Kinetics: Rethinking Test-Time Scaling Laws</a>.
+            </span><br />
+            <span class="authors">
+              Sadhukhan, Ranajoy; Chen, Zhuoming; Zheng, Haizhong; Zhou, Yang; Strubell, Emma; Chen, Beidi
+            </span><br />
+            <span class="venuetype"></span><span class="venue">NeurIPS 2025</span>
+            <br />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span class="date">
+              <big><strong>2025</strong></big><br />
+              June
+            </span>
+          </td>
+          <td class="publication">
+            <span class="pubtitle">
+              <a href="#">Act Only When It Pays: Efficient Reinforcement Learning for LLM Reasoning via Selective Rollouts</a>.
+            </span><br />
+            <span class="authors">
+              Zheng, Haizhong; Zhou, Yang; Bartoldson, Brian R.; Kailkhura, Bhavya; Lai, Fan; Zhao, Jiawei; Chen, Beidi
+            </span><br />
+            <span class="venuetype"></span><span class="venue">NeurIPS 2025</span>
+            <br />
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+            <span class="date">
+              <big><strong>2025</strong></big><br />
+              June
+            </span>
+          </td>
+          <td class="publication">
+            <span class="pubtitle">
+              <a href="#">Multiverse: Your Language Models Secretly Decide How to Parallelize and Merge Generation</a>.
+            </span><br />
+            <span class="authors">
+              Yang, Xinyu*; An, Yuwei*; Liu, Hongyi; Chen, Tianqi; Chen, Beidi
+            </span><br />
+            <span class="venuetype"></span><span class="venue">NeurIPS 2025</span>
+            <span style="color:red; font-weight:bold;">(Spotlight)</span>
+            <br />
+          </td>
+        </tr>
         <tr>
             <td>
                 <span class="date">
