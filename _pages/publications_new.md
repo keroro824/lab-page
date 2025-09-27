@@ -148,7 +148,7 @@ permalink: /publications/
           </td>
           <td class="publication">
             <span class="pubtitle">
-              <a href="#">Kinetics: Rethinking Test-Time Scaling Laws</a>.
+               <a href="https://arxiv.org/abs/2506.05333">Kinetics: Rethinking Test-Time Scaling Laws</a>.
             </span><br />
             <span class="authors">
               Sadhukhan, Ranajoy; Chen, Zhuoming; Zheng, Haizhong; Zhou, Yang; Strubell, Emma; Chen, Beidi
@@ -166,7 +166,7 @@ permalink: /publications/
           </td>
           <td class="publication">
             <span class="pubtitle">
-              <a href="#">Act Only When It Pays: Efficient Reinforcement Learning for LLM Reasoning via Selective Rollouts</a>.
+              <a href="https://arxiv.org/abs/2506.02177">Act Only When It Pays: Efficient Reinforcement Learning for LLM Reasoning via Selective Rollouts</a>.
             </span><br />
             <span class="authors">
               Zheng, Haizhong; Zhou, Yang; Bartoldson, Brian R.; Kailkhura, Bhavya; Lai, Fan; Zhao, Jiawei; Chen, Beidi
@@ -185,7 +185,7 @@ permalink: /publications/
           </td>
           <td class="publication">
             <span class="pubtitle">
-              <a href="#">Multiverse: Your Language Models Secretly Decide How to Parallelize and Merge Generation</a>.
+              <a href="https://arxiv.org/pdf/2506.09991">Multiverse: Your Language Models Secretly Decide How to Parallelize and Merge Generation</a>.
             </span><br />
             <span class="authors">
               Yang, Xinyu*; An, Yuwei*; Liu, Hongyi; Chen, Tianqi; Chen, Beidi
