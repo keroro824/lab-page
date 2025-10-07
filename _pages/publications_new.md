@@ -23,7 +23,7 @@ permalink: /publications/
             <span class="date">
                 <big><strong>2025</strong></big>
                 <br />
-                June
+                Oct
             </span>
         </td>
         <td class="publication">
