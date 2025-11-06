@@ -116,7 +116,8 @@ permalink: /publications/
             <span class="authors">
               Xu, Ceyu*; Wu, Yongji*; Yang, Xinyu*; Chen, Beidi; Lentz, Matthew; Zhuo, Danyang; Wills, Lisa Wu
             </span><br />
-            <span class="venuetype"></span><span class="venue">Micro 2025 (Best Paper Award)</span>
+            <span class="venuetype"></span><span class="venue">Micro 2025</span>
+            <span style="color:red; font-weight:bold;">(Best Paper Award)</span>
             <br />
           </td>
         </tr>
