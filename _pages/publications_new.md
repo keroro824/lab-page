@@ -106,6 +106,24 @@ permalink: /publications/
           <td>
             <span class="date">
               <big><strong>2025</strong></big><br />
+              October
+            </span>
+          </td>
+          <td class="publication">
+            <span class="pubtitle">
+               <a href="https://dl.acm.org/doi/pdf/10.1145/3725843.3756078">LLM.265: Video Codecs are Secretly Tensor Codecs</a>.
+            </span><br />
+            <span class="authors">
+              Xu, Ceyu*; Wu, Yongji*; Yang, Xinyu*; Chen, Beidi; Lentz, Matthew; Zhuo, Danyang; Wills, Lisa Wu
+            </span><br />
+            <span class="venuetype"></span><span class="venue">Micro 2025 (Best Paper Award)</span>
+            <br />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span class="date">
+              <big><strong>2025</strong></big><br />
               June
             </span>
           </td>
