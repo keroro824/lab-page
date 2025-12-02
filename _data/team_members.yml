@@ -58,12 +58,6 @@
 #   email: vashistt@andrew.cmu.edu
 #   number_educ: 0
 
-- name: Yuwei An
-  photo: Yuwei.JPG
-  info: Master Student
-  email: ayw.sirius19@gmail.com
-  number_educ: 0
-
 - name: Hongyi Liu 
   photo: hongyi_liu_head.jpeg
   info: PhD Student 
@@ -74,4 +68,10 @@
   photo: krish_agarwal.jpeg 
   info: PhD Student 
   email: krishagarwal@utexas.org
+  number_educ: 0
+
+- name: Yuwei An
+  photo: Yuwei.JPG
+  info: Master Student
+  email: ayw.sirius19@gmail.com
   number_educ: 0
