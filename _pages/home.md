@@ -23,7 +23,7 @@ Her research focuses on efficient AI; specifically, she designs and optimizes al
         <div class="item active">
             <img src="{{ site.url }}{{ site.baseurl }}/images/vortex.gif" alt="Slide 2" style="height:226px" />
         </div>
-        <div class="item active">
+        <div class="item">
             <img src="{{ site.url }}{{ site.baseurl }}/images/Multiverse.gif" alt="Slide 2" style="height:226px" />
         </div>
         <div class="item">
