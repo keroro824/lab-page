@@ -17,7 +17,27 @@ permalink: /publications/
 ## Preprints
 <table class="table">
 <tbody>
-
+    
+    <tr>
+        <td>
+            <span class="date">
+                <big><strong>2025</strong></big>
+                <br />
+                December
+            </span>
+        </td>
+        <td class="publication">
+            <span class="pubtitle">
+                <a href="https://github.com/Infini-AI-Lab/jackpot/blob/main/jpt.pdf"><strong>Jackpot: Optimal Budgeted Rejection Sampling for Extreme Actor–Policy Mismatch RL </strong></a>.
+            </span><br />
+            <span class="authors">
+                Chen, Zhuoming*; Liu, Hongyi*; Zhou Yang*; Zheng, Haizhong; Chen, Beidi
+            </span><br />
+            <span class="venuetype"></span><span class="venue">Preprints</span>
+            <br />
+        </td>
+    </tr>
+    
     <tr>
         <td>
             <span class="date">
@@ -171,7 +191,7 @@ permalink: /publications/
                <a href="https://arxiv.org/abs/2506.05333">Kinetics: Rethinking Test-Time Scaling Laws</a>.
             </span><br />
             <span class="authors">
-              Sadhukhan, Ranajoy; Chen, Zhuoming; Zheng, Haizhong; Zhou, Yang; Strubell, Emma; Chen, Beidi
+              Sadhukhan, Ranajoy*; Chen, Zhuoming*; Zheng, Haizhong; Zhou, Yang; Strubell, Emma; Chen, Beidi
             </span><br />
             <span class="venuetype"></span><span class="venue">NeurIPS 2025</span>
             <br />
