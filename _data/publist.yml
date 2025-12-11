@@ -1,3 +1,11 @@
+- title: "Vortex: Democratizing Sparse Attention"
+  image: vortex.gif
+  description: "Vortex is a lightweight, modular framework for building custom sparse attention algorithms for LLM inference. It exists to make it easy for researchers and engineers to prototype, extend, and deploy advanced sparsity patterns on modern inference backends such as SGLang—without modifying core model code. Vortex allows you to express novel sparse attention concisely while relying on an optimized execution engine."
+  link:
+    url: https://github.com/Infini-AI-Lab/vortex_torch/tree/v1
+    blog: https://infini-ai-lab.github.io/vortex-technical-blog/
+    display: Arxiv
+  highlight: 1
 - title: "Kinetics: Rethinking Test-Time Scaling Laws"
   image: Kinetics.png
   description: "We introduce Kinetics, which challenges the traditional test-time scaling (TTS) laws by adopting a practical efficiency perspective. It reveals that prior compute-optimal approaches overlook major key-value memory access bottlenecks in various TTS strategies. By jointly considering memory and compute, the Kinetics scaling law shows that it is more efficient to scale model size up to a threshold before investing more compute in test-time scaling. Motivated by this, we propose a new scaling paradigm centered on sparse attention, which fundamentally reshapes the scaling law. According to our Sparse Kinetics scaling law, sparse attention significantly enhances the scalability and performance of TTS and becomes increasingly valuable in high-cost scenarios."
