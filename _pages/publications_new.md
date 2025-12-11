@@ -106,6 +106,44 @@ permalink: /publications/
           <td>
             <span class="date">
               <big><strong>2025</strong></big><br />
+              November
+            </span>
+          </td>
+          <td class="publication">
+            <span class="pubtitle">
+                <a href="https://arxiv.org/abs/2510.19225">RLBoost: Harvesting Preemptible Resources for Cost-Efficient Reinforcement Learning on LLMs</a>.
+            </span><br />
+            <span class="authors">
+              Wu, Yongji; Liu, Xueshen; Zheng, Haizhong; Gu, Juncheng; Chen, Beidi; Mao, Z. Morley; Krishnamurthy, Arvind; Stoica, Ion 
+            </span><br />
+            <span class="venuetype"></span><span class="venue">NSDI 2026</span>
+            <br />
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+            <span class="date">
+              <big><strong>2025</strong></big><br />
+              November
+            </span>
+          </td>
+          <td class="publication">
+            <span class="pubtitle">
+               WAVE: Leveraging Architecture Observation for  Privacy-Preserving Model Oversight.
+            </span><br />
+            <span class="authors">
+              Xu, Haoxuan; Gong, Chen; Liu, Beijie; Zheng, Haizhong; Chen, Beidi; Li, Mengyuan
+            </span><br />
+            <span class="venuetype"></span><span class="venue">ASPLOS 2026</span>
+            <br />
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+            <span class="date">
+              <big><strong>2025</strong></big><br />
               October
             </span>
           </td>
