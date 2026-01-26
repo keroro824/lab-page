@@ -85,6 +85,25 @@ permalink: /publications/
     <tbody><tr>
         <td>
             <span class="date">
+                <big><strong>2026</strong></big>
+                <br />
+                January
+            </span>
+        </td>
+        <td class="publication">
+            <span class="pubtitle">
+                <a href="https://arxiv.org/abs/2510.01161"><strong>STEM: Scaling Transformers with Embedding Modules</strong></a>.
+            </span><br />
+            <span class="authors">
+                Sadhukhan, Ranajoy; Cao, Sheng; Dong, Harry; Zhao, Changsheng; Purpura-Pontoniere, Attiano; Tian, Yuandong; Liu, Zechun; Chen, Beidi
+            </span><br />
+            <span class="venuetype"></span><span class="venue">ICLR 2026</span>
+            <br />
+        </td>
+    </tr>
+        <tr>
+        <td>
+            <span class="date">
                 <big><strong>2025</strong></big>
                 <br />
                 December
@@ -97,7 +116,7 @@ permalink: /publications/
             <span class="authors">
                 Chen, Zhuoming*; Liu, Hongyi*; Zhou Yang*; Zheng, Haizhong; Chen, Beidi
             </span><br />
-            <span class="venuetype"></span><span class="venue">Preprints</span>
+            <span class="venuetype"></span><span class="venue">ICLR 2026</span>
             <br />
         </td>
     </tr>
@@ -117,7 +136,7 @@ permalink: /publications/
             <span class="authors">
                 Zheng, Haizhong; Zhao, Jiawei; Chen, Beidi
             </span><br />
-            <span class="venuetype"></span><span class="venue">Preprints</span>
+            <span class="venuetype"></span><span class="venue">ICLR 2026</span>
             <br />
         </td>
     </tr>
