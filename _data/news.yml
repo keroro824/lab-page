@@ -1,5 +1,6 @@
-# - date: 26 January 2026 
-#   headline: [STEM](https://arxiv.org/abs/2601.10639), [Jackpot](https://github.com/Infini-AI-Lab/jackpot/blob/main/jpt.pdf), and [M2PO](https://arxiv.org/abs/2510.01161) are accepted by ICLR 2026.
+- date: 26 January 2026 
+  headline: [STEM](https://arxiv.org/abs/2601.10639), [Jackpot](https://github.com/Infini-AI-Lab/jackpot/blob/main/jpt.pdf), and [M2PO](https://arxiv.org/abs/2510.01161) are accepted by ICLR 2026.
+  
 - date: 2 December 2025 
   headline: Scale Test-Time Compute on Modern Hardware on [Tutorials at Neurips 2025](https://neurips.cc/virtual/2025/loc/san-diego/109595).
   
@@ -30,8 +31,8 @@
 - date: 11 August 2024
   headline: We will present [Layer Skip](https://arxiv.org/abs/2404.16710) at ACL 2024.
 
-- date: 21 July 2024
-  headline: We will present [LESS](https://arxiv.org/abs/2402.09398), [LoCoCo](https://arxiv.org/abs/2406.05317), and [Galore(<font color=Red>Oral</font>)](https://arxiv.org/abs/2403.03507), [HexGen](https://arxiv.org/abs/2311.11514), [Compress, then prompt](https://arxiv.org/abs/2305.11186), and [KIVI](https://arxiv.org/abs/2402.02750) led by collaborators at ICML 2024.
+# - date: 21 July 2024
+#   headline: We will present [LESS](https://arxiv.org/abs/2402.09398), [LoCoCo](https://arxiv.org/abs/2406.05317), and [Galore(<font color=Red>Oral</font>)](https://arxiv.org/abs/2403.03507), [HexGen](https://arxiv.org/abs/2311.11514), [Compress, then prompt](https://arxiv.org/abs/2305.11186), and [KIVI](https://arxiv.org/abs/2402.02750) led by collaborators at ICML 2024.
   
 # - date: 12 May 2024
 #   headline: We will present [Q-Hitter](https://mlsys.org/virtual/2024/poster/2642) at MLSys 2024.
