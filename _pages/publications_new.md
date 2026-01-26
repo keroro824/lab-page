@@ -17,46 +17,6 @@ permalink: /publications/
 ## Preprints
 <table class="table">
 <tbody>
-    
-    <tr>
-        <td>
-            <span class="date">
-                <big><strong>2025</strong></big>
-                <br />
-                December
-            </span>
-        </td>
-        <td class="publication">
-            <span class="pubtitle">
-                <a href="https://github.com/Infini-AI-Lab/jackpot/blob/main/jpt.pdf"><strong>Jackpot: Optimal Budgeted Rejection Sampling for Extreme Actor–Policy Mismatch RL </strong></a>.
-            </span><br />
-            <span class="authors">
-                Chen, Zhuoming*; Liu, Hongyi*; Zhou Yang*; Zheng, Haizhong; Chen, Beidi
-            </span><br />
-            <span class="venuetype"></span><span class="venue">Preprints</span>
-            <br />
-        </td>
-    </tr>
-    
-    <tr>
-        <td>
-            <span class="date">
-                <big><strong>2025</strong></big>
-                <br />
-                October
-            </span>
-        </td>
-        <td class="publication">
-            <span class="pubtitle">
-                <a href="https://arxiv.org/abs/2510.01161"><strong> Prosperity before Collapse: How Far Can Off-Policy RL Reach with Stale Data on LLMs?</strong></a>.
-            </span><br />
-            <span class="authors">
-                Zheng, Haizhong; Zhao, Jiawei; Chen, Beidi
-            </span><br />
-            <span class="venuetype"></span><span class="venue">Preprints</span>
-            <br />
-        </td>
-    </tr>
     <tr>
         <td>
             <span class="date">
@@ -123,6 +83,45 @@ permalink: /publications/
 ## Publications
 <table class="table table-pubs">
     <tbody><tr>
+        <td>
+            <span class="date">
+                <big><strong>2025</strong></big>
+                <br />
+                December
+            </span>
+        </td>
+        <td class="publication">
+            <span class="pubtitle">
+                <a href="https://github.com/Infini-AI-Lab/jackpot/blob/main/jpt.pdf"><strong>Jackpot: Optimal Budgeted Rejection Sampling for Extreme Actor–Policy Mismatch RL </strong></a>.
+            </span><br />
+            <span class="authors">
+                Chen, Zhuoming*; Liu, Hongyi*; Zhou Yang*; Zheng, Haizhong; Chen, Beidi
+            </span><br />
+            <span class="venuetype"></span><span class="venue">Preprints</span>
+            <br />
+        </td>
+    </tr>
+    
+    <tr>
+        <td>
+            <span class="date">
+                <big><strong>2025</strong></big>
+                <br />
+                October
+            </span>
+        </td>
+        <td class="publication">
+            <span class="pubtitle">
+                <a href="https://arxiv.org/abs/2510.01161"><strong> Prosperity before Collapse: How Far Can Off-Policy RL Reach with Stale Data on LLMs?</strong></a>.
+            </span><br />
+            <span class="authors">
+                Zheng, Haizhong; Zhao, Jiawei; Chen, Beidi
+            </span><br />
+            <span class="venuetype"></span><span class="venue">Preprints</span>
+            <br />
+        </td>
+    </tr>
+        <tr>
           <td>
             <span class="date">
               <big><strong>2025</strong></big><br />
