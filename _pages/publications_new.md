@@ -120,7 +120,25 @@ permalink: /publications/
             <br />
         </td>
     </tr>
-    
+    <tr>
+        <td>
+            <span class="date">
+                <big><strong>2025</strong></big>
+                <br />
+                January
+            </span>
+        </td>
+        <td class="publication">
+            <span class="pubtitle">
+                <a href="https://arxiv.org/abs/2508.18224">FSA: An Alternative Efficient Implementation of Native Sparse Attention Kernel</a>.
+            </span><br />
+            <span class="authors">
+                Yan, Ran; Jiang, Youhe; Chen, Zhuoming; Mai, Haohui; Chen, Beidi; Yuan, Binhang
+            </span><br />
+            <span class="venuetype"></span><span class="venue">ICLR 2026</span>
+            <br />
+        </td>
+    </tr>
     <tr>
         <td>
             <span class="date">
