@@ -92,7 +92,7 @@ permalink: /publications/
         </td>
         <td class="publication">
             <span class="pubtitle">
-                <a href="https://arxiv.org/abs/2510.01161"><strong>STEM: Scaling Transformers with Embedding Modules</strong></a>.
+                <a href="https://arxiv.org/abs/2601.10639"><strong>STEM: Scaling Transformers with Embedding Modules</strong></a>.
             </span><br />
             <span class="authors">
                 Sadhukhan, Ranajoy; Cao, Sheng; Dong, Harry; Zhao, Changsheng; Purpura-Pontoniere, Attiano; Tian, Yuandong; Liu, Zechun; Chen, Beidi
@@ -111,10 +111,10 @@ permalink: /publications/
         </td>
         <td class="publication">
             <span class="pubtitle">
-                <a href="https://github.com/Infini-AI-Lab/jackpot/blob/main/jpt.pdf"><strong>Jackpot: Optimal Budgeted Rejection Sampling for Extreme Actor–Policy Mismatch RL </strong></a>.
+                <a href="https://arxiv.org/abs/2602.06107"><strong>Jackpot: Optimal Budgeted Rejection Sampling for Extreme Actor–Policy Mismatch RL </strong></a>.
             </span><br />
             <span class="authors">
-                Chen, Zhuoming*; Liu, Hongyi*; Zhou Yang*; Zheng, Haizhong; Chen, Beidi
+                Chen, Zhuoming*; Liu, Hongyi*; Zhou, Yang*; Zheng, Haizhong; Chen, Beidi
             </span><br />
             <span class="venuetype"></span><span class="venue">ICLR 2026</span>
             <br />
