@@ -16,11 +16,11 @@
   email: zhuominc@andrew.cmu.edu
   number_educ: 0
 
-- name: <a href="https://xinyuyang.me/">Xinyu Yang</a>
-  photo: xinyu.jpeg
-  info: PhD Student
-  email: xinyuya2@andrew.cmu.edu
-  number_educ: 0
+# - name: <a href="https://xinyuyang.me/">Xinyu Yang</a>
+#   photo: xinyu.jpeg
+#   info: PhD Student
+#   email: xinyuya2@andrew.cmu.edu
+#   number_educ: 0
 
 - name: <a href="https://www.linkedin.com/in/yangzhou2001/">Yang Zhou</a>
   photo: yang.jpg
