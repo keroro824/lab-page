@@ -20,6 +20,26 @@ permalink: /publications/
     <tr>
         <td>
             <span class="date">
+                <big><strong>2026</strong></big>
+                <br />
+                February
+            </span>
+        </td>
+        <td class="publication">
+            <span class="pubtitle">
+                <a href="https://arxiv.org/abs/2602.12271"><strong>MonarchRT: Efficient Attention for Real-Time Video Generation</strong></a>.
+            </span><br />
+            <span class="authors">
+                Agarwal, Krish; Chen, Zhuoming; Luo, Cheng; Chen, Yongqi; Zheng, Haizhong; Huang, Xun; Rudra, Atri; Chen, Beidi
+            </span><br />
+            <span class="venuetype"></span><span class="venue">Preprints</span>
+            <br />
+        </td>
+    </tr>
+    
+    <tr>
+        <td>
+            <span class="date">
                 <big><strong>2024</strong></big>
                 <br />
                 February
