@@ -3,7 +3,7 @@
   description: "Vortex is a lightweight, modular framework for building custom sparse attention algorithms for LLM inference. It exists to make it easy for researchers and engineers to prototype, extend, and deploy advanced sparsity patterns on modern inference backends such as SGLang—without modifying core model code. Vortex allows you to express novel sparse attention concisely while relying on an optimized execution engine."
   link:
     url: https://github.com/Infini-AI-Lab/vortex_torch/tree/v1
-    blog: https://infini-ai-lab.github.io/vortex-technical-blog/
+    blog: https://infini-ai-lab.github.io/ai-environment-architect/
     display: Arxiv
   highlight: 1
 - title: "Kinetics: Rethinking Test-Time Scaling Laws"
