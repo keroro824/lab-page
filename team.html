@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Team — InfiniAI Lab</title>
+<meta name="description" content="Members and alumni of InfiniAI Lab at Carnegie Mellon University." />
+<link rel="icon" type="image/png" href="infini-ai.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fraunces:wght@500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #ffffff;
+    --bg-soft: #fdf7fb;
+    --ink: #1a1320;
+    --ink-soft: #4a3f55;
+    --muted: #7a6f88;
+    --line: #ebe2ee;
+    --accent: #d96fae;
+    --accent-2: #b76cd9;
+    --accent-soft: #fde7f1;
+    --gradient: linear-gradient(135deg, #f7b7d6 0%, #d96fae 45%, #b76cd9 100%);
+    --shadow: 0 10px 40px -20px rgba(183, 108, 217, 0.35);
+    --radius: 14px;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: var(--ink); background: var(--bg);
+    line-height: 1.6; -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--accent-2); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .container { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
+
+  /* nav */
+  header.nav {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: saturate(160%) blur(12px);
+    -webkit-backdrop-filter: saturate(160%) blur(12px);
+    border-bottom: 1px solid var(--line);
+  }
+  header.nav {
+    background: rgba(255, 255, 255, 0.78);
+    backdrop-filter: saturate(180%) blur(16px);
+    -webkit-backdrop-filter: saturate(180%) blur(16px);
+    border-bottom: 1px solid rgba(235, 226, 238, 0.7);
+  }
+  .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 72px; }
+  .brand {
+    display: flex; align-items: center; gap: 12px;
+    font-weight: 700; color: var(--ink); letter-spacing: -0.01em;
+    transition: opacity 0.15s ease;
+  }
+  .brand:hover { opacity: 0.78; text-decoration: none; }
+  .brand img { height: 32px; width: auto; display: block; }
+  .brand span { font-size: 16.5px; }
+
+  .nav-links { display: flex; align-items: center; gap: 4px; }
+  .nav-links a {
+    position: relative;
+    color: var(--ink-soft); font-weight: 500; font-size: 14.5px;
+    padding: 9px 14px; border-radius: 999px;
+    transition: color 0.18s ease;
+  }
+  .nav-links a:not(.icon-link)::after {
+    content: ""; position: absolute;
+    left: 14px; right: 14px; bottom: 3px;
+    height: 2px; border-radius: 2px;
+    background: var(--gradient);
+    opacity: 0; transform: scaleX(0.3); transform-origin: center;
+    transition: opacity 0.2s ease, transform 0.25s ease;
+  }
+  .nav-links a:not(.icon-link):hover { color: var(--ink); text-decoration: none; }
+  .nav-links a:not(.icon-link):hover::after { opacity: 1; transform: scaleX(1); }
+  .nav-links a.active { color: var(--accent-2); }
+  .nav-links a.active::after { opacity: 1; transform: scaleX(1); }
+
+  .nav-links .icon-link {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 36px; height: 36px; padding: 0;
+    border-radius: 50%; color: var(--ink-soft);
+    transition: background 0.18s ease, color 0.18s ease, transform 0.18s ease;
+  }
+  .nav-links .icon-link:hover {
+    background: var(--accent-soft); color: var(--accent-2);
+    transform: translateY(-1px);
+  }
+  .nav-links .icon-link:first-of-type { margin-left: 12px; position: relative; }
+  .nav-links .icon-link:first-of-type::before {
+    content: ""; position: absolute;
+    left: -7px; top: 50%; transform: translateY(-50%);
+    width: 1px; height: 18px; background: var(--line);
+  }
+
+  .nav-toggle {
+    display: none;
+    align-items: center; justify-content: center;
+    background: transparent; border: none;
+    width: 40px; height: 40px;
+    border-radius: 50%; cursor: pointer;
+    color: var(--ink-soft);
+    transition: background 0.15s ease, color 0.15s ease;
+  }
+  .nav-toggle:hover { background: var(--accent-soft); color: var(--accent-2); }
+  .nav-toggle .bars { transition: transform 0.25s ease, opacity 0.2s ease; transform-origin: center; }
+  .nav-toggle[aria-expanded="true"] .bar1 { transform: translateY(5px) rotate(45deg); }
+  .nav-toggle[aria-expanded="true"] .bar2 { opacity: 0; }
+  .nav-toggle[aria-expanded="true"] .bar3 { transform: translateY(-5px) rotate(-45deg); }
+
+  @media (max-width: 720px) {
+    .nav-toggle { display: inline-flex; }
+
+    .nav-links {
+      position: absolute;
+      top: 72px; left: 0; right: 0;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+      padding: 0 24px;
+      background: rgba(255, 255, 255, 0.97);
+      backdrop-filter: saturate(180%) blur(16px);
+      -webkit-backdrop-filter: saturate(180%) blur(16px);
+      border-bottom: 1px solid var(--line);
+      box-shadow: 0 14px 30px -22px rgba(0,0,0,0.18);
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height 0.3s ease, opacity 0.2s ease, padding 0.3s ease;
+    }
+    .nav-links.open {
+      max-height: 640px;
+      opacity: 1;
+      padding: 12px 24px 18px;
+    }
+    .nav-links a:not(.icon-link) {
+      display: block;
+      padding: 12px 14px;
+      border-radius: 10px;
+    }
+    .nav-links a:not(.icon-link)::after { display: none; }
+    .nav-links a:not(.icon-link):hover { background: var(--bg-soft); }
+    .nav-links a.active { background: var(--accent-soft); }
+
+    .nav-links .icon-link {
+      width: auto; height: auto;
+      justify-content: flex-start;
+      border-radius: 10px;
+      background: transparent;
+      margin-left: 0;
+      padding: 12px 14px;
+      gap: 12px;
+    }
+    .nav-links .icon-link::before { display: none; }
+    .nav-links .icon-link::after {
+      content: attr(aria-label);
+      color: var(--ink-soft);
+      font-size: 14.5px;
+      font-weight: 500;
+    }
+    .nav-links .icon-link:first-of-type {
+      margin-top: 6px;
+      border-top: 1px solid var(--line);
+      padding-top: 14px;
+    }
+    .nav-links .icon-link:hover {
+      background: var(--bg-soft);
+      color: var(--accent-2);
+      transform: none;
+    }
+  }
+
+  /* page header */
+  .page-head { padding: 80px 0 50px; position: relative; overflow: hidden; }
+  .page-head::before {
+    content: ""; position: absolute; inset: 0;
+    background:
+      radial-gradient(800px 400px at 90% -10%, rgba(217, 111, 174, 0.15), transparent 60%),
+      radial-gradient(600px 300px at 0% 30%, rgba(183, 108, 217, 0.10), transparent 60%);
+    pointer-events: none;
+  }
+  .page-head .container { position: relative; }
+  .eyebrow {
+    display: inline-block; font-size: 13px; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--accent-2); font-weight: 600; margin-bottom: 14px;
+  }
+  h1 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: clamp(34px, 4.4vw, 52px);
+    line-height: 1.1; letter-spacing: -0.025em;
+    margin: 0 0 16px; font-weight: 600;
+  }
+  .page-lede { color: var(--ink-soft); font-size: 17px; max-width: 60ch; margin: 0; }
+
+  main { padding: 0 0 100px; }
+
+  h2.section-title {
+    font-family: 'Fraunces', serif;
+    font-size: 28px; font-weight: 600;
+    margin: 56px 0 24px; letter-spacing: -0.01em;
+  }
+  h2.section-title:first-child { margin-top: 24px; }
+
+  /* PI card */
+  .pi-card {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 36px;
+    align-items: center;
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 32px;
+    box-shadow: var(--shadow);
+  }
+  @media (max-width: 640px) {
+    .pi-card { grid-template-columns: 1fr; padding: 24px; gap: 20px; text-align: center; }
+    .pi-card .pi-photo { margin: 0 auto; }
+  }
+  .pi-photo {
+    width: 220px; height: 220px;
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: var(--bg-soft);
+    position: relative;
+    box-shadow: 0 10px 30px -16px rgba(217, 111, 174, 0.5);
+  }
+  .pi-photo img {
+    width: 100%; height: 100%;
+    object-fit: cover; object-position: center 20%;
+    display: block;
+  }
+  .pi-name {
+    font-family: 'Fraunces', serif;
+    font-size: 30px; font-weight: 600;
+    margin: 0 0 6px; letter-spacing: -0.01em;
+  }
+  .pi-name a { color: var(--ink); }
+  .pi-name a:hover { color: var(--accent-2); text-decoration: none; }
+  .pi-role { color: var(--accent-2); font-weight: 500; margin: 0 0 12px; font-size: 15px; }
+  .pi-email a { color: var(--ink-soft); font-size: 14.5px; }
+  .pi-email a:hover { color: var(--accent-2); }
+
+  /* member grid */
+  .member-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    gap: 22px;
+  }
+  .member {
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 22px;
+    transition: transform 0.2s ease, box-shadow 0.25s ease, border-color 0.2s ease;
+  }
+  .member:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+    border-color: rgba(217, 111, 174, 0.4);
+  }
+  .member-photo {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--bg-soft);
+    margin-bottom: 16px;
+  }
+  .member-photo img {
+    width: 100%; height: 100%;
+    object-fit: cover; object-position: center 20%;
+    display: block;
+  }
+  .member-name {
+    font-family: 'Fraunces', serif;
+    font-size: 18px; font-weight: 600;
+    margin: 0 0 4px; letter-spacing: -0.005em;
+    line-height: 1.3;
+  }
+  .member-name a { color: var(--ink); }
+  .member-name a:hover { color: var(--accent-2); text-decoration: none; }
+  .member-role {
+    color: var(--accent-2);
+    font-size: 13px; font-weight: 500;
+    margin: 0 0 8px;
+  }
+  .member-email a {
+    color: var(--muted);
+    font-size: 12.5px;
+    word-break: break-all;
+  }
+  .member-email a:hover { color: var(--accent-2); }
+
+  /* alumni */
+  .alumni-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 14px;
+  }
+  .alumni {
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 18px 20px;
+    transition: border-color 0.2s ease, background 0.2s ease;
+  }
+  .alumni:hover { border-color: var(--accent); background: var(--bg-soft); }
+  .alumni-name {
+    font-weight: 600;
+    color: var(--ink);
+    font-size: 15px;
+    display: block;
+    margin-bottom: 2px;
+  }
+  .alumni-role {
+    color: var(--accent-2);
+    font-size: 12.5px;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 8px;
+  }
+  .alumni-next {
+    color: var(--ink-soft);
+    font-size: 13.5px;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .alumni-next .arrow { color: var(--accent); }
+
+  /* footer */
+  footer {
+    border-top: 1px solid var(--line);
+    padding: 40px 0; color: var(--muted); font-size: 14px;
+  }
+  .footer-inner {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 20px; flex-wrap: wrap;
+  }
+  .footer-inner .brand img { height: 28px; }
+  .footer-inner .brand span { font-size: 15px; }
+  .footer-social { display: flex; gap: 10px; }
+  .footer-social a {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 36px; height: 36px; border-radius: 50%;
+    color: var(--ink-soft); border: 1px solid var(--line);
+    transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+  }
+  .footer-social a:hover { color: var(--accent-2); border-color: var(--accent); background: var(--accent-soft); }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html">
+      <img src="infini-ai.png" alt="InfiniAI Lab logo" />
+      <span>InfiniAI Lab</span>
+    </a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+        <line class="bars bar1" x1="4" y1="7"  x2="20" y2="7"/>
+        <line class="bars bar2" x1="4" y1="12" x2="20" y2="12"/>
+        <line class="bars bar3" x1="4" y1="17" x2="20" y2="17"/>
+      </svg>
+    </button>
+    <nav class="nav-links" id="primary-nav">
+      <a href="index.html#about">About</a>
+      <a href="index.html#research">Research</a>
+      <a href="team.html" class="active">Team</a>
+      <a href="publications.html">Publications</a>
+      <a href="blog.html">Blog</a>
+      <a href="index.html#openings">Openings</a>
+      <a href="index.html#contact">Contact</a>
+      <a class="icon-link" href="https://github.com/Infini-AI-Lab" target="_blank" rel="noopener" aria-label="GitHub">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2.1c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.7 1.25 3.36.96.1-.74.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.06 11.06 0 0 1 5.79 0c2.21-1.49 3.18-1.18 3.18-1.18.63 1.59.23 2.76.11 3.05.74.81 1.18 1.84 1.18 3.1 0 4.42-2.7 5.39-5.27 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.68.8.56C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg>
+      </a>
+      <a class="icon-link" href="https://x.com/InfiniAILab" target="_blank" rel="noopener" aria-label="X">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      </a>
+    </nav>
+  </div>
+</header>
+
+<section class="page-head">
+  <div class="container">
+    <div class="eyebrow">InfiniAI Lab</div>
+    <h1>Team.</h1>
+    <p class="page-lede">
+      The researchers, students, and alumni building efficient AI at Carnegie Mellon University.
+    </p>
+  </div>
+</section>
+
+<main>
+  <div class="container">
+
+    <h2 class="section-title">Principal Investigator</h2>
+    <div class="pi-card">
+      <div class="pi-photo">
+        <img src="photos/image0.jpeg" alt="Beidi Chen" loading="lazy" />
+      </div>
+      <div>
+        <h3 class="pi-name"><a href="https://www.andrew.cmu.edu/user/beidic/" target="_blank" rel="noopener">Beidi Chen</a></h3>
+        <p class="pi-role">Assistant Professor · Carnegie Mellon University</p>
+        <p class="pi-email"><a href="mailto:beidic@andrew.cmu.edu">beidic@andrew.cmu.edu</a></p>
+      </div>
+    </div>
+
+    <h2 class="section-title">Members</h2>
+    <div class="member-grid">
+
+      <article class="member">
+        <div class="member-photo"><img src="photos/Haizhong.jpeg" alt="Haizhong Zheng" loading="lazy" /></div>
+        <h3 class="member-name"><a href="http://zhenghaizhong.com/" target="_blank" rel="noopener">Haizhong Zheng</a></h3>
+        <p class="member-role">Postdoctoral Researcher</p>
+        <p class="member-email"><a href="mailto:haizhonz@andrew.cmu.edu">haizhonz@andrew.cmu.edu</a></p>
+      </article>
+
+      <article class="member">
+        <div class="member-photo"><img src="photos/Zhuoming.jpg" alt="Zhuoming Chen" loading="lazy" /></div>
+        <h3 class="member-name"><a href="https://dreaming-panda.github.io/" target="_blank" rel="noopener">Zhuoming Chen</a></h3>
+        <p class="member-role">PhD Student</p>
+        <p class="member-email"><a href="mailto:zhuominc@andrew.cmu.edu">zhuominc@andrew.cmu.edu</a></p>
+      </article>
+
+      <article class="member">
+        <div class="member-photo"><img src="photos/yang.jpg" alt="Yang Zhou" loading="lazy" /></div>
+        <h3 class="member-name"><a href="https://www.linkedin.com/in/yangzhou2001/" target="_blank" rel="noopener">Yang Zhou</a></h3>
+        <p class="member-role">PhD Student</p>
+        <p class="member-email"><a href="mailto:yangzho6@andrew.cmu.edu">yangzho6@andrew.cmu.edu</a></p>
+      </article>
+
+      <article class="member">
+        <div class="member-photo"><img src="photos/ranajoy.jpg" alt="Ranajoy Sadhukhan" loading="lazy" /></div>
+        <h3 class="member-name"><a href="https://ranonrkm.github.io/" target="_blank" rel="noopener">Ranajoy Sadhukhan</a></h3>
+        <p class="member-role">PhD Student</p>
+        <p class="member-email"><a href="mailto:rsadhukh@andrew.cmu.edu">rsadhukh@andrew.cmu.edu</a></p>
+      </article>
+
+      <article class="member">
+        <div class="member-photo"><img src="photos/hongyi_liu_head.jpeg" alt="Hongyi Liu" loading="lazy" /></div>
+        <h3 class="member-name">Hongyi Liu</h3>
+        <p class="member-role">PhD Student</p>
+        <p class="member-email"><a href="mailto:liuhongy21@gmail.com">liuhongy21@gmail.com</a></p>
+      </article>
+
+      <article class="member">
+        <div class="member-photo"><img src="photos/krish_agarwal.jpeg" alt="Krish Agarwal" loading="lazy" /></div>
+        <h3 class="member-name">Krish Agarwal</h3>
+        <p class="member-role">PhD Student</p>
+        <p class="member-email"><a href="mailto:krishagarwal@utexas.org">krishagarwal@utexas.org</a></p>
+      </article>
+
+    </div>
+
+    <h2 class="section-title">Alumni</h2>
+    <div class="alumni-grid" id="alumniGrid"></div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <a class="brand" href="index.html">
+      <img src="infini-ai.png" alt="InfiniAI Lab" />
+      <span>InfiniAI Lab</span>
+    </a>
+    <div class="footer-social">
+      <a href="https://github.com/Infini-AI-Lab" target="_blank" rel="noopener" aria-label="GitHub">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2.1c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.7 1.25 3.36.96.1-.74.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.06 11.06 0 0 1 5.79 0c2.21-1.49 3.18-1.18 3.18-1.18.63 1.59.23 2.76.11 3.05.74.81 1.18 1.84 1.18 3.1 0 4.42-2.7 5.39-5.27 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.68.8.56C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg>
+      </a>
+      <a href="https://x.com/InfiniAILab" target="_blank" rel="noopener" aria-label="X">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      </a>
+    </div>
+    <div>© <span id="year"></span> InfiniAI Lab · Carnegie Mellon University</div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+(function () {
+  const toggle = document.querySelector('.nav-toggle');
+  const menu = document.querySelector('.nav-links');
+  if (!toggle || !menu) return;
+  toggle.addEventListener('click', () => {
+    const open = menu.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', String(open));
+  });
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    menu.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+  }));
+})();
+
+const ALUMNI = [
+  { name: "Harry Dong",       role: "PhD",       next: "Microsoft Research" },
+  { name: "Hanshi Sun",       role: "MS",       next: "Bytedance" },
+  { name: "Jian Chen",        role: "MS",       next: "PhD at UCSD" },
+  { name: "Yuwei An",         role: "MS",       next: "PhD at Princeton" },
+  { name: "Xiwen Min",        role: "MS",       next: "PhD at UT Austin" },
+  { name: "Vashisth Tiwari",  role: "MS",       next: "PhD at CMU" },
+  { name: "Chen Li",          role: "MS",       next: "PhD at CMU" },
+  { name: "Yiying Luo",       role: "MS",       next: "PhD at CMU" },
+  { name: "Wentao Guo",       role: "MS",       next: "PhD at Princeton University" },
+  { name: "Qilong Feng",      role: "Undergrad", next: "PhD at CMU" },
+  { name: "Huanyu Wang",      role: "Undergrad", next: "PhD at CMU" },
+  { name: "Haoyun Qin",       role: "Undergrad", next: "PhD at Princeton University" },
+  { name: "Jingwei Zuo",      role: "Undergrad", next: "PhD at Rice University" }
+];
+
+function esc(s) {
+  return String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]));
+}
+
+document.getElementById('alumniGrid').innerHTML = ALUMNI.map(a => `
+  <div class="alumni">
+    <span class="alumni-name">${esc(a.name)}</span>
+    <span class="alumni-role">${esc(a.role)}</span>
+    <span class="alumni-next"><span class="arrow">→</span> ${esc(a.next)}</span>
+  </div>
+`).join("");
+</script>
+
+</body>
+</html>

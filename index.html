@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>InfiniAI Lab — Carnegie Mellon University</title>
+<meta name="description" content="InfiniAI Lab at Carnegie Mellon University, led by Prof. Beidi Chen. We build efficient and scalable AI models and systems." />
+<link rel="icon" type="image/png" href="infini-ai.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fraunces:wght@500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #ffffff;
+    --bg-soft: #fdf7fb;
+    --ink: #1a1320;
+    --ink-soft: #4a3f55;
+    --muted: #7a6f88;
+    --line: #ebe2ee;
+    --accent: #d96fae;
+    --accent-2: #b76cd9;
+    --accent-soft: #fde7f1;
+    --gradient: linear-gradient(135deg, #f7b7d6 0%, #d96fae 45%, #b76cd9 100%);
+    --shadow: 0 10px 40px -20px rgba(183, 108, 217, 0.35);
+    --radius: 14px;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: var(--accent-2); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .container {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 28px;
+  }
+
+  /* ---------- Nav ---------- */
+  header.nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: saturate(160%) blur(12px);
+    -webkit-backdrop-filter: saturate(160%) blur(12px);
+    border-bottom: 1px solid var(--line);
+  }
+  header.nav {
+    background: rgba(255, 255, 255, 0.78);
+    backdrop-filter: saturate(180%) blur(16px);
+    -webkit-backdrop-filter: saturate(180%) blur(16px);
+    border-bottom: 1px solid rgba(235, 226, 238, 0.7);
+  }
+  .nav-inner {
+    display: flex; align-items: center; justify-content: space-between;
+    height: 72px;
+  }
+  .brand {
+    display: flex; align-items: center; gap: 12px;
+    font-weight: 700; color: var(--ink);
+    letter-spacing: -0.01em;
+    transition: opacity 0.15s ease;
+  }
+  .brand:hover { opacity: 0.78; text-decoration: none; }
+  .brand img { height: 32px; width: auto; display: block; }
+  .brand span { font-size: 16.5px; }
+
+  .nav-links { display: flex; align-items: center; gap: 4px; }
+  .nav-links a {
+    position: relative;
+    color: var(--ink-soft);
+    font-weight: 500;
+    font-size: 14.5px;
+    padding: 9px 14px;
+    border-radius: 999px;
+    transition: color 0.18s ease;
+  }
+  .nav-links a:not(.icon-link)::after {
+    content: "";
+    position: absolute;
+    left: 14px; right: 14px; bottom: 3px;
+    height: 2px; border-radius: 2px;
+    background: var(--gradient);
+    opacity: 0;
+    transform: scaleX(0.3);
+    transform-origin: center;
+    transition: opacity 0.2s ease, transform 0.25s ease;
+  }
+  .nav-links a:not(.icon-link):hover { color: var(--ink); text-decoration: none; }
+  .nav-links a:not(.icon-link):hover::after { opacity: 1; transform: scaleX(1); }
+  .nav-links a.active { color: var(--accent-2); }
+  .nav-links a.active::after { opacity: 1; transform: scaleX(1); }
+
+  .nav-links .icon-link {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 36px; height: 36px;
+    padding: 0;
+    border-radius: 50%;
+    color: var(--ink-soft);
+    transition: background 0.18s ease, color 0.18s ease, transform 0.18s ease;
+  }
+  .nav-links .icon-link:hover {
+    background: var(--accent-soft);
+    color: var(--accent-2);
+    transform: translateY(-1px);
+  }
+  .nav-links .icon-link:first-of-type {
+    margin-left: 12px;
+    position: relative;
+  }
+  .nav-links .icon-link:first-of-type::before {
+    content: "";
+    position: absolute;
+    left: -7px; top: 50%;
+    transform: translateY(-50%);
+    width: 1px; height: 18px;
+    background: var(--line);
+  }
+
+  .nav-toggle {
+    display: none;
+    align-items: center; justify-content: center;
+    background: transparent; border: none;
+    width: 40px; height: 40px;
+    border-radius: 50%; cursor: pointer;
+    color: var(--ink-soft);
+    transition: background 0.15s ease, color 0.15s ease;
+  }
+  .nav-toggle:hover { background: var(--accent-soft); color: var(--accent-2); }
+  .nav-toggle .bars { transition: transform 0.25s ease, opacity 0.2s ease; transform-origin: center; }
+  .nav-toggle[aria-expanded="true"] .bar1 { transform: translateY(5px) rotate(45deg); }
+  .nav-toggle[aria-expanded="true"] .bar2 { opacity: 0; }
+  .nav-toggle[aria-expanded="true"] .bar3 { transform: translateY(-5px) rotate(-45deg); }
+
+  @media (max-width: 720px) {
+    .nav-toggle { display: inline-flex; }
+
+    .nav-links {
+      position: absolute;
+      top: 72px; left: 0; right: 0;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+      padding: 0 24px;
+      background: rgba(255, 255, 255, 0.97);
+      backdrop-filter: saturate(180%) blur(16px);
+      -webkit-backdrop-filter: saturate(180%) blur(16px);
+      border-bottom: 1px solid var(--line);
+      box-shadow: 0 14px 30px -22px rgba(0,0,0,0.18);
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height 0.3s ease, opacity 0.2s ease, padding 0.3s ease;
+    }
+    .nav-links.open {
+      max-height: 640px;
+      opacity: 1;
+      padding: 12px 24px 18px;
+    }
+    .nav-links a:not(.icon-link) {
+      display: block;
+      padding: 12px 14px;
+      border-radius: 10px;
+    }
+    .nav-links a:not(.icon-link)::after { display: none; }
+    .nav-links a:not(.icon-link):hover { background: var(--bg-soft); }
+    .nav-links a.active { background: var(--accent-soft); }
+
+    .nav-links .icon-link {
+      width: auto; height: auto;
+      justify-content: flex-start;
+      border-radius: 10px;
+      background: transparent;
+      margin-left: 0;
+      padding: 12px 14px;
+      gap: 12px;
+    }
+    .nav-links .icon-link::before { display: none; }
+    .nav-links .icon-link::after {
+      content: attr(aria-label);
+      color: var(--ink-soft);
+      font-size: 14.5px;
+      font-weight: 500;
+    }
+    .nav-links .icon-link:first-of-type {
+      margin-top: 6px;
+      border-top: 1px solid var(--line);
+      padding-top: 14px;
+    }
+    .nav-links .icon-link:hover {
+      background: var(--bg-soft);
+      color: var(--accent-2);
+      transform: none;
+    }
+  }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    position: relative;
+    padding: 110px 0 90px;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(900px 500px at 85% -10%, rgba(217, 111, 174, 0.18), transparent 60%),
+      radial-gradient(700px 400px at 10% 30%, rgba(183, 108, 217, 0.12), transparent 60%);
+    pointer-events: none;
+  }
+  .hero-inner {
+    position: relative;
+  }
+  @media (max-width: 820px) {
+    .hero { padding: 70px 0 60px; }
+  }
+
+  .eyebrow {
+    display: inline-block;
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent-2);
+    font-weight: 600;
+    margin-bottom: 18px;
+  }
+  h1.title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: clamp(40px, 5.5vw, 64px);
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+    margin: 0 0 22px;
+    font-weight: 600;
+  }
+  h1.title .grad {
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .lede {
+    font-size: 18px;
+    color: var(--ink-soft);
+    max-width: 62ch;
+    margin: 0 0 28px;
+  }
+  h1.title { max-width: 22ch; }
+  .cta-row { display: flex; gap: 14px; flex-wrap: wrap; }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 22px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 15px;
+    transition: transform 0.15s ease, box-shadow 0.2s ease;
+  }
+  .btn-primary {
+    background: var(--gradient);
+    color: white;
+    box-shadow: var(--shadow);
+  }
+  .btn-primary:hover { transform: translateY(-1px); text-decoration: none; }
+  .btn-ghost {
+    border: 1px solid var(--line);
+    color: var(--ink);
+    background: white;
+  }
+  .btn-ghost:hover { border-color: var(--accent); color: var(--accent-2); text-decoration: none; }
+
+  /* ---------- Sections ---------- */
+  section { padding: 90px 0; }
+  section.alt { background: var(--bg-soft); }
+
+  .section-head {
+    margin-bottom: 50px;
+    max-width: 720px;
+  }
+  .section-eyebrow {
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent-2);
+    font-weight: 600;
+    margin-bottom: 14px;
+  }
+  h2 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: clamp(30px, 3.5vw, 40px);
+    margin: 0 0 18px;
+    letter-spacing: -0.02em;
+    font-weight: 600;
+    line-height: 1.15;
+  }
+  .section-lede {
+    color: var(--ink-soft);
+    font-size: 17px;
+    margin: 0;
+  }
+
+  /* ---------- About PI ---------- */
+  .pi-card {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 44px;
+    align-items: stretch;
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 38px;
+    box-shadow: var(--shadow);
+  }
+  @media (max-width: 720px) {
+    .pi-card { grid-template-columns: 1fr; padding: 28px; gap: 24px; }
+    .pi-photo { height: auto; aspect-ratio: 1; }
+  }
+  .pi-photo {
+    width: 100%;
+    height: 100%;
+    min-height: 320px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--bg-soft);
+    box-shadow: 0 10px 30px -16px rgba(217, 111, 174, 0.5);
+  }
+  .pi-photo img {
+    width: 100%; height: 100%;
+    object-fit: cover; object-position: 70% 20%;
+    display: block;
+  }
+  .pi-name {
+    font-family: 'Fraunces', serif;
+    font-size: 28px;
+    margin: 0 0 6px;
+    font-weight: 600;
+  }
+  .pi-role {
+    color: var(--accent-2);
+    font-weight: 500;
+    margin: 0 0 18px;
+    font-size: 15px;
+  }
+  .pi-bio p {
+    margin: 0 0 14px;
+    color: var(--ink-soft);
+  }
+  .pi-bio p:last-child { margin-bottom: 0; }
+
+  /* ---------- Research grid ---------- */
+  .research-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+  }
+  @media (max-width: 760px) { .research-grid { grid-template-columns: 1fr; } }
+  .research-card {
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 32px 30px;
+    position: relative;
+    transition: transform 0.2s ease, box-shadow 0.25s ease, border-color 0.2s ease;
+  }
+  .research-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+    border-color: rgba(217, 111, 174, 0.4);
+  }
+  .research-card .num {
+    font-family: 'Fraunces', serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--accent);
+    margin-bottom: 12px;
+    letter-spacing: 0.08em;
+  }
+  .research-card h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 22px;
+    margin: 0 0 12px;
+    line-height: 1.25;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+  .research-card p {
+    margin: 0;
+    color: var(--ink-soft);
+    font-size: 15.5px;
+  }
+
+  /* ---------- Openings ---------- */
+  .opening-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+  }
+  @media (max-width: 760px) { .opening-grid { grid-template-columns: 1fr; } }
+  .opening-card {
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 32px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    transition: transform 0.2s ease, box-shadow 0.25s ease, border-color 0.2s ease;
+  }
+  .opening-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+    border-color: rgba(217, 111, 174, 0.4);
+  }
+  .opening-tag {
+    align-self: flex-start;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent-2);
+    background: var(--accent-soft);
+    padding: 4px 12px;
+    border-radius: 999px;
+  }
+  .opening-card h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 22px;
+    margin: 0;
+    line-height: 1.25;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+  .opening-card p {
+    margin: 0;
+    color: var(--ink-soft);
+    font-size: 15.5px;
+  }
+  .opening-card em { color: var(--accent-2); font-style: normal; font-weight: 600; }
+  .opening-card .btn { align-self: flex-start; margin-top: 6px; }
+
+  /* ---------- Footer ---------- */
+  footer {
+    border-top: 1px solid var(--line);
+    padding: 40px 0;
+    color: var(--muted);
+    font-size: 14px;
+  }
+  .footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .footer-inner .brand img { height: 28px; }
+  .footer-inner .brand span { font-size: 15px; }
+  .footer-social { display: flex; gap: 10px; }
+  .footer-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    color: var(--ink-soft);
+    border: 1px solid var(--line);
+    transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+  }
+  .footer-social a:hover { color: var(--accent-2); border-color: var(--accent); background: var(--accent-soft); }
+
+  .btn-ghost svg { color: var(--ink-soft); }
+  .btn-ghost:hover svg { color: var(--accent-2); }
+
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="#top">
+      <img src="infini-ai.png" alt="InfiniAI Lab logo" />
+      <span>InfiniAI Lab</span>
+    </a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+        <line class="bars bar1" x1="4" y1="7"  x2="20" y2="7"/>
+        <line class="bars bar2" x1="4" y1="12" x2="20" y2="12"/>
+        <line class="bars bar3" x1="4" y1="17" x2="20" y2="17"/>
+      </svg>
+    </button>
+    <nav class="nav-links" id="primary-nav">
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="team.html">Team</a>
+      <a href="publications.html">Publications</a>
+      <a href="blog.html">Blog</a>
+      <a href="#openings">Openings</a>
+      <a href="#contact">Contact</a>
+      <a class="icon-link" href="https://github.com/Infini-AI-Lab" target="_blank" rel="noopener" aria-label="GitHub">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2.1c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.7 1.25 3.36.96.1-.74.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.06 11.06 0 0 1 5.79 0c2.21-1.49 3.18-1.18 3.18-1.18.63 1.59.23 2.76.11 3.05.74.81 1.18 1.84 1.18 3.1 0 4.42-2.7 5.39-5.27 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.68.8.56C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg>
+      </a>
+      <a class="icon-link" href="https://x.com/InfiniAILab" target="_blank" rel="noopener" aria-label="X">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      </a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div>
+        <span class="eyebrow">Carnegie Mellon University</span>
+        <h1 class="title">
+          Building <span class="grad">efficient &amp; scalable</span> AI models and systems.
+        </h1>
+        <p class="lede">
+          InfiniAI Lab co-designs algorithms, model architectures, and hardware-aware
+          infrastructure to push the frontier of large-scale machine learning —
+          from sparse architectures to agentic RL and real-time multimodal generation.
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#research">Explore our research</a>
+          <a class="btn btn-ghost" href="#about">Meet the PI</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About PI -->
+  <section id="about" class="alt">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-eyebrow">About the PI</div>
+        <h2>Led by Prof. Beidi Chen.</h2>
+        <p class="section-lede">
+          Designing and optimizing algorithms on modern hardware to accelerate large machine learning systems.
+        </p>
+      </div>
+
+      <div class="pi-card">
+        <div class="pi-photo"><img src="photos/image0.jpeg" alt="Beidi Chen" /></div>
+        <div class="pi-bio">
+          <p class="pi-name">Beidi Chen</p>
+          <p class="pi-role">Assistant Professor, Carnegie Mellon University · Amazon Scholar</p>
+          <p>
+            Beidi Chen is an Assistant Professor at Carnegie Mellon University and Amazon Scholar.
+            Previously, she was a visiting Research Scientist at FAIR, and before that, a postdoctoral
+            scholar at Stanford University. She received her Ph.D. from Rice University.
+          </p>
+          <p>
+            Her research focuses on efficient AI — specifically, designing and optimizing algorithms
+            on modern hardware to accelerate large machine learning systems. Her work has won the
+            best paper runner-up at ICML 2022 and the best paper award at MICRO 2025. She has been
+            recognized as a Rising Star in EECS by MIT and UIUC, and is a recipient of the
+            Google ML and Systems Junior Faculty Award as well as the Google Research Scholar Award.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Research -->
+  <section id="research">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-eyebrow">Research</div>
+        <h2>Four interconnected directions.</h2>
+        <p class="section-lede">
+          InfiniAI Lab develops efficient and scalable AI models and systems by co-designing
+          algorithms, model architectures, and hardware-aware infrastructure.
+        </p>
+      </div>
+
+      <div class="research-grid">
+        <article class="research-card">
+          <div class="num">01</div>
+          <h3>Sparse Model Architecture</h3>
+          <p>
+            We rethink dense computation to unlock long-context and long-generation efficiency,
+            expand model capacity at constant compute through Mixture-of-Experts and conditional
+            computation, and study the scaling laws that govern how sparse models grow with data,
+            parameters, and hardware.
+          </p>
+        </article>
+
+        <article class="research-card">
+          <div class="num">02</div>
+          <h3>Scalable Agentic RL: Training &amp; Inference</h3>
+          <p>
+            We build the systems stack for the next generation of reinforcement-learned, tool-using
+            agents — large-scale and asynchronous RL pipelines, agentic serving engines, and
+            kernel- and system-level optimizations for sparse attention and MoE inference at
+            frontier scale.
+          </p>
+        </article>
+
+        <article class="research-card">
+          <div class="num">03</div>
+          <h3>Real-time &amp; Multimodal Generation</h3>
+          <p>
+            We bring generative AI into the interactive, multi-sensory loop where humans actually
+            work and create — developing streaming text, image, audio, and video models with
+            sub-second latency, unified multimodal architectures, and human–AI collaboration
+            interfaces that enhance creativity rather than replace it.
+          </p>
+        </article>
+
+        <article class="research-card">
+          <div class="num">04</div>
+          <h3>MLSys for the Post-AGI Era</h3>
+          <p>
+            We prepare infrastructure for a world where AI agents are first-class operators of the
+            AI stack itself — systems that let agents build, deploy, optimize, secure, and evolve
+            ML infrastructure with minimal human intervention, while remaining safe, verifiable,
+            and robust as models and tools co-evolve.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Openings -->
+  <section id="openings" class="alt">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-eyebrow">Join us</div>
+        <h2>Open positions.</h2>
+        <p class="section-lede">
+          We are currently open for <strong>intern</strong>, <strong>PhD</strong>,
+          and <strong>postdoc</strong> applications.
+        </p>
+      </div>
+
+      <div class="opening-grid">
+        <article class="opening-card">
+          <div class="opening-tag">PhD &amp; Postdoc</div>
+          <h3>Email Prof. Chen directly.</h3>
+          <p>
+            Send a brief note explaining why you're interested and attach a CV, including
+            your undergraduate grades. No separate cover letter or certificates needed.
+          </p>
+          <p>
+            Use <em>"Application PhD"</em> or <em>"Application Postdoc"</em> as the email
+            subject. If you're applying to a specific advertisement, note it in the email.
+          </p>
+          <a class="btn btn-primary" href="mailto:beidic@andrew.cmu.edu?subject=Application%20PhD">Email beidic@andrew.cmu.edu</a>
+        </article>
+
+        <article class="opening-card">
+          <div class="opening-tag">Internship</div>
+          <h3>Apply through the form.</h3>
+          <p>
+            Fill out our application form with your CV and transcript. Then email
+            Prof. Chen and the PhD student(s) or postdoc(s) you'd like to work with,
+            including: (1) CV, (2) transcript, (3) a brief description of your research
+            interests.
+          </p>
+          <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSfMJwpRMARPuwhzuoPo_76VrGPq84FkFrFNAnp3P17ITyxF9Q/viewform?usp=pp_url" target="_blank" rel="noopener">Open application form</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-eyebrow">Get in touch</div>
+        <h2>Collaborate with InfiniAI.</h2>
+        <p class="section-lede">
+          We're always looking for curious researchers and engineers who want to build the
+          systems behind the next generation of AI. Reach out if our directions resonate.
+        </p>
+      </div>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="mailto:beidic@andrew.cmu.edu">Email the lab</a>
+        <a class="btn btn-ghost" href="https://github.com/Infini-AI-Lab" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2.1c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.7 1.25 3.36.96.1-.74.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.06 11.06 0 0 1 5.79 0c2.21-1.49 3.18-1.18 3.18-1.18.63 1.59.23 2.76.11 3.05.74.81 1.18 1.84 1.18 3.1 0 4.42-2.7 5.39-5.27 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.68.8.56C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg>
+          GitHub
+        </a>
+        <a class="btn btn-ghost" href="https://x.com/InfiniAILab" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          Follow on X
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <a class="brand" href="#top">
+      <img src="infini-ai.png" alt="InfiniAI Lab" />
+      <span>InfiniAI Lab</span>
+    </a>
+    <div class="footer-social">
+      <a href="https://github.com/Infini-AI-Lab" target="_blank" rel="noopener" aria-label="GitHub">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2.1c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.7 1.25 3.36.96.1-.74.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.06 11.06 0 0 1 5.79 0c2.21-1.49 3.18-1.18 3.18-1.18.63 1.59.23 2.76.11 3.05.74.81 1.18 1.84 1.18 3.1 0 4.42-2.7 5.39-5.27 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.68.8.56C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg>
+      </a>
+      <a href="https://x.com/InfiniAILab" target="_blank" rel="noopener" aria-label="X">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      </a>
+    </div>
+    <div>© <span id="year"></span> InfiniAI Lab · Carnegie Mellon University</div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  (function () {
+    const toggle = document.querySelector('.nav-toggle');
+    const menu = document.querySelector('.nav-links');
+    if (!toggle || !menu) return;
+    toggle.addEventListener('click', () => {
+      const open = menu.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(open));
+    });
+    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      menu.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    }));
+  })();
+</script>
+
+</body>
+</html>

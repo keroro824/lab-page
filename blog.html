@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Blog — InfiniAI Lab</title>
+<meta name="description" content="Research blog from InfiniAI Lab at Carnegie Mellon University." />
+<link rel="icon" type="image/png" href="infini-ai.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fraunces:wght@500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #ffffff;
+    --bg-soft: #fdf7fb;
+    --ink: #1a1320;
+    --ink-soft: #4a3f55;
+    --muted: #7a6f88;
+    --line: #ebe2ee;
+    --accent: #d96fae;
+    --accent-2: #b76cd9;
+    --accent-soft: #fde7f1;
+    --gradient: linear-gradient(135deg, #f7b7d6 0%, #d96fae 45%, #b76cd9 100%);
+    --shadow: 0 10px 40px -20px rgba(183, 108, 217, 0.35);
+    --radius: 14px;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: var(--ink); background: var(--bg);
+    line-height: 1.65; -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: var(--accent-2); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .container { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
+
+  /* nav */
+  header.nav {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: saturate(160%) blur(12px);
+    -webkit-backdrop-filter: saturate(160%) blur(12px);
+    border-bottom: 1px solid var(--line);
+  }
+  header.nav {
+    background: rgba(255, 255, 255, 0.78);
+    backdrop-filter: saturate(180%) blur(16px);
+    -webkit-backdrop-filter: saturate(180%) blur(16px);
+    border-bottom: 1px solid rgba(235, 226, 238, 0.7);
+  }
+  .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 72px; }
+  .brand {
+    display: flex; align-items: center; gap: 12px;
+    font-weight: 700; color: var(--ink); letter-spacing: -0.01em;
+    transition: opacity 0.15s ease;
+  }
+  .brand:hover { opacity: 0.78; text-decoration: none; }
+  .brand img { height: 32px; width: auto; display: block; }
+  .brand span { font-size: 16.5px; }
+
+  .nav-links { display: flex; align-items: center; gap: 4px; }
+  .nav-links a {
+    position: relative;
+    color: var(--ink-soft); font-weight: 500; font-size: 14.5px;
+    padding: 9px 14px; border-radius: 999px;
+    transition: color 0.18s ease;
+  }
+  .nav-links a:not(.icon-link)::after {
+    content: ""; position: absolute;
+    left: 14px; right: 14px; bottom: 3px;
+    height: 2px; border-radius: 2px;
+    background: var(--gradient);
+    opacity: 0; transform: scaleX(0.3); transform-origin: center;
+    transition: opacity 0.2s ease, transform 0.25s ease;
+  }
+  .nav-links a:not(.icon-link):hover { color: var(--ink); text-decoration: none; }
+  .nav-links a:not(.icon-link):hover::after { opacity: 1; transform: scaleX(1); }
+  .nav-links a.active { color: var(--accent-2); }
+  .nav-links a.active::after { opacity: 1; transform: scaleX(1); }
+
+  .nav-links .icon-link {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 36px; height: 36px; padding: 0;
+    border-radius: 50%; color: var(--ink-soft);
+    transition: background 0.18s ease, color 0.18s ease, transform 0.18s ease;
+  }
+  .nav-links .icon-link:hover {
+    background: var(--accent-soft); color: var(--accent-2);
+    transform: translateY(-1px);
+  }
+  .nav-links .icon-link:first-of-type { margin-left: 12px; position: relative; }
+  .nav-links .icon-link:first-of-type::before {
+    content: ""; position: absolute;
+    left: -7px; top: 50%; transform: translateY(-50%);
+    width: 1px; height: 18px; background: var(--line);
+  }
+
+  .nav-toggle {
+    display: none;
+    align-items: center; justify-content: center;
+    background: transparent; border: none;
+    width: 40px; height: 40px;
+    border-radius: 50%; cursor: pointer;
+    color: var(--ink-soft);
+    transition: background 0.15s ease, color 0.15s ease;
+  }
+  .nav-toggle:hover { background: var(--accent-soft); color: var(--accent-2); }
+  .nav-toggle .bars { transition: transform 0.25s ease, opacity 0.2s ease; transform-origin: center; }
+  .nav-toggle[aria-expanded="true"] .bar1 { transform: translateY(5px) rotate(45deg); }
+  .nav-toggle[aria-expanded="true"] .bar2 { opacity: 0; }
+  .nav-toggle[aria-expanded="true"] .bar3 { transform: translateY(-5px) rotate(-45deg); }
+
+  @media (max-width: 720px) {
+    .nav-toggle { display: inline-flex; }
+
+    .nav-links {
+      position: absolute;
+      top: 72px; left: 0; right: 0;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+      padding: 0 24px;
+      background: rgba(255, 255, 255, 0.97);
+      backdrop-filter: saturate(180%) blur(16px);
+      -webkit-backdrop-filter: saturate(180%) blur(16px);
+      border-bottom: 1px solid var(--line);
+      box-shadow: 0 14px 30px -22px rgba(0,0,0,0.18);
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height 0.3s ease, opacity 0.2s ease, padding 0.3s ease;
+    }
+    .nav-links.open {
+      max-height: 640px;
+      opacity: 1;
+      padding: 12px 24px 18px;
+    }
+    .nav-links a:not(.icon-link) {
+      display: block;
+      padding: 12px 14px;
+      border-radius: 10px;
+    }
+    .nav-links a:not(.icon-link)::after { display: none; }
+    .nav-links a:not(.icon-link):hover { background: var(--bg-soft); }
+    .nav-links a.active { background: var(--accent-soft); }
+
+    .nav-links .icon-link {
+      width: auto; height: auto;
+      justify-content: flex-start;
+      border-radius: 10px;
+      background: transparent;
+      margin-left: 0;
+      padding: 12px 14px;
+      gap: 12px;
+    }
+    .nav-links .icon-link::before { display: none; }
+    .nav-links .icon-link::after {
+      content: attr(aria-label);
+      color: var(--ink-soft);
+      font-size: 14.5px;
+      font-weight: 500;
+    }
+    .nav-links .icon-link:first-of-type {
+      margin-top: 6px;
+      border-top: 1px solid var(--line);
+      padding-top: 14px;
+    }
+    .nav-links .icon-link:hover {
+      background: var(--bg-soft);
+      color: var(--accent-2);
+      transform: none;
+    }
+  }
+
+  /* page header */
+  .page-head { padding: 80px 0 50px; position: relative; overflow: hidden; }
+  .page-head::before {
+    content: ""; position: absolute; inset: 0;
+    background:
+      radial-gradient(800px 400px at 90% -10%, rgba(217, 111, 174, 0.15), transparent 60%),
+      radial-gradient(600px 300px at 0% 30%, rgba(183, 108, 217, 0.10), transparent 60%);
+    pointer-events: none;
+  }
+  .page-head .container { position: relative; }
+  .eyebrow {
+    display: inline-block; font-size: 13px; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--accent-2); font-weight: 600; margin-bottom: 14px;
+  }
+  h1 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: clamp(34px, 4.4vw, 52px);
+    line-height: 1.1; letter-spacing: -0.025em;
+    margin: 0 0 16px; font-weight: 600;
+  }
+  .page-lede { color: var(--ink-soft); font-size: 17px; max-width: 60ch; margin: 0; }
+
+  /* blog cards */
+  main { padding: 0 0 100px; }
+  .post-list {
+    display: flex; flex-direction: column; gap: 22px;
+  }
+  .post {
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 32px 34px;
+    transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.25s ease;
+  }
+  .post:hover {
+    border-color: rgba(217, 111, 174, 0.4);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+  }
+  @media (max-width: 600px) { .post { padding: 24px 22px; } }
+
+  .post-title {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(22px, 2.4vw, 28px);
+    font-weight: 600;
+    margin: 0 0 12px;
+    line-height: 1.25;
+    letter-spacing: -0.015em;
+  }
+  .post-title a { color: var(--ink); }
+  .post-title a:hover { color: var(--accent-2); text-decoration: none; }
+  .post-title .ext {
+    display: inline-block; margin-left: 4px; color: var(--muted);
+    font-size: 0.7em; vertical-align: middle;
+    transition: color 0.15s ease;
+  }
+  .post-title a:hover .ext { color: var(--accent-2); }
+
+  .post-desc {
+    color: var(--ink-soft);
+    font-size: 15.5px;
+    margin: 0 0 16px;
+  }
+  .post-authors {
+    font-size: 13.5px;
+    color: var(--muted);
+    margin: 0 0 18px;
+  }
+  .post-links {
+    display: flex; gap: 10px; flex-wrap: wrap;
+  }
+  .post-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 7px 14px;
+    border-radius: 999px;
+    font-size: 13.5px; font-weight: 500;
+    background: var(--bg-soft);
+    color: var(--ink);
+    border: 1px solid var(--line);
+    transition: all 0.15s ease;
+  }
+  .post-link:hover {
+    background: var(--accent-soft);
+    color: var(--accent-2);
+    border-color: var(--accent);
+    text-decoration: none;
+  }
+  .post-link.primary {
+    background: var(--gradient);
+    color: white;
+    border-color: transparent;
+  }
+  .post-link.primary:hover { color: white; opacity: 0.92; }
+
+  /* footer */
+  footer {
+    border-top: 1px solid var(--line);
+    padding: 40px 0; color: var(--muted); font-size: 14px;
+  }
+  .footer-inner {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 20px; flex-wrap: wrap;
+  }
+  .footer-inner .brand img { height: 28px; }
+  .footer-inner .brand span { font-size: 15px; }
+  .footer-social { display: flex; gap: 10px; }
+  .footer-social a {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 36px; height: 36px; border-radius: 50%;
+    color: var(--ink-soft); border: 1px solid var(--line);
+    transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+  }
+  .footer-social a:hover { color: var(--accent-2); border-color: var(--accent); background: var(--accent-soft); }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html">
+      <img src="infini-ai.png" alt="InfiniAI Lab logo" />
+      <span>InfiniAI Lab</span>
+    </a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+        <line class="bars bar1" x1="4" y1="7"  x2="20" y2="7"/>
+        <line class="bars bar2" x1="4" y1="12" x2="20" y2="12"/>
+        <line class="bars bar3" x1="4" y1="17" x2="20" y2="17"/>
+      </svg>
+    </button>
+    <nav class="nav-links" id="primary-nav">
+      <a href="index.html#about">About</a>
+      <a href="index.html#research">Research</a>
+      <a href="team.html">Team</a>
+      <a href="publications.html">Publications</a>
+      <a href="blog.html" class="active">Blog</a>
+      <a href="index.html#openings">Openings</a>
+      <a href="index.html#contact">Contact</a>
+      <a class="icon-link" href="https://github.com/Infini-AI-Lab" target="_blank" rel="noopener" aria-label="GitHub">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2.1c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.7 1.25 3.36.96.1-.74.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.06 11.06 0 0 1 5.79 0c2.21-1.49 3.18-1.18 3.18-1.18.63 1.59.23 2.76.11 3.05.74.81 1.18 1.84 1.18 3.1 0 4.42-2.7 5.39-5.27 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.68.8.56C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg>
+      </a>
+      <a class="icon-link" href="https://x.com/InfiniAILab" target="_blank" rel="noopener" aria-label="X">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      </a>
+    </nav>
+  </div>
+</header>
+
+<section class="page-head">
+  <div class="container">
+    <div class="eyebrow">InfiniAI Lab</div>
+    <h1>Blog.</h1>
+    <p class="page-lede">
+      Project pages and write-ups from the lab — deeper context on selected papers,
+      systems, and tools we've built for efficient large-scale ML.
+    </p>
+  </div>
+</section>
+
+<main>
+  <div class="container">
+    <div class="post-list" id="postList"></div>
+  </div>
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <a class="brand" href="index.html">
+      <img src="infini-ai.png" alt="InfiniAI Lab" />
+      <span>InfiniAI Lab</span>
+    </a>
+    <div class="footer-social">
+      <a href="https://github.com/Infini-AI-Lab" target="_blank" rel="noopener" aria-label="GitHub">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2.1c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.7 1.25 3.36.96.1-.74.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.06 11.06 0 0 1 5.79 0c2.21-1.49 3.18-1.18 3.18-1.18.63 1.59.23 2.76.11 3.05.74.81 1.18 1.84 1.18 3.1 0 4.42-2.7 5.39-5.27 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.68.8.56C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg>
+      </a>
+      <a href="https://x.com/InfiniAILab" target="_blank" rel="noopener" aria-label="X">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      </a>
+    </div>
+    <div>© <span id="year"></span> InfiniAI Lab · Carnegie Mellon University</div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+(function () {
+  const toggle = document.querySelector('.nav-toggle');
+  const menu = document.querySelector('.nav-links');
+  if (!toggle || !menu) return;
+  toggle.addEventListener('click', () => {
+    const open = menu.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', String(open));
+  });
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    menu.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+  }));
+})();
+
+const POSTS = [
+  {
+    title: "Vortex: Democratizing Sparse Attention",
+    description: "Vortex is a lightweight, modular framework for building custom sparse attention algorithms for LLM inference. It exists to make it easy for researchers and engineers to prototype, extend, and deploy advanced sparsity patterns on modern inference backends such as SGLang—without modifying core model code. Vortex allows you to express novel sparse attention concisely while relying on an optimized execution engine.",
+    authors: "",
+    paper: "https://github.com/Infini-AI-Lab/vortex_torch/",
+    paperLabel: "GitHub",
+    blog: "https://infini-ai-lab.github.io/ai-environment-architect/"
+  },
+  {
+    title: "Kinetics: Rethinking Test-Time Scaling Laws",
+    description: "We introduce Kinetics, which challenges the traditional test-time scaling (TTS) laws by adopting a practical efficiency perspective. It reveals that prior compute-optimal approaches overlook major key-value memory access bottlenecks in various TTS strategies. By jointly considering memory and compute, the Kinetics scaling law shows that it is more efficient to scale model size up to a threshold before investing more compute in test-time scaling. Motivated by this, we propose a new scaling paradigm centered on sparse attention, which fundamentally reshapes the scaling law. According to our Sparse Kinetics scaling law, sparse attention significantly enhances the scalability and performance of TTS and becomes increasingly valuable in high-cost scenarios.",
+    authors: "Ranajoy Sadhukhan, Zhuoming Chen, Haizhong Zheng, Yang Zhou, Emma Strubell, Beidi Chen",
+    paper: "https://arxiv.org/abs/2506.05333",
+    paperLabel: "arXiv",
+    blog: "https://infini-ai-lab.github.io/Kinetics/"
+  },
+  {
+    title: "Multiverse: Your Language Models Secretly Decide How to Parallelize and Merge Generation",
+    description: "We introduce Multiverse, a new generative model that enables natively parallel generation. Multiverse internalizes a MapReduce paradigm through three stages: (i) a Map stage for adaptive task splitting, (ii) a Process stage for parallel subtask execution, and (iii) a Reduce stage for lossless result merging. Next, we build a real-world Multiverse model with a co-design of data, algorithm, and system, enabling rapid and seamless transfer from frontier AR-LLMs. For data creation, we develop Multiverse Curator, an automated LLM-assisted pipeline that transforms sequential chains into MapReduce structures. Algorithmically, we design Multiverse Attention to separate parallel steps while ensuring training efficiency. Systematically, we implement Multiverse Engine to dynamically switches between sequential and parallel generation. After a 3-hour fine-tuning with 1K examples, Multiverse-32B is the only open-sourced non-AR model to match the performance of leading AR-LLMs of the same scale, scoring 54% and 46% on AIME24 & 25, respectively. Moreover, it exhibits superior scaling, outperforming AR-LLMs by 1.87% on average, which results in up to a 2x speedup.",
+    authors: "Xinyu Yang, Yuwei An, Hongyi Liu, Tianqi Chen, Beidi Chen",
+    paper: "https://arxiv.org/pdf/2506.09991",
+    paperLabel: "arXiv",
+    blog: "https://multiverse4fm.github.io/"
+  },
+  {
+    title: "GSM-Infinite: How Do Your LLMs Behave over Infinitely Increasing Context Length and Reasoning Complexity?",
+    description: "We develop GSM-infinite, a grade-school math problem generator capable of producing arithmetic problems with infinite difficulty and context length under fine-grained control. GSM-infinite benchmark provides a scalable and controllable testbed for quantitatively evaluating and advancing LLM reasoning abilities with increasing reasoning difficulty and increasing context length. Specifically, we found these observations. 1. LLMs reasoning performance drops exponentially (sigmoid on realistic context) as reasoning complexity increases. 2. LLMs reasoning performance sharply decreases when context length increases. 3. LLMs consistently better at forward-thinking problems (constructive logic) than backward-thinking problems given the same reasoning complexity. 4. When we scale repeated sampling computation exponentially, LLM performance on GSM-infinite grows linearly.",
+    authors: "Yang Zhou, Hongyi Liu, Zhuoming Chen, Yuandong Tian, Beidi Chen",
+    paper: "https://arxiv.org/abs/2502.05252",
+    paperLabel: "arXiv",
+    blog: "https://infini-ai-lab.github.io/gsm_infinite/"
+  },
+  {
+    title: "APE: Faster and Longer Context-Augmented Generation via Adaptive Parallel Encoding",
+    description: "Context-augmented generation, including RAG and ICL, require the efficient combination of multiple contexts to generate responses. Directly inputting them sequentially increase computational cost by re-encoding the combined selection of contexts for every request. To address this, we propose Adaptive Parallel Encoding (APE) to pre-compute and cache the KV states of each context independently, enabling direct loading of cached states during inference and accommodating more contexts through position reuse across contexts. With the shared prefix, attention temperature, and scaling factor, APE further align the distribution of parallel encoding with sequential encoding for better accuracy. Our method can preserve 98% and 93% sequential encoding performance on RAG and ICL tasks, while achieving a 4.5× speedup by reducing 28× prefilling time for a 128K-length context.",
+    authors: "Xinyu Yang, Tianqi Chen, Beidi Chen",
+    paper: "https://arxiv.org/abs/2502.05431",
+    paperLabel: "arXiv",
+    blog: "https://infini-ai-lab.github.io/APE-Page/"
+  },
+  {
+    title: "MagicPIG: LSH Sampling for Efficient LLM Generation",
+    description: "MagicPIG leverages sampling for efficient attention estimation, utilizing CPUs as augmented memory to significantly enhance inference throughput. This approach stands out by combining computational efficiency with scalability, making it well-suited for handling resource-intensive tasks. Unlike conventional TopK attention mechanisms, which can struggle with maintaining both precision and performance as context lengths grow, MagicPIG excels in processing complex tasks such as long-context reasoning. By effectively distributing memory and computation between CPUs and accelerators, MagicPIG not only ensures high throughput but also maintains the fidelity of attention mechanisms over extended sequences.",
+    authors: "Zhuoming Chen, Ranajoy Sadhukhan, Zihao Ye, Yang Zhou, Jianyu Zhang, Niklas Nolte, Yuandong Tian, Matthijs Douze, Leon Bottou, Zhihao Jia, Beidi Chen",
+    paper: "https://arxiv.org/abs/2410.16179",
+    paperLabel: "arXiv",
+    blog: "https://www.lsh-ai.com"
+  },
+  {
+    title: "S2FT: Efficient, Scalable and Generalizable LLM Fine-tuning by Structured Sparsity",
+    description: "Structured Sparse Fine-Tuning (S2FT) is a novel PEFT family for LLMs that achieves high quality, efficient training, and scalable serving simultaneously. It accomplishes this by \"selecting sparsely and computing densely\". Compared to LoRA, S2FT enhances generalization ability on both commonsense and arithmetic reasoning with 4.6% and 1.3% average improvements while reducing 10% training time and memory. Furthermore, S2FT enables scalable effective fusion, fast switch, and efficient parallelism for serving multiple adapters. These features make S2FT particularly valuable for the large-scale, real-world deployment of foundation models in various domains.",
+    authors: "Xinyu Yang, Jixuan Leng, Geyang Guo, Jiawei Zhao, Ryumei Nakada, Linjun Zhang, Huaxiu Yao, Beidi Chen",
+    paper: "https://arxiv.org/abs/2412.06289",
+    paperLabel: "arXiv",
+    blog: "https://infini-ai-lab.github.io/S2FT-Page/"
+  },
+  {
+    title: "Sirius: Contextual Sparsity with Correction for Efficient LLMs",
+    description: "Contextual Sparsity (CS) is appealing for its training-free nature and its ability to reach a higher compression ratio seemingly without quality degradation. However, in this paper, we find that although CS succeeds in prompt-understanding tasks, CS significantly degrades the model performance for reasoning, deduction, and knowledge-based tasks. This paper introduces Sirius, an efficient correction mechanism, which significantly recovers CS models quality on reasoning tasks while maintaining its efficiency gain. We comprehensively evaluate Sirius on 6 models across 8 complex generation tasks. Also, we develop system implementation for Sirius to achieve around 20% speedup for Llama-3-8B-Instruct on-chip and 35% on Llama-3-70B-Instruct offloading.",
+    authors: "Yang Zhou, Zhuoming Chen, Zhaozhuo Xu, Victoria Lin, Beidi Chen",
+    paper: "https://www.arxiv.org/pdf/2409.03856",
+    paperLabel: "arXiv",
+    blog: "https://infini-ai-lab.github.io/Sirius/"
+  },
+  {
+    title: "MagicDec — Part 1: Breaking the Latency-Throughput Tradeoff for Long Context Generation with Speculative Decoding",
+    description: "MagicDec studies speculative decoding in the regime of long context and large batch serving, illustrating the potential of speculative decoding for improving throughput. MagicDec also proposes using sparse attention for draft models, which is of vital importance for large batch serving. For moderate to long sequences, we demonstrate up to 2× speedup for LLaMA-2-7B-32K and 1.84× speedup for LLaMA-3.1-8B when serving batch sizes ranging from 32 to 256 on 8 NVIDIA A100 GPUs.",
+    authors: "Jian Chen, Vashisth Tiwari, Ranajoy Sadhukhan, Zhuoming Chen, Jinyuan Shi, Ian En-Hsu Yen, Avner May, Beidi Chen",
+    paper: "https://arxiv.org/abs/2408.11049v3",
+    paperLabel: "arXiv",
+    blog: "https://infini-ai-lab.github.io/MagicDec-part1/"
+  },
+  {
+    title: "MagicDec — Part 2: Breaking the Latency-Throughput Tradeoff for Long Context Generation with Speculative Decoding",
+    description: "MagicDec studies speculative decoding in the regime of long context and large batch serving, illustrating the potential of speculative decoding for improving throughput. MagicDec also proposes using sparse attention for draft models, which is of vital importance for large batch serving. For moderate to long sequences, we demonstrate up to 2× speedup for LLaMA-2-7B-32K and 1.84× speedup for LLaMA-3.1-8B when serving batch sizes ranging from 32 to 256 on 8 NVIDIA A100 GPUs.",
+    authors: "Jian Chen, Vashisth Tiwari, Ranajoy Sadhukhan, Zhuoming Chen, Jinyuan Shi, Ian En-Hsu Yen, Beidi Chen",
+    paper: "https://arxiv.org/abs/2408.11049v3",
+    paperLabel: "arXiv",
+    blog: "https://infini-ai-lab.github.io/MagicDec-part2/"
+  },
+  {
+    title: "TriForce: Lossless Acceleration of Long Sequence Generation with Hierarchical Speculative Decoding",
+    description: "With large language models (LLMs) deployed for long content generation, the growing key-value (KV) cache size has become a bottleneck, leading to low computational core utilization and high latency. TriForce, a hierarchical speculative decoding system, addresses this by using dynamic sparse KV cache via retrieval and a smaller model for speculative decoding, achieving up to 2.31× speedup on an A100 GPU and notable efficiency on RTX 4090 GPUs. TriForce also outperforms DeepSpeed-Zero-Inference by 4.86× on a single RTX 4090 GPU, maintaining robust performance across various temperatures.",
+    authors: "Hanshi Sun, Zhuoming Chen, Xinyu Yang, Yuandong Tian, Beidi Chen",
+    paper: "https://arxiv.org/abs/2404.11912",
+    paperLabel: "arXiv",
+    blog: "https://infini-ai-lab.github.io/TriForce/"
+  },
+  {
+    title: "Sequoia: Scalable, Robust, and Hardware-aware Speculative Decoding",
+    description: "Sequoia offers a scalable, robust, and hardware-aware solution for speculative decoding. Sequoia uses a dynamic programming algorithm for optimal token tree structures, a novel sampling and verification method for robust performance across temperatures, and a hardware-aware optimizer for maximum efficiency. Evaluations show Sequoia significantly speeds up decoding, improving Llama2-7B, Llama2-13B, and Vicuna-33B performance on an A100 by up to 4.04×, 3.73×, and 2.27×, respectively, and achieving impressive speedups in offloading settings.",
+    authors: "Zhuoming Chen, Avner May, Ruslan Svirschevski, Yuhsun Huang, Max Ryabinin, Zhihao Jia, Beidi Chen",
+    paper: "https://arxiv.org/abs/2402.12374",
+    paperLabel: "arXiv",
+    blog: "https://infini-ai-lab.github.io/Sequoia-Page/"
+  }
+];
+
+function esc(s) {
+  return String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]));
+}
+
+const EXT = '<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><polyline points="8 7 17 7 17 16"/></svg>';
+
+function renderPost(p) {
+  const titleHref = p.blog || p.paper || "";
+  const titleHTML = titleHref
+    ? `<a href="${esc(titleHref)}" target="_blank" rel="noopener">${esc(p.title)}<span class="ext"> ↗</span></a>`
+    : esc(p.title);
+  const authors = p.authors
+    ? `<div class="post-authors">${esc(p.authors)}</div>`
+    : "";
+  const links = [];
+  if (p.blog) {
+    links.push(`<a class="post-link primary" href="${esc(p.blog)}" target="_blank" rel="noopener">Read blog ${EXT}</a>`);
+  }
+  if (p.paper) {
+    links.push(`<a class="post-link" href="${esc(p.paper)}" target="_blank" rel="noopener">${esc(p.paperLabel || 'Paper')} ${EXT}</a>`);
+  }
+  return `
+    <article class="post">
+      <h2 class="post-title">${titleHTML}</h2>
+      <p class="post-desc">${esc(p.description)}</p>
+      ${authors}
+      <div class="post-links">${links.join("")}</div>
+    </article>
+  `;
+}
+
+document.getElementById('postList').innerHTML = POSTS.map(renderPost).join("");
+</script>
+
+</body>
+</html>
