@@ -2,23 +2,38 @@
 <table class="table">
 <tbody>
     <tr>
-        <td>
-            <span class="date">
-                <big><strong>2026</strong></big>
-                <br />
-                February
-            </span>
-        </td>
+        <td><span class="date"><big><strong>2026</strong></big><br />July</span></td>
         <td class="publication">
-            <span class="pubtitle">
-                <a href="https://arxiv.org/abs/2602.12271"><strong>MonarchRT: Efficient Attention for Real-Time Video Generation</strong></a>.
-            <span class="pub-topics"><span class="topic-badge topic-sparse"><i class="fas fa-brain"></i></span><span class="topic-badge topic-system"><i class="bi bi-gpu-card"></i></span></span></span><br />
-            <span class="authors">
-                Agarwal, Krish; Chen, Zhuoming; Luo, Cheng; Chen, Yongqi; Zheng, Haizhong; Huang, Xun; Rudra, Atri; Chen, Beidi
-            </span><br />
-            <span class="venuetype"></span><span class="venue">Preprints</span>
-            <br />        </td>
+            <span class="pubtitle"><a href="https://arxiv.org/abs/2607.18171">FlashRT: Agent Harness for Guiding Agents to Deploy Real-Time Multimodal Applications</a>.<span class="pub-topics"><span class="topic-badge topic-system"><i class="bi bi-gpu-card"></i></span></span></span><br />
+            <span class="authors">Agarwal, Krish; Chen, Zhuoming; Qin, Yanyuan; Gu, Zhenyu; Rudra, Atri; Chen, Beidi</span><br />
+            <span class="venuetype"></span><span class="venue">Preprints</span><br />
+        </td>
     </tr>
+    <tr>
+        <td><span class="date"><big><strong>2026</strong></big><br />June</span></td>
+        <td class="publication">
+            <span class="pubtitle"><a href="https://arxiv.org/abs/2606.08446">Sparrow: Sparse Rollout for Stable and Efficient Long-context RL of Large Language Models</a>.<span class="pub-topics"><span class="topic-badge topic-sparse"><i class="fas fa-brain"></i></span><span class="topic-badge topic-learning"><i class="fas fa-cogs"></i></span></span></span><br />
+            <span class="authors">Zhou, Yang; Sadhukhan, Ranajoy; Sun, Zhaofeng; Chen, Zhuoming; Kundu, Souvik; Dingliwal, Saket; Jayanthi, Sai Muralidhar; Galstyan, Aram; Zheng, Haizhong; Chen, Beidi</span><br />
+            <span class="venuetype"></span><span class="venue">Preprints</span><br />
+        </td>
+    </tr>
+    <tr>
+        <td><span class="date"><big><strong>2026</strong></big><br />April</span></td>
+        <td class="publication">
+            <span class="pubtitle"><a href="https://arxiv.org/abs/2604.24658">The Last Human-Written Paper: Agent-Native Research Artifacts</a>.<span class="pub-topics"><span class="topic-badge topic-system"><i class="bi bi-gpu-card"></i></span></span></span><br />
+            <span class="authors">Liu, Jiachen; Pei, Jiaxin; Huang, Jintao; Si, Chenglei; Qu, Ao; Tang, Xiangru; Lu, Runyu; Chen, Lichang; Bai, Xiaoyan; Zheng, Haizhong; Chen, Carl; Chen, Zhiyang; Ye, Haojie; Fu, Yujuan; He, Zexue; Jin, Zijian; Zhang, Zhenyu; Sun, Shangquan; Harmon, Maestro; Wang, John Dianzhuo; Zeng, Jianqiao; Sun, Jiachen; Wu, Mingyuan; Zhou, Baoyu; You, Chenyu; Lu, Shijian; Qiu, Yiming; Lai, Fan; Yuan, Yuan; Li, Yao; Hong, Junyuan; Zhu, Ruihao; Chen, Beidi; Pentland, Alex; Chen, Ang; Chowdhury, Mosharaf; Zhang, Zechen</span><br />
+            <span class="venuetype"></span><span class="venue">Preprints</span><br />
+        </td>
+    </tr>
+    <tr>
+        <td><span class="date"><big><strong>2026</strong></big><br />March</span></td>
+        <td class="publication">
+            <span class="pubtitle"><a href="https://arxiv.org/abs/2603.20661">WWW.Serve: Interconnecting Global LLM Services through Decentralization</a>.<span class="pub-topics"><span class="topic-badge topic-learning"><i class="fas fa-cogs"></i></span><span class="topic-badge topic-system"><i class="bi bi-gpu-card"></i></span></span></span><br />
+            <span class="authors">Wang, Huanyu; Xia, Ziyu; Chen, Zhuoming; Chen, Beidi</span><br />
+            <span class="venuetype"></span><span class="venue">Preprints</span><br />
+        </td>
+    </tr>
+
 
     <tr>
     <td>
@@ -101,7 +116,66 @@
 
 ## Publications
 <table class="table table-pubs">
-    <tbody><tr>
+    <tbody>
+    <tr>
+        <td><span class="date"><big><strong>2026</strong></big><br />August</span></td>
+        <td class="publication">
+            <span class="pubtitle"><a href="https://arxiv.org/abs/2608.28389">CamoDocs: A Poisoning Attack Against Retrieval-Augmented Language Models Using Camouflaged Documents</a>.<span class="pub-topics"><span class="topic-badge topic-system"><i class="bi bi-gpu-card"></i></span></span></span><br />
+            <span class="authors">Jung, Jaewon; Zheng, Haizhong; Jang, Hongsun; Song, Jaeyong; Chen, Beidi; Lee, Jinho</span><br />
+            <span class="venuetype"></span><span class="venue">EMNLP 2026</span><br />
+        </td>
+    </tr>
+    <tr>
+        <td><span class="date"><big><strong>2026</strong></big><br />August</span></td>
+        <td class="publication">
+            <span class="pubtitle"><a href="https://arxiv.org/abs/2608.24024">Beyond Confidence: Test-Time Scaling for Multi-Turn Search Agents via Retrieval Grounding</a>.<span class="pub-topics"><span class="topic-badge topic-learning"><i class="fas fa-cogs"></i></span></span></span><br />
+            <span class="authors">Kook, Hyunho; So, Junhyuk; Fu, Tianyu; Zheng, Haizhong; Chen, Beidi</span><br />
+            <span class="venuetype"></span><span class="venue">EMNLP 2026 Findings</span><br />
+        </td>
+    </tr>
+    <tr>
+        <td><span class="date"><big><strong>2026</strong></big><br />June</span></td>
+        <td class="publication">
+            <span class="pubtitle"><a href="https://arxiv.org/abs/2606.06453">Vortex: Efficient and Programmable Sparse Attention Serving for AI Agents</a>.<span class="pub-topics"><span class="topic-badge topic-sparse"><i class="fas fa-brain"></i></span><span class="topic-badge topic-learning"><i class="fas fa-cogs"></i></span><span class="topic-badge topic-system"><i class="bi bi-gpu-card"></i></span></span></span><br />
+            <span class="authors">Chen, Zhuoming; Zhong, Xinrui; Feng, Qilong; Sadhukhan, Ranajoy; Zhou, Yang; Shieh, Michael Qizhe; Jia, Zhihao; Chen, Beidi</span><br />
+            <span class="venuetype"></span><span class="venue">NeurIPS 2026</span><br />
+        </td>
+    </tr>
+    <tr>
+        <td><span class="date"><big><strong>2026</strong></big><br />May</span></td>
+        <td class="publication">
+            <span class="pubtitle"><a href="https://arxiv.org/abs/2605.15565">AstraFlow: Dataflow-Oriented Reinforcement Learning for Agentic LLMs</a>.<span class="pub-topics"><span class="topic-badge topic-learning"><i class="fas fa-cogs"></i></span></span></span><br />
+            <span class="authors">Zheng, Haizhong; Di, Yizhuo; Wang, Jiahui; Jin, Shuowei; Liu, Xueshen; Wu, Yongji; Mao, Z. Morley; Stoica, Ion; Zhao, Jiawei; Chen, Beidi</span><br />
+            <span class="venuetype"></span><span class="venue">NeurIPS 2026</span><br />
+        </td>
+    </tr>
+    <tr>
+        <td><span class="date"><big><strong>2026</strong></big><br />February</span></td>
+        <td class="publication">
+            <span class="pubtitle"><a href="https://arxiv.org/abs/2602.13692">ThunderAgent: A Simple, Fast and Program-Aware Agentic Inference System</a>.<span class="pub-topics"><span class="topic-badge topic-learning"><i class="fas fa-cogs"></i></span></span></span><br />
+            <span class="authors">Kang, Hao; Li, Ziyang; Xu, Weili; Yang, Xinyu; Chen, Yinfang; Wang, Junxiong; Chen, Beidi; Krishna, Tushar; Xu, Chenfeng; Arora, Simran</span><br />
+            <span class="venuetype"></span><span class="venue">ICML 2026</span><br />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <span class="date">
+                <big><strong>2026</strong></big>
+                <br />
+                February
+            </span>
+        </td>
+        <td class="publication">
+            <span class="pubtitle">
+                <a href="https://arxiv.org/abs/2602.12271"><strong>MonarchRT: Efficient Attention for Real-Time Video Generation</strong></a>.
+            <span class="pub-topics"><span class="topic-badge topic-sparse"><i class="fas fa-brain"></i></span><span class="topic-badge topic-system"><i class="bi bi-gpu-card"></i></span></span></span><br />
+            <span class="authors">
+                Agarwal, Krish; Chen, Zhuoming; Luo, Cheng; Chen, Yongqi; Zheng, Haizhong; Huang, Xun; Rudra, Atri; Chen, Beidi
+            </span><br />
+            <span class="venuetype"></span><span class="venue">NeurIPS 2026</span>
+            <br />        </td>
+    </tr>
+    <tr>
         <td>
             <span class="date">
                 <big><strong>2026</strong></big>
