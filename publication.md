@@ -2,6 +2,14 @@
 <table class="table">
 <tbody>
     <tr>
+        <td><span class="date"><big><strong>2026</strong></big><br />October</span></td>
+        <td class="publication">
+            <span class="pubtitle"><a href="https://arxiv.org/abs/2610.12599">STAPLE: Static Sparse Upcycling of Pretrained Checkpoints via Embedding Modules</a>.<span class="pub-topics"><span class="topic-badge topic-sparse"><i class="fas fa-brain"></i></span></span></span><br />
+            <span class="authors">Sadhukhan, Ranajoy; Hong, Euijin; Cao, Sheng; Liu, Zechun; Jin, Shuowei; Li, Sha; Yu, Changlong; Liu, Xin; Lu, Qin; Shi, Zhenyu; Nigam, Priyanka; Chen, Beidi</span><br />
+            <span class="venuetype"></span><span class="venue">Preprints</span><br />
+        </td>
+    </tr>
+    <tr>
         <td><span class="date"><big><strong>2026</strong></big><br />July</span></td>
         <td class="publication">
             <span class="pubtitle"><a href="https://arxiv.org/abs/2607.18171">FlashRT: Agent Harness for Guiding Agents to Deploy Real-Time Multimodal Applications</a>.<span class="pub-topics"><span class="topic-badge topic-system"><i class="bi bi-gpu-card"></i></span></span></span><br />
