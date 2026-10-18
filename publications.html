@@ -27,6 +27,7 @@
     --t-arch-bg: #fde7f1;    --t-arch-ink: #b13a7e;
     --t-rl-bg:   #ece4fb;    --t-rl-ink:   #6a3fc7;
     --t-multi-bg:#fff1e0;    --t-multi-ink:#b06a1e;
+    --t-trusted-bg:#fce8e6;  --t-trusted-ink:#9b3434;
     --t-mlsys-bg:#e0eaf8;    --t-mlsys-ink:#2a5db0;
   }
 
@@ -247,6 +248,7 @@
   .chip:hover { border-color: var(--accent); color: var(--accent-2); }
   .chip.active { background: var(--gradient); color: white; border-color: transparent; }
   .chip .dot { width: 8px; height: 8px; border-radius: 50%; }
+  .chip[data-topic="trusted"] .dot { background: var(--t-trusted-ink); }
   .chip[data-topic="arch"]  .dot { background: var(--t-arch-ink); }
   .chip[data-topic="rl"]    .dot { background: var(--t-rl-ink); }
   .chip[data-topic="multi"] .dot { background: var(--t-multi-ink); }
@@ -329,6 +331,7 @@
   .topic.arch  { background: var(--t-arch-bg);  color: var(--t-arch-ink); }
   .topic.rl    { background: var(--t-rl-bg);    color: var(--t-rl-ink); }
   .topic.multi { background: var(--t-multi-bg); color: var(--t-multi-ink); }
+  .topic.trusted { background: var(--t-trusted-bg); color: var(--t-trusted-ink); }
   .topic.mlsys { background: var(--t-mlsys-bg); color: var(--t-mlsys-ink); }
 
   .empty {
@@ -395,9 +398,9 @@
     <div class="eyebrow">InfiniAI Lab</div>
     <h1>Publications.</h1>
     <p class="page-lede">
-      Selected papers from the lab, organized along our four research directions —
-      sparse architectures, agentic RL systems, real-time &amp; multimodal generation,
-      and Post-MLSys.
+      Selected papers from the lab, organized along our five research directions —
+      trusted &amp; verified AI systems, sparse architectures, agentic RL systems,
+      real-time &amp; multimodal generation, and Post MLSys.
     </p>
   </div>
 </section>
@@ -411,10 +414,11 @@
       </label>
       <div class="chip-group" id="topicChips">
         <button class="chip active" data-topic="all">All</button>
+        <button class="chip" data-topic="trusted"><span class="dot"></span>Trusted &amp; Verified AI System</button>
         <button class="chip" data-topic="arch"><span class="dot"></span>Sparse Architecture</button>
         <button class="chip" data-topic="rl"><span class="dot"></span>Agentic RL</button>
         <button class="chip" data-topic="multi"><span class="dot"></span>Multimodal</button>
-        <button class="chip" data-topic="mlsys"><span class="dot"></span>Post-MLSys</button>
+        <button class="chip" data-topic="mlsys"><span class="dot"></span>Post MLSys</button>
       </div>
       <select id="yearSelect" class="year-select">
         <option value="all">All years</option>
@@ -477,7 +481,8 @@ document.getElementById('year').textContent = new Date().getFullYear();
  *   arch  — Sparse Model Architecture
  *   rl    — Scalable Agentic RL: Training & Inference
  *   multi — Real-time & Multimodal Generation
- *   mlsys — MLSys for the Post-AGI Era
+ *   trusted — Trusted & Verified AI System
+ *   mlsys — Post MLSys
  */
 const PREPRINTS = [
   {"y": 2026, "m": "July", "t": "FlashRT: Agent Harness for Guiding Agents to Deploy Real-Time Multimodal Applications", "url": "https://arxiv.org/abs/2607.18171", "a": "Agarwal, Krish; Chen, Zhuoming; Qin, Yanyuan; Gu, Zhenyu; Rudra, Atri; Chen, Beidi", "v": "Preprint", "topics": ["multi", "mlsys"]},
@@ -487,7 +492,7 @@ const PREPRINTS = [
 ];
 
 const PUBLICATIONS = [
-  {"y": 2026, "m": "August", "t": "CamoDocs: A Poisoning Attack Against Retrieval-Augmented Language Models Using Camouflaged Documents", "url": "https://arxiv.org/abs/2608.28389", "a": "Jung, Jaewon; Zheng, Haizhong; Jang, Hongsun; Song, Jaeyong; Chen, Beidi; Lee, Jinho", "v": "EMNLP 2026", "topics": ["mlsys"]},
+  {"y": 2026, "m": "August", "t": "CamoDocs: A Poisoning Attack Against Retrieval-Augmented Language Models Using Camouflaged Documents", "url": "https://arxiv.org/abs/2608.28389", "a": "Jung, Jaewon; Zheng, Haizhong; Jang, Hongsun; Song, Jaeyong; Chen, Beidi; Lee, Jinho", "v": "EMNLP 2026", "topics": ["trusted"]},
   {"y": 2026, "m": "August", "t": "Beyond Confidence: Test-Time Scaling for Multi-Turn Search Agents via Retrieval Grounding", "url": "https://arxiv.org/abs/2608.24024", "a": "Kook, Hyunho; So, Junhyuk; Fu, Tianyu; Zheng, Haizhong; Chen, Beidi", "v": "EMNLP 2026 Findings", "topics": ["rl"]},
   {"y": 2026, "m": "June", "t": "Vortex: Efficient and Programmable Sparse Attention Serving for AI Agents", "url": "https://arxiv.org/abs/2606.06453", "a": "Chen, Zhuoming; Zhong, Xinrui; Feng, Qilong; Sadhukhan, Ranajoy; Zhou, Yang; Shieh, Michael Qizhe; Jia, Zhihao; Chen, Beidi", "v": "NeurIPS 2026", "topics": ["arch", "rl", "mlsys"]},
   {"y": 2026, "m": "May", "t": "AstraFlow: Dataflow-Oriented Reinforcement Learning for Agentic LLMs", "url": "https://arxiv.org/abs/2605.15565", "a": "Zheng, Haizhong; Di, Yizhuo; Wang, Jiahui; Jin, Shuowei; Liu, Xueshen; Wu, Yongji; Mao, Z. Morley; Stoica, Ion; Zhao, Jiawei; Chen, Beidi", "v": "NeurIPS 2026", "topics": ["rl"]},
@@ -495,9 +500,9 @@ const PUBLICATIONS = [
   { y: 2026, m: "February",  t: "MonarchRT: Efficient Attention for Real-Time Video Generation", url: "https://arxiv.org/abs/2602.12271", a: "Agarwal, Krish; Chen, Zhuoming; Luo, Cheng; Chen, Yongqi; Zheng, Haizhong; Huang, Xun; Rudra, Atri; Chen, Beidi", v: "NeurIPS 2026", topics: ["multi","arch"] },
   { y: 2026, m: "January",  t: "STEM: Scaling Transformers with Embedding Modules", url: "https://arxiv.org/abs/2601.10639", a: "Sadhukhan, Ranajoy; Cao, Sheng; Dong, Harry; Zhao, Changsheng; Purpura-Pontoniere, Attiano; Tian, Yuandong; Liu, Zechun; Chen, Beidi", v: "ICLR 2026", topics: ["arch"] },
   { y: 2025, m: "December", t: "Jackpot: Optimal Budgeted Rejection Sampling for Extreme Actor–Policy Mismatch RL", url: "https://arxiv.org/abs/2602.06107", a: "Chen, Zhuoming*; Liu, Hongyi*; Zhou, Yang*; Zheng, Haizhong; Chen, Beidi", v: "ICLR 2026", topics: ["rl"] },
-  { y: 2025, m: "December", t: "When \"Correct\" Is Not Safe: Can We Trust Functionally Correct Patches Generated by Code Agents?", url: "", a: "Yibo Peng*; James Song*; Lei Li*; Xinyu Yang; Mihai Christodorescu; Ravi Mangal; Corina Pasareanu; Haizhong Zheng; Beidi Chen", v: "ACL 2026", topics: ["mlsys"] },
+  { y: 2025, m: "December", t: "When \"Correct\" Is Not Safe: Can We Trust Functionally Correct Patches Generated by Code Agents?", url: "", a: "Yibo Peng*; James Song*; Lei Li*; Xinyu Yang; Mihai Christodorescu; Ravi Mangal; Corina Pasareanu; Haizhong Zheng; Beidi Chen", v: "ACL 2026", topics: ["trusted"] },
   { y: 2025, m: "November", t: "RLBoost: Harvesting Preemptible Resources for Cost-Efficient Reinforcement Learning on LLMs", url: "https://arxiv.org/abs/2510.19225", a: "Wu, Yongji*; Liu, Xueshen*; Zheng, Haizhong; Gu, Juncheng; Chen, Beidi; Mao, Z. Morley; Krishnamurthy, Arvind; Stoica, Ion", v: "NSDI 2026", topics: ["rl"] },
-  { y: 2025, m: "November", t: "WAVE: Leveraging Architecture Observation for Privacy-Preserving Model Oversight", url: "", a: "Xu, Haoxuan*; Gong, Chen*; Liu, Beijie*; Zheng, Haizhong; Chen, Beidi; Li, Mengyuan", v: "ASPLOS 2026", topics: ["mlsys"] },
+  { y: 2025, m: "November", t: "WAVE: Leveraging Architecture Observation for Privacy-Preserving Model Oversight", url: "", a: "Xu, Haoxuan*; Gong, Chen*; Liu, Beijie*; Zheng, Haizhong; Chen, Beidi; Li, Mengyuan", v: "ASPLOS 2026", topics: ["trusted"] },
   { y: 2025, m: "October",  t: "Prosperity before Collapse: How Far Can Off-Policy RL Reach with Stale Data on LLMs?", url: "https://arxiv.org/abs/2510.01161", a: "Zheng, Haizhong; Zhao, Jiawei; Chen, Beidi", v: "ICLR 2026", topics: ["rl"] },
   { y: 2025, m: "October",  t: "LLM.265: Video Codecs are Secretly Tensor Codecs", url: "https://dl.acm.org/doi/pdf/10.1145/3725843.3756078", a: "Xu, Ceyu*; Wu, Yongji*; Yang, Xinyu*; Chen, Beidi; Lentz, Matthew; Zhuo, Danyang; Wills, Lisa Wu", v: "MICRO 2025", award: "Best Paper Award", topics: ["mlsys"] },
   { y: 2025, m: "August",   t: "FSA: An Alternative Efficient Implementation of Native Sparse Attention Kernel", url: "https://arxiv.org/abs/2508.18224", a: "Yan, Ran; Jiang, Youhe; Chen, Zhuoming; Mai, Haohui; Chen, Beidi; Yuan, Binhang", v: "ICLR 2026", topics: ["arch","rl"] },
@@ -561,10 +566,11 @@ const PUBLICATIONS = [
 ];
 
 const TOPIC_LABEL = {
+  trusted: "Trusted & Verified AI System",
   arch:  "Sparse Architecture",
   rl:    "Agentic RL",
   multi: "Multimodal",
-  mlsys: "Post-MLSys",
+  mlsys: "Post MLSys",
 };
 
 const state = { topic: "all", year: "all", q: "" };

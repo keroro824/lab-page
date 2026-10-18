@@ -5,7 +5,9 @@ Her research focuses on efficient AI; specifically, she designs and optimizes al
 
 ### Research
 
-InfiniAI Lab develops *efficient* and *scalable* AI models and systems by co-designing algorithms, model architectures, and hardware-aware infrastructure. Our research spans four interconnected directions:
+InfiniAI Lab develops *efficient* and *scalable* AI models and systems by co-designing algorithms, model architectures, and hardware-aware infrastructure. Our research spans five interconnected directions:
+
+**Trusted & Verified AI System.** *We build trusted and verifiable AI systems, developing methods to secure models and agents, protect privacy, and verify generated code and system behavior. Our goal is to make AI infrastructure safe, reliable, and robust as models and tools co-evolve.*
 
 **Sparse Model Architecture.** *We rethink dense computation to unlock long-context and long-generation efficiency, expand model capacity at constant compute through Mixture-of-Experts and conditional computation, and study the scaling laws that govern how sparse models grow with data, parameters, and hardware.*
 
@@ -13,4 +15,4 @@ InfiniAI Lab develops *efficient* and *scalable* AI models and systems by co-des
 
 **Real-time & Multimodal Generation.** *We bring generative AI into the interactive, multi-sensory loop where humans actually work and create, developing streaming text, image, audio, and video models with sub-second latency, unified multimodal architectures, and human–AI collaboration interfaces that enhance creativity and fulfillment rather than replace them.*
 
-**MLSys for the Post-AGI Era.** *We prepare infrastructure for a world where AI agents are first-class operators of the AI stack itself — systems that let agents build, deploy, optimize, secure, and evolve ML infrastructure with minimal human intervention, while remaining safe, verifiable, and robust as models and tools co-evolve.*
+**Post MLSys.** *We prepare infrastructure for a world where AI agents are first-class operators of the AI stack itself — systems that let agents build, deploy, optimize, and evolve ML infrastructure with minimal human intervention.*
