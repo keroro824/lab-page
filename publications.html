@@ -399,8 +399,8 @@
     <h1>Publications.</h1>
     <p class="page-lede">
       Selected papers from the lab, organized along our five research directions —
-      trusted &amp; verified AI systems, sparse architectures, agentic RL systems,
-      real-time &amp; multimodal generation, and Post MLSys.
+      trusted &amp; verified AI systems, Post MLSys, real-time &amp; multimodal generation,
+      sparse architectures, and scalable agentic AI.
     </p>
   </div>
 </section>
@@ -415,10 +415,10 @@
       <div class="chip-group" id="topicChips">
         <button class="chip active" data-topic="all">All</button>
         <button class="chip" data-topic="trusted"><span class="dot"></span>Trusted &amp; Verified AI System</button>
-        <button class="chip" data-topic="arch"><span class="dot"></span>Sparse Architecture</button>
-        <button class="chip" data-topic="rl"><span class="dot"></span>Agentic RL</button>
-        <button class="chip" data-topic="multi"><span class="dot"></span>Multimodal</button>
         <button class="chip" data-topic="mlsys"><span class="dot"></span>Post MLSys</button>
+        <button class="chip" data-topic="multi"><span class="dot"></span>Multimodal</button>
+        <button class="chip" data-topic="arch"><span class="dot"></span>Sparse Architecture</button>
+        <button class="chip" data-topic="rl"><span class="dot"></span>Scalable Agentic AI</button>
       </div>
       <select id="yearSelect" class="year-select">
         <option value="all">All years</option>
@@ -479,7 +479,7 @@ document.getElementById('year').textContent = new Date().getFullYear();
 
 /* Topics:
  *   arch  — Sparse Model Architecture
- *   rl    — Scalable Agentic RL: Training & Inference
+ *   rl    — Scalable Agentic AI
  *   multi — Real-time & Multimodal Generation
  *   trusted — Trusted & Verified AI System
  *   mlsys — Post MLSys
@@ -568,7 +568,7 @@ const PUBLICATIONS = [
 const TOPIC_LABEL = {
   trusted: "Trusted & Verified AI System",
   arch:  "Sparse Architecture",
-  rl:    "Agentic RL",
+  rl:    "Scalable Agentic AI",
   multi: "Multimodal",
   mlsys: "Post MLSys",
 };
