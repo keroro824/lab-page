@@ -1,6 +1,6 @@
 - title: "ServerBench: How can your coding agents design specialized LLM serving systems?"
   description: "ServerBench is a benchmark in which coding agents build a complete LLM serving system for a given model, GPU allocation, and workload, and decide how much workload it serves. Systems are replayed against real coding-agent trajectories with shared context, multi-turn dependencies, and parallel subagents; scored in dollars per dollar, the latency-qualified token value per dollar of GPU cost; and counted only after independent verification of p90 TTFT/TPOT targets, generation fidelity, and complete workload execution. Across 11 coding-agent models and three deployments, the best agent-built servers reach up to 4.87× the strongest SGLang or vLLM baseline, yet only 22 of 33 runs deliver a verified system."
-  authors: Xinrui Zhong, Zhiming Wang, Zhuoming Chen, Yongqi Liu, Zhaohui Wang, Shanglin Yang, Beidi Chen
+  authors: Xinrui Zhong, Zhiming Wang, Yongqi Liu, Zhaohui Wang, Shanglin Yang, Zhuoming Chen, Beidi Chen
   link:
     url: https://github.com/Infini-AI-Lab/Server-Bench
     blog: https://infini-ai-lab.github.io/Server-Bench/
