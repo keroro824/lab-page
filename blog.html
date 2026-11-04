@@ -379,6 +379,14 @@ document.getElementById('year').textContent = new Date().getFullYear();
 
 const POSTS = [
   {
+    title: "ServerBench: How can your coding agents design specialized LLM serving systems?",
+    description: "ServerBench is a benchmark in which coding agents build a complete LLM serving system for a given model, GPU allocation, and workload, and decide how much workload it serves. Systems are replayed against real coding-agent trajectories with shared context, multi-turn dependencies, and parallel subagents; scored in dollars per dollar, the latency-qualified token value per dollar of GPU cost; and counted only after independent verification of p90 TTFT/TPOT targets, generation fidelity, and complete workload execution. Across 11 coding-agent models and three deployments, the best agent-built servers reach up to 4.87× the strongest SGLang or vLLM baseline, yet only 22 of 33 runs deliver a verified system.",
+    authors: "Xinrui Zhong, Zhiming Wang, Zhuoming Chen, Yongqi Liu, Zhaohui Wang, Shanglin Yang, Beidi Chen",
+    paper: "https://github.com/Infini-AI-Lab/Server-Bench",
+    paperLabel: "GitHub",
+    blog: "https://infini-ai-lab.github.io/Server-Bench/"
+  },
+  {
     title: "Vortex: Democratizing Sparse Attention",
     description: "Vortex is a lightweight, modular framework for building custom sparse attention algorithms for LLM inference. It exists to make it easy for researchers and engineers to prototype, extend, and deploy advanced sparsity patterns on modern inference backends such as SGLang—without modifying core model code. Vortex allows you to express novel sparse attention concisely while relying on an optimized execution engine.",
     authors: "",
