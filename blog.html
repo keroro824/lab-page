@@ -379,6 +379,14 @@ document.getElementById('year').textContent = new Date().getFullYear();
 
 const POSTS = [
   {
+    title: "CompressionBench: How can your coding agents compress LLMs?",
+    description: "Every token an LLM generates reads its weights from GPU memory, and moving those bytes costs far more energy than the arithmetic they feed. CompressionBench asks coding agents to cut those bytes: given a BF16 checkpoint, a storage limit, one GPU, and eight hours, an agent must deliver compressed weights plus the inference code that runs them. Independent verification checks likelihood, answer accuracy, storage on disk and in GPU memory, and execution. Across six agents and six tasks, 29 of 36 models pass; agent-built models fit 120B-class MoE models on a single GPU at 2-4 bits per weight, and the best design per task stays within 3.4% of BF16 perplexity on average.",
+    authors: "Xinrui Zhong, Zhifeng Li, Zhiming Wang, Yongqi Liu, Shanglin Yang, Yang Zhou, Zikun Li, Zhuoming Chen, Beidi Chen",
+    paper: "https://github.com/Infini-AI-Lab/Compression-Bench",
+    paperLabel: "GitHub",
+    blog: "https://infini-ai-lab.github.io/Compression-Bench/"
+  },
+  {
     title: "ServerBench: How can your coding agents design specialized LLM serving systems?",
     description: "ServerBench is a benchmark in which coding agents build a complete LLM serving system for a given model, GPU allocation, and workload, and decide how much workload it serves. Systems are replayed against real coding-agent trajectories with shared context, multi-turn dependencies, and parallel subagents; scored in dollars per dollar, the latency-qualified token value per dollar of GPU cost; and counted only after independent verification of p90 TTFT/TPOT targets, generation fidelity, and complete workload execution. Across 11 coding-agent models and three deployments, the best agent-built servers reach up to 4.87× the strongest SGLang or vLLM baseline, yet only 22 of 33 runs deliver a verified system.",
     authors: "Xinrui Zhong, Zhiming Wang, Yongqi Liu, Zhaohui Wang, Shanglin Yang, Zikun Li, Zhuoming Chen, Beidi Chen",
