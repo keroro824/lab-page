@@ -3,7 +3,7 @@
   authors: Zhuoming Chen
   link:
     url: https://github.com/Infini-AI-Lab/TVA
-    blog: blog/tva/
+    blog: https://infini-ai-lab.github.io/TVA/
     display: GitHub
   highlight: 1
 - title: "CompressionBench: How can your coding agents compress LLMs?"
