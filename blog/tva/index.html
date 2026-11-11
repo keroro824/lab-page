@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>TVA: AI Agents Prove Triton Kernels Correct — InfiniAI Lab</title>
+<meta name="description" content="TVA is a Lean 4 library and agent sandbox in which AI agents prove that real Triton kernels from SGLang, vLLM and flash-linear-attention are correct on every launch they cover." />
+<link rel="icon" type="image/png" href="../../infini-ai.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fraunces:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #ffffff;
+    --bg-soft: #fdf7fb;
+    --ink: #1a1320;
+    --ink-soft: #4a3f55;
+    --muted: #7a6f88;
+    --line: #ebe2ee;
+    --accent: #d96fae;
+    --accent-2: #b76cd9;
+    --accent-soft: #fde7f1;
+    --gradient: linear-gradient(135deg, #f7b7d6 0%, #d96fae 45%, #b76cd9 100%);
+    --shadow: 0 10px 40px -20px rgba(183, 108, 217, 0.35);
+    --radius: 14px;
+    --code-bg: #faf6fc;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: var(--ink); background: var(--bg);
+    line-height: 1.7; -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--accent-2); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .container { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
+
+  /* nav (as on the lab's other pages) */
+  header.nav {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(255, 255, 255, 0.78);
+    backdrop-filter: saturate(180%) blur(16px);
+    -webkit-backdrop-filter: saturate(180%) blur(16px);
+    border-bottom: 1px solid rgba(235, 226, 238, 0.7);
+  }
+  .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 72px; }
+  .brand { display: flex; align-items: center; gap: 12px; font-weight: 700; color: var(--ink); letter-spacing: -0.01em; }
+  .brand:hover { opacity: 0.78; text-decoration: none; }
+  .brand img { height: 32px; width: auto; display: block; }
+  .brand span { font-size: 16.5px; }
+  .nav-links { display: flex; align-items: center; gap: 4px; }
+  .nav-links a {
+    position: relative; color: var(--ink-soft); font-weight: 500; font-size: 14.5px;
+    padding: 9px 14px; border-radius: 999px; transition: color 0.18s ease;
+  }
+  .nav-links a::after {
+    content: ""; position: absolute; left: 14px; right: 14px; bottom: 3px;
+    height: 2px; border-radius: 2px; background: var(--gradient);
+    opacity: 0; transform: scaleX(0.3); transition: opacity 0.2s ease, transform 0.25s ease;
+  }
+  .nav-links a:hover { color: var(--ink); text-decoration: none; }
+  .nav-links a:hover::after, .nav-links a.active::after { opacity: 1; transform: scaleX(1); }
+  .nav-links a.active { color: var(--accent-2); }
+  .nav-toggle {
+    display: none; align-items: center; justify-content: center;
+    background: transparent; border: none; width: 40px; height: 40px;
+    border-radius: 50%; cursor: pointer; color: var(--ink-soft);
+  }
+  @media (max-width: 720px) {
+    .nav-toggle { display: inline-flex; }
+    .nav-links {
+      position: absolute; top: 72px; left: 0; right: 0;
+      flex-direction: column; align-items: stretch; gap: 0; padding: 0 24px;
+      background: rgba(255, 255, 255, 0.97); border-bottom: 1px solid var(--line);
+      max-height: 0; overflow: hidden; opacity: 0;
+      transition: max-height 0.3s ease, opacity 0.2s ease, padding 0.3s ease;
+    }
+    .nav-links.open { max-height: 640px; opacity: 1; padding: 12px 24px 18px; }
+    .nav-links a { display: block; padding: 12px 14px; border-radius: 10px; }
+    .nav-links a::after { display: none; }
+  }
+
+  /* post header */
+  .post-head { padding: 72px 0 36px; position: relative; overflow: hidden; }
+  .post-head::before {
+    content: ""; position: absolute; inset: 0;
+    background:
+      radial-gradient(800px 400px at 90% -10%, rgba(217, 111, 174, 0.15), transparent 60%),
+      radial-gradient(600px 300px at 0% 30%, rgba(183, 108, 217, 0.10), transparent 60%);
+    pointer-events: none;
+  }
+  .post-head .container { position: relative; }
+  .eyebrow {
+    display: inline-block; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--accent-2); font-weight: 600; margin-bottom: 14px;
+  }
+  h1 {
+    font-family: 'Fraunces', Georgia, serif; font-size: clamp(32px, 4.4vw, 50px);
+    line-height: 1.12; letter-spacing: -0.025em; margin: 0 0 18px; font-weight: 600; max-width: 22ch;
+  }
+  .lede { color: var(--ink-soft); font-size: 18px; max-width: 64ch; margin: 0 0 22px; }
+  .byline { color: var(--muted); font-size: 14px; }
+  .head-links { margin-top: 18px; display: flex; gap: 10px; flex-wrap: wrap; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; border-radius: 999px;
+    font-size: 14px; font-weight: 500; border: 1px solid var(--line); background: var(--bg-soft); color: var(--ink);
+  }
+  .btn.primary { background: var(--gradient); color: white; border-color: transparent; }
+  .btn:hover { text-decoration: none; opacity: 0.92; }
+
+  /* article */
+  article { max-width: 760px; margin: 0 auto; padding: 8px 28px 90px; }
+  article h2 {
+    font-family: 'Fraunces', Georgia, serif; font-size: clamp(24px, 2.6vw, 30px);
+    letter-spacing: -0.015em; line-height: 1.25; margin: 56px 0 14px; font-weight: 600;
+  }
+  article h3 { font-size: 18px; margin: 32px 0 8px; letter-spacing: -0.01em; }
+  article p, article li { font-size: 16.5px; color: var(--ink); }
+  article p { margin: 0 0 18px; }
+  article ul, article ol { padding-left: 22px; margin: 0 0 18px; }
+  article li { margin: 6px 0; }
+  code {
+    font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.86em; background: var(--code-bg); border: 1px solid var(--line);
+    padding: 1px 5px; border-radius: 5px;
+  }
+  pre {
+    background: var(--code-bg); border: 1px solid var(--line); border-radius: 12px;
+    padding: 16px 18px; overflow-x: auto; margin: 0 0 22px; line-height: 1.55;
+  }
+  pre code { background: none; border: none; padding: 0; font-size: 13.5px; }
+  .c { color: #8a7f98; }   /* comment */
+  .k { color: #a2408c; }   /* keyword */
+  .callout {
+    background: var(--bg-soft); border: 1px solid var(--line); border-left: 4px solid var(--accent);
+    border-radius: 10px; padding: 16px 20px; margin: 0 0 22px;
+  }
+  .callout p:last-child { margin-bottom: 0; }
+  figure { margin: 28px 0 30px; }
+  figcaption { color: var(--muted); font-size: 14px; margin-top: 10px; line-height: 1.55; }
+  .table-wrap { overflow-x: auto; margin: 0 0 22px; }
+  table { border-collapse: collapse; width: 100%; font-size: 14.5px; }
+  th, td { text-align: left; vertical-align: top; padding: 9px 12px; border-bottom: 1px solid var(--line); }
+  th { font-weight: 600; color: var(--ink-soft); background: var(--bg-soft); }
+  td.tva { background: #fbf2f8; }
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 14px; margin: 6px 0 26px; }
+  .stat { border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; background: white; }
+  .stat .n { font-family: 'Fraunces', serif; font-size: 30px; font-weight: 600; line-height: 1.1; }
+  .stat .l { color: var(--muted); font-size: 13.5px; margin-top: 4px; }
+
+  /* proof-size chart */
+  .bars { display: grid; grid-template-columns: max-content 1fr max-content; gap: 3px 12px; align-items: center; font-size: 13px; }
+  .bars .grp { grid-column: 1 / -1; font-weight: 600; color: var(--ink-soft); margin-top: 12px; font-size: 13.5px; }
+  .bars .name { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--ink-soft); white-space: nowrap; }
+  .bars .track { height: 10px; background: var(--bg-soft); border-radius: 5px; overflow: hidden; }
+  .bars .fill { height: 100%; background: var(--gradient); border-radius: 5px; }
+  .bars .val { color: var(--muted); font-variant-numeric: tabular-nums; text-align: right; }
+  @media (max-width: 560px) { .bars .name { white-space: normal; word-break: break-all; } }
+
+  .refs { font-size: 14px; color: var(--ink-soft); }
+  .refs li { font-size: 14px; }
+
+  footer { border-top: 1px solid var(--line); padding: 40px 0; color: var(--muted); font-size: 14px; }
+  .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+  .footer-inner .brand img { height: 28px; }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="../../index.html">
+      <img src="../../infini-ai.png" alt="InfiniAI Lab logo" />
+      <span>InfiniAI Lab</span>
+    </a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+        <line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/>
+      </svg>
+    </button>
+    <nav class="nav-links" id="primary-nav">
+      <a href="../../index.html#about">About</a>
+      <a href="../../index.html#research">Research</a>
+      <a href="../../team.html">Team</a>
+      <a href="../../publications.html">Publications</a>
+      <a href="../../blog.html" class="active">Blog</a>
+      <a href="../../index.html#openings">Openings</a>
+      <a href="../../index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="post-head">
+  <div class="container">
+    <div class="eyebrow">Trusted AI systems</div>
+    <h1>TVA: AI Agents Prove Triton Kernels Correct</h1>
+    <p class="lede">
+      Tests check the shapes you think of. A proof covers every launch. TVA is a Lean 4 library
+      and an agent sandbox in which AI agents prove that the Triton kernels behind LLM serving,
+      from SGLang, vLLM and flash-linear-attention, are correct on every launch they cover:
+      no fault, no race, nothing written outside their outputs, and every output within a stated
+      bound of the exact answer.
+    </p>
+    <div class="byline">Zhuoming Chen · InfiniAI Lab, Carnegie Mellon University · November 2026</div>
+    <div class="head-links">
+      <a class="btn primary" href="https://github.com/Infini-AI-Lab/TVA" target="_blank" rel="noopener">Code on GitHub ↗</a>
+    </div>
+  </div>
+</section>
+
+<article>
+
+<h2>The inference stack is now a target</h2>
+
+<p>
+The last few months made one thing plain: the software that serves AI models is being attacked
+like any other high-value infrastructure.
+</p>
+<ul>
+  <li>
+    <strong>Inference providers.</strong> Fireworks AI disclosed unauthorized use of internal
+    credentials in early October 2026 and a second intrusion through a third-party cloud provider
+    later that month; a November update widened the scope to account data and, for some customers,
+    secrets, datasets and incomplete model weights
+    (<a href="https://cryptobriefing.com/fireworks-ai-october-security-incident-customer-data/" target="_blank" rel="noopener">Crypto Briefing</a>,
+    <a href="https://www.drweb.de/fireworks-ai-zweiter-hackerangriff-kundendaten/" target="_blank" rel="noopener">Dr. Web</a>).
+  </li>
+  <li>
+    <strong>Serving engines.</strong> SGLang received a CVSS 9.8 remote-code-execution report,
+    CVE-2026-5760, in which a crafted chat template inside a GGUF model file runs code on the
+    server, after two earlier critical deserialization flaws
+    (<a href="https://thehackernews.com/2026/04/sglang-cve-2026-5760-cvss-98-enables.html" target="_blank" rel="noopener">The Hacker News</a>,
+    <a href="https://labs.cloudsecurityalliance.org/research/csa-research-note-sglang-cve-2026-5760-gguf-rce-20260422-csa/" target="_blank" rel="noopener">CSA</a>).
+  </li>
+  <li>
+    <strong>The supply chain.</strong> In the PHP ecosystem, a malicious <code>intercom-php</code>
+    release and a compromise of the Laravel-Lang packages pushed credential stealers and backdoors
+    into widely installed libraries, through the projects' own release channels
+    (<a href="https://cloudsmith.com/blog/mini-shai-hulud-reaches-packagist-the-intercom-intercom-php-compromise-explained" target="_blank" rel="noopener">Cloudsmith</a>,
+    <a href="https://thehackernews.com/2026/05/laravel-lang-php-packages-compromised.html" target="_blank" rel="noopener">The Hacker News</a>).
+  </li>
+</ul>
+<p>
+None of these incidents went through a GPU kernel. But they share a pattern: attackers go where
+code is trusted, changes fast, and is too large for anyone to re-read. GPU kernels fit that
+description better than almost anything else in an LLM stack. vLLM and SGLang together contain about 1,800
+<code>@triton.jit</code> functions, new ones arrive with every model architecture, and more and more of
+them are written by AI agents. A kernel runs with access to the whole GPU memory: the weights,
+and the KV caches of every request in the batch. And its failures are silent. An
+<code>int32</code> offset that wraps only past a few million tokens, a mask that is off by one
+row, or a race between programs does not crash anything; it returns a plausible wrong answer, or
+reads a byte that belongs to someone else. Research has also started to treat the numerical
+layer itself as an attack surface, with backdoors that trigger only under particular compiler
+optimizations or hardware
+(<a href="https://arxiv.org/abs/2605.20641" target="_blank" rel="noopener">1</a>,
+<a href="https://arxiv.org/abs/2601.21902" target="_blank" rel="noopener">2</a>).
+</p>
+<p>
+Testing samples a few shapes and a few inputs. Code review does not scale to the rate at which
+kernels change. What does scale is a proof that a machine checks: a statement that holds for
+<em>every</em> launch the host can make, checked by a small trusted kernel rather than by
+whoever reviews the pull request. Writing such proofs by hand is far too expensive, which is why
+nobody does it for production kernels. Our bet is that AI agents can now write them.
+</p>
+
+<h2>What TVA is</h2>
+
+<p>
+TVA has three parts.
+</p>
+<ol>
+  <li>
+    <strong>A Lean 4 semantics of Triton.</strong> About 8,300 lines of Lean define what a Triton
+    program means: tensors, the <code>tl.*</code> operations, masked loads and stores, atomics,
+    and a launch as programs interleaving over a byte-addressed memory. Floating-point values are
+    exact IEEE bit patterns (fp32, fp16, bf16, fp8 formats, mxfp8 with e8m0 scales) with exact
+    rounding; integers are fixed-width and wrap. Operations whose result the hardware leaves
+    open, such as <code>tl.exp</code>, the accumulation order inside <code>tl.dot</code>, or float
+    atomics, return any value allowed by a <em>device fact</em>, and each device fact is backed
+    by our own measurements on an H200.
+  </li>
+  <li>
+    <strong>Fixed claims about real kernels.</strong> A claim transcribes a kernel line by line
+    into that vocabulary and states which launches it covers and what every covered launch must
+    leave in memory. Claims are written once, by hand, and pinned by their SHA-256.
+  </li>
+  <li>
+    <strong>A proof kit and a sandbox for agents.</strong> About 16,000 lines of proved lemmas
+    (memory access patterns, loops, integer widths, floating-point error, <code>tl.dot</code>
+    accumulation, online softmax, decayed recurrences, scans, shared atomics) let a prover walk a
+    kernel one program at a time. A container gives an agent the claim, the library and the docs,
+    and one tool that grades its proof.
+  </li>
+</ol>
+
+<h3>What a claim says</h3>
+<p>
+Every claim has the same shape. <code>Inst</code> is everything the host chooses (shapes,
+scalars, buffers), <code>ok</code> says which choices are covered, and <code>Post</code> says
+what the final memory must satisfy:
+</p>
+<pre><code><span class="k">def</span> Claim.Holds (c : Claim) : Prop :=
+  ∀ P, Device P →                    <span class="c">-- every platform with the H200's device facts</span>
+  ∀ d, c.ok d →                      <span class="c">-- every covered launch: shapes stay symbolic</span>
+  ∀ init, c.Pre d init →             <span class="c">-- every initial memory, including the data</span>
+    Correct (c.kernel d) (c.launch d) init (c.Post d init)
+<span class="c">-- Correct: no undefined behaviour, no race between programs, and every way the launch can end
+-- is a normal end (no fault, no hang) whose final memory satisfies Post.</span></code></pre>
+<p>
+Here is the model of Triton's vector-addition tutorial. Each line reads one line of the source,
+and the comments say how:
+</p>
+<pre><code><span class="k">def</span> add_kernel (x_ptr y_ptr output_ptr : Ptr .f32) (n_elements : I32) (BLOCK_SIZE : Nat) : Kernel <span class="k">where</span>
+  body ctx := <span class="k">do</span>
+    <span class="k">let</span> pid := tl.program_id ctx 0
+    <span class="c">-- `pid * BLOCK_SIZE` is computed in int32, and wraps</span>
+    <span class="k">let</span> block_start := pid * (IntV.ofNat BLOCK_SIZE : I32)
+    <span class="k">let</span> offsets := block_start + tl.arange 0 BLOCK_SIZE
+    <span class="k">let</span> mask := offsets.ltS n_elements
+    <span class="k">let</span> x ← tl.load (x_ptr + offsets) (some mask)
+    <span class="k">let</span> y ← tl.load (y_ptr + offsets) (some mask)
+    <span class="k">let</span> output ← tl.add x y
+    tl.store (output_ptr + offsets) output (some mask)</code></pre>
+<p>
+Its <code>Post</code> says that element <code>j &lt; n</code> of the output is the IEEE sum of
+the inputs' elements <code>j</code>, and that <strong>every other byte of memory is
+unchanged</strong>. That last clause is in every claim. A proved kernel writes only its outputs.
+</p>
+<p>
+For production kernels the interesting part is the conditions. SGLang's 50-line vocabulary
+embedding lookup needs eleven of them: the ids are <code>int32</code> or <code>int64</code>,
+<code>BLOCK_H</code> is a power of two, the <code>int32</code> column index cannot wrap, the grid
+fits CUDA's limits, every vocabulary index of the tensor-parallel shard fits in
+<code>int64</code>, and the output shares no byte with the inputs. None of these is written in the kernel's source. A claim makes
+every one of them explicit, so a reader can check them against the code that launches the
+kernel. For floating-point kernels, <code>Post</code> bounds the error against the exact
+real-number result with a tolerance that is derived from the device facts and stays meaningful
+at the largest covered size.
+</p>
+
+<h3>What you trust</h3>
+<p>
+The list is short and lives in one file: Lean and Mathlib; that the claim's model is the kernel,
+which a reader checks line by line; that Triton 3.8.0 compiles the kernel as the model says,
+outside a published list of 56 excluded features and situations, among them known miscompiles;
+and the device facts, each with its measurements. Everything else, including the 16,000 lines of
+proof kit and every agent-written proof, is checked by Lean.
+</p>
+
+<h2>Agents prove, a machine grades</h2>
+
+<figure>
+<svg viewBox="0 0 760 250" width="100%" role="img" aria-label="TVA pipeline: a kernel and its host code become a fixed claim, an agent proves it in a sandbox, and tva-check grades the proof">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f7b7d6"/><stop offset="0.5" stop-color="#d96fae"/><stop offset="1" stop-color="#b76cd9"/>
+    </linearGradient>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#b76cd9"/>
+    </marker>
+  </defs>
+  <g font-family="Inter, sans-serif" font-size="13" fill="#1a1320">
+    <rect x="6" y="40" width="160" height="150" rx="12" fill="#fdf7fb" stroke="#ebe2ee"/>
+    <text x="86" y="66" text-anchor="middle" font-weight="600">Kernel + host code</text>
+    <text x="86" y="92" text-anchor="middle" fill="#4a3f55">SGLang, vLLM, fla,</text>
+    <text x="86" y="110" text-anchor="middle" fill="#4a3f55">Triton tutorials</text>
+    <text x="86" y="146" text-anchor="middle" fill="#7a6f88" font-size="12">the launches the</text>
+    <text x="86" y="162" text-anchor="middle" fill="#7a6f88" font-size="12">host really makes</text>
+
+    <rect x="200" y="40" width="160" height="150" rx="12" fill="#fdf7fb" stroke="#ebe2ee"/>
+    <text x="280" y="66" text-anchor="middle" font-weight="600">Fixed claim</text>
+    <text x="280" y="92" text-anchor="middle" fill="#4a3f55">model · conditions</text>
+    <text x="280" y="110" text-anchor="middle" fill="#4a3f55">Pre · Post</text>
+    <text x="280" y="146" text-anchor="middle" fill="#7a6f88" font-size="12">written once by hand,</text>
+    <text x="280" y="162" text-anchor="middle" fill="#7a6f88" font-size="12">pinned by SHA-256</text>
+
+    <rect x="394" y="22" width="180" height="186" rx="12" fill="white" stroke="url(#g)" stroke-width="2"/>
+    <text x="484" y="48" text-anchor="middle" font-weight="600">Agent in a sandbox</text>
+    <text x="484" y="74" text-anchor="middle" fill="#4a3f55">claim, library, docs,</text>
+    <text x="484" y="92" text-anchor="middle" fill="#4a3f55">one worked example</text>
+    <text x="484" y="122" text-anchor="middle" fill="#4a3f55">writes Proof.lean:</text>
+    <text x="484" y="142" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="12">theorem main :</text>
+    <text x="484" y="158" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="12">claim.Holds</text>
+    <text x="484" y="188" text-anchor="middle" fill="#7a6f88" font-size="12">no other proof visible</text>
+
+    <rect x="608" y="40" width="146" height="150" rx="12" fill="#fdf7fb" stroke="#ebe2ee"/>
+    <text x="681" y="66" text-anchor="middle" font-weight="600">tva-check</text>
+    <text x="681" y="90" text-anchor="middle" fill="#4a3f55" font-size="12">1 claim unchanged</text>
+    <text x="681" y="107" text-anchor="middle" fill="#4a3f55" font-size="12">2 no escape hatches</text>
+    <text x="681" y="124" text-anchor="middle" fill="#4a3f55" font-size="12">3 fresh build</text>
+    <text x="681" y="141" text-anchor="middle" fill="#4a3f55" font-size="12">4 exact statement,</text>
+    <text x="681" y="156" text-anchor="middle" fill="#4a3f55" font-size="12">standard axioms</text>
+    <text x="681" y="173" text-anchor="middle" fill="#4a3f55" font-size="12">5 kernel re-check</text>
+
+    <line x1="168" y1="115" x2="196" y2="115" stroke="#b76cd9" stroke-width="2" marker-end="url(#arr)"/>
+    <line x1="362" y1="115" x2="390" y2="115" stroke="#b76cd9" stroke-width="2" marker-end="url(#arr)"/>
+    <line x1="576" y1="115" x2="604" y2="115" stroke="#b76cd9" stroke-width="2" marker-end="url(#arr)"/>
+    <text x="681" y="232" text-anchor="middle" font-weight="600" fill="#b76cd9">reward 1 or 0</text>
+  </g>
+</svg>
+<figcaption>The kernel's claim is fixed before any agent sees it. The agent writes only the proof,
+and a machine check, not a reviewer, decides whether it counts.</figcaption>
+</figure>
+
+<p>
+Because claims are fixed, nobody needs to judge an agent's proof. An agent gets one claim in a
+container, as a task in the <a href="https://github.com/harbor-framework/harbor" target="_blank" rel="noopener">Harbor</a>
+framework: the claim's files, the built library with its documentation, and one worked
+example. It writes <code>theorem main : claim.Holds</code> in Lean, often split into many modules, and
+builds as often as it likes. A grader in a separate container then runs five
+checks:
+</p>
+<ol>
+  <li>the claim file is byte-for-byte the pinned one;</li>
+  <li>the proof uses no escape hatch: no <code>sorry</code>, <code>axiom</code>,
+      <code>native_decide</code>, <code>implemented_by</code>, meta code, local instances or
+      foreign imports;</li>
+  <li>everything builds from scratch;</li>
+  <li><code>main</code> has exactly the type <code>claim.Holds</code> and depends only on Lean's
+      three standard axioms;</li>
+  <li>Lean's kernel re-checks every declaration of the claim and of the proof from the compiled
+      files.</li>
+</ol>
+<p>
+The answer is a reward of 1 or 0. Nothing in it depends on trusting the agent. Each claim also
+keeps a reference proof, and the sandbox never shows it to an agent: a task copies only the
+claim's own files, through an allow-list that also refuses any file whose content matches a
+reference proof.
+</p>
+
+<h2>Results: all 41 claims proved by agents</h2>
+
+<p>
+We wrote fixed claims for 41 kernels. Fourteen are Triton tutorial and library kernels: vector
+addition, softmax, layer norm, fp16, fp8 and mxfp8 GEMMs, persistent and TMA GEMMs, stream-K
+with atomics, FlashAttention forward and backward, and paged attention. Twenty-seven are
+production kernels: 12 from SGLang, 7 from vLLM and 8 from flash-linear-attention, covering
+extend and prefill attention over paged and variable-length batches, fused MoE, LoRA, int8
+scaled GEMMs, speculative-decoding rejection sampling, KV-cache writes, Mamba-2 SSD and gated
+DeltaNet chunked recurrences.
+</p>
+<p>
+Every one of the 41 claims now has a complete proof written by AI agents and accepted by the
+grader in a fresh container: 40 of them by Claude Sonnet 5.5 agents, plus the vector-addition
+worked example. The hardest took several agent sessions, each handing a written plan to the
+next.
+</p>
+
+<div class="stats">
+  <div class="stat"><div class="n">41 / 41</div><div class="l">claims proved, each graded in a fresh container</div></div>
+  <div class="stat"><div class="n">27</div><div class="l">production kernels from SGLang, vLLM and flash-linear-attention</div></div>
+  <div class="stat"><div class="n">170k</div><div class="l">lines of agent-written Lean, every line checked</div></div>
+  <div class="stat"><div class="n">0</div><div class="l">claims found false: each kernel meets its claim on every covered launch</div></div>
+</div>
+
+<figure>
+<div class="bars" id="bars"></div>
+<figcaption>Size of each machine-checked proof, in lines of Lean including its documentation. Proofs
+range from 210 lines (vector addition) to about 9,900 (fla's LayerNorm/GroupNorm with a
+residual); the median is about 3,400.</figcaption>
+</figure>
+
+<p>
+Proof size tracks what makes a kernel hard to reason about rather than its length. Elementwise
+and gather kernels are short. GEMMs need the error of a <code>tl.dot</code> accumulation over
+the K loop. Attention kernels need an online-softmax invariant whose error bound survives every
+rescaling, and the chunked recurrences of linear attention need a state invariant carried
+across chunks with decays. SGLang's extend attention, with its paged KV cache, tree masks for
+speculative decoding and sliding windows, needed 49 modules.
+</p>
+
+<h2>How TVA compares</h2>
+
+<p>
+Formal verification of GPU kernels has moved fast this year. The systems closest to ours
+verify machine-learning kernels at the PTX level or against a reference program:
+</p>
+
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr><th></th><th>TVA</th><th>Volta</th><th>SentryWard</th><th>Formalizing PTX in Lean</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Input</td><td class="tva">Triton source of production kernels</td><td>a kernel and a reference</td><td>PTX of warp-specialized kernels</td><td>hand-written PTX</td></tr>
+    <tr><td>Problem sizes</td><td class="tva">symbolic: every covered launch</td><td>static</td><td>fixed</td><td>—</td></tr>
+    <tr><td>Addresses and branches from loaded values</td><td class="tva">yes (paged KV, MoE routing, varlen batches)</td><td>no</td><td>no</td><td>—</td></tr>
+    <tr><td>Floating point</td><td class="tva">exact IEEE formats and rounding, tolerances from measured device facts</td><td>real numbers</td><td>real numbers</td><td>real numbers</td></tr>
+    <tr><td>What is guaranteed</td><td class="tva">no fault, race or hang; nothing written outside the outputs; outputs within tolerance</td><td>equivalence to the reference</td><td>synchronization, race freedom, equivalence</td><td>correctness under the PTX memory model</td></tr>
+    <tr><td>Trusted compiler</td><td class="tva">Triton 3.8.0, with 56 stated exclusions</td><td>—</td><td>— (works on PTX)</td><td>— (works on PTX)</td></tr>
+  </tbody>
+</table>
+</div>
+
+<p>
+<a href="https://arxiv.org/abs/2511.12638" target="_blank" rel="noopener">Volta</a> checks that an
+optimized kernel is equivalent to a reference by symbolic execution, with thread counts, tensor
+sizes, pointer targets and branch conditions known statically, and compares expressions over the
+reals; its open implementation, <a href="https://github.com/francois141/ptx_verifier" target="_blank" rel="noopener">ptx_verifier</a>,
+extracts Lean propositions for a fixed size.
+<a href="https://sentryward.io/blog/" target="_blank" rel="noopener">SentryWard</a> verifies
+synchronization, race freedom and equivalence for warp-specialized Hopper and Blackwell kernels at
+fixed sizes, excluding addresses and branches that depend on loaded values.
+<a href="https://sf-tensor.com/papers/formalizing-ptx.pdf" target="_blank" rel="noopener">Formalizing PTX in Lean</a>
+models every execution of hand-written PTX against the PTX memory model, including asynchronous
+copies and tensor cores, with LLMs writing the proofs. Earlier tools such as GPUVerify and Faial
+prove race freedom only, and recent agent systems for CUDA, such as
+<a href="https://arxiv.org/abs/2511.12294" target="_blank" rel="noopener">ProofWright</a> and
+<a href="https://arxiv.org/abs/2610.24548" target="_blank" rel="noopener">Browne et al.</a>,
+target elementwise kernels or a CUDA subset.
+</p>
+<p>
+TVA makes a different trade. It works one level higher, on Triton programs, and trusts the
+Triton compiler with one stated rule. In exchange it covers what production serving kernels
+actually do: shapes known only at run time, addresses read from memory (page tables, expert
+maps, sequence offsets), integer arithmetic that can wrap, and floating-point results that are
+<em>not</em> equal to the exact answer and must be bounded honestly. A real-number equivalence
+proof says nothing about how far a bf16 attention output may be from exact attention at a long
+context. A TVA claim states that bound, and the proof establishes it.
+</p>
+
+<h2>Limits</h2>
+<ul>
+  <li>The Triton compiler is trusted outside the exclusion list, and claims cover one stack:
+      Triton 3.8.0 on the H200.</li>
+  <li>Claims are written by hand, and a reader must still check that a model transcribes its
+      source. The fixed shape of a claim, a line-by-line model with comments, keeps that check
+      local.</li>
+  <li>A proof guarantees what the claim states. Each claim says which launches it leaves out and
+      why, and some real modes are left out, for example in-kernel TMA descriptors.</li>
+  <li>Proofs are long and agent time is not free. Making agents cheaper and more reliable at this
+      is the next step.</li>
+</ul>
+
+<h2>What's next</h2>
+<p>
+The 41 claims and their checker are, in effect, a benchmark: each task is one kernel and one
+fixed claim, and success is a binary machine check that cannot be gamed by weakening the
+specification. We are using it to measure how well different models prove kernels, and we are
+working toward the case that matters most: when a kernel is wrong, an agent should come back with
+a concrete launch that breaks it rather than with nothing. The library, the claims and the
+sandbox are open source at
+<a href="https://github.com/Infini-AI-Lab/TVA" target="_blank" rel="noopener">github.com/Infini-AI-Lab/TVA</a>.
+</p>
+
+<div class="callout">
+<p>
+<strong>In one sentence:</strong> TVA turns "this kernel passed our tests" into "Lean checked
+that this kernel is correct on every launch its host can make", and lets AI agents do the
+proving.
+</p>
+</div>
+
+</article>
+
+<footer>
+  <div class="container footer-inner">
+    <a class="brand" href="../../index.html">
+      <img src="../../infini-ai.png" alt="InfiniAI Lab" />
+      <span>InfiniAI Lab</span>
+    </a>
+    <div>© <span id="year"></span> InfiniAI Lab · Carnegie Mellon University</div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+(function () {
+  const toggle = document.querySelector('.nav-toggle');
+  const menu = document.querySelector('.nav-links');
+  if (!toggle || !menu) return;
+  toggle.addEventListener('click', () => {
+    const open = menu.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', String(open));
+  });
+})();
+
+// Lines of Lean in each claim's machine-checked proof (Proof.lean and Proof/**.lean).
+const PROOFS = [
+  ["Triton tutorials and library kernels", [
+    ["vec_add_f32", 210], ["seeded_dropout_f32", 777], ["attn_bwd_pre_f16", 1252], ["softmax_f32", 2894],
+    ["persistent_matmul_f16", 3064], ["matmul_f16", 3192], ["matmul_e5m2", 3241], ["tma_persistent_matmul_f16", 3271],
+    ["attn_bwd_f16", 3403], ["layer_norm_fwd_f16", 3444], ["paged_attention_f16", 3986],
+    ["block_scaled_matmul_mxfp8", 4458], ["attn_fwd_f16", 6103], ["streamk_matmul_f16", 6740]]],
+  ["SGLang", [
+    ["vocab_embedding_bf16", 1031], ["kv_indices_i32", 1136], ["route_histogram_i32", 2100], ["moe_sum_reduce_bf16", 2542],
+    ["ssd_state_passing_f32", 3180], ["ssd_bmm_chunk_bf16", 3443], ["prefill_attn_varlen_bf16", 6434],
+    ["moe_router_bf16", 6593], ["gdn_gating_bf16", 6672], ["ssd_chunk_scan_bf16", 7046], ["ssd_chunk_state_bf16", 7340],
+    ["extend_attn_bf16", 9388]]],
+  ["vLLM", [
+    ["count_expert_tokens_i32", 1322], ["rejection_greedy_i32", 1447], ["kv_cache_write_bf16", 2346],
+    ["fused_moe_bf16", 3015], ["scaled_mm_int8", 3727], ["lora_shrink_bf16", 4522], ["merge_attn_states_bf16", 5110]]],
+  ["flash-linear-attention", [
+    ["chunk_cumsum_f32", 2854], ["recompute_wu_bf16", 3823], ["l2norm_fwd_bf16", 4248], ["chunk_bwd_dv_local_bf16", 4953],
+    ["chunk_fwd_o_bf16", 5262], ["rotary_varlen_bf16", 5925], ["chunk_delta_h_bf16", 8553], ["layer_norm_fwd_bf16", 9924]]],
+];
+const MAX = 10000;
+document.getElementById('bars').innerHTML = PROOFS.map(([grp, rows]) =>
+  `<div class="grp">${grp}</div>` + rows.map(([k, n]) =>
+    `<div class="name">${k}</div>` +
+    `<div class="track"><div class="fill" style="width:${(100 * n / MAX).toFixed(1)}%"></div></div>` +
+    `<div class="val">${n.toLocaleString('en-US')}</div>`).join("")).join("");
+</script>
+
+</body>
+</html>

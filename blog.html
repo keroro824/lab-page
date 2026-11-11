@@ -379,6 +379,14 @@ document.getElementById('year').textContent = new Date().getFullYear();
 
 const POSTS = [
   {
+    title: "TVA: AI Agents Prove Triton Kernels Correct",
+    description: "TVA is a Lean 4 library and agent sandbox for proving that Triton kernels are correct on every launch they cover: no fault, no race, nothing written outside their outputs, and every output within a stated bound of the exact answer. Claims about 41 kernels, including 27 production kernels from SGLang, vLLM and flash-linear-attention, are fixed in advance; AI agents write the proofs in a sandbox and a machine check grades them. Every one of the 41 claims now has a machine-checked proof written by AI agents, about 170,000 lines of Lean.",
+    authors: "Zhuoming Chen",
+    paper: "https://github.com/Infini-AI-Lab/TVA",
+    paperLabel: "GitHub",
+    blog: "blog/tva/"
+  },
+  {
     title: "CompressionBench: How can your coding agents compress LLMs?",
     description: "LLM weights fill scarce GPU memory (HBM), and every generated token reads them again, which costs far more energy than the arithmetic they feed. CompressionBench asks coding agents to cut those bytes: given a BF16 checkpoint, a storage limit, one GPU, and eight hours, an agent must deliver compressed weights plus the inference code that runs them. Independent verification checks likelihood, answer accuracy, storage on disk and in GPU memory, and execution. Across six agents and six tasks, 29 of 36 models pass; agent-built models shrink 120B-class MoE models from ~240 GB to 32-48 GiB of GPU memory, on a single GPU at 2-4 bits per weight, and the best design per task stays within 3.4% of BF16 perplexity on average.",
     authors: "Xinrui Zhong, Zhifeng Li, Zhiming Wang, Yongqi Liu, Shanglin Yang, Yang Zhou, Zikun Li, Zhuoming Chen, Beidi Chen",
