@@ -1,6 +1,5 @@
 - title: "TVA: AI Agents Prove Triton Kernels Correct"
   description: "TVA is a Lean 4 library for proving Triton kernels correct. AI agents write the proofs in a sandbox, and Lean checks them. Agents proved all 41 claims we wrote with TVA, including 27 production kernels from SGLang, vLLM and flash-linear-attention."
-  authors: Zhuoming Chen
   link:
     url: https://github.com/Infini-AI-Lab/TVA
     blog: https://infini-ai-lab.github.io/TVA/
